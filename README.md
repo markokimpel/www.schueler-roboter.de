@@ -1,1 +1,1 @@
-[Deutsch](de)
+Zur [deutschen](de) Webseite.
