@@ -3,6 +3,6 @@
 Bau und Programmierung eines leistungsfähigen Roboters.
 
 * [Über das Projekt](project)
-* [Hardware](#)
-* [Software](#)
-* [Programmieren mit Scratch](#)
+* Hardware (TODO)
+* Software (TODO)
+* Programmieren mit Scratch (TODO)
