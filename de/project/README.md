@@ -15,9 +15,9 @@ Schaffung einer leistungsstarken und kostengünstigen Plattform auf der Schüler
 
 ## Vorgehensweisen
 
-### 1. Definition eines fahrbaren Roboters auf Basis des Raspberry Pis.
+### 1. Definition eines fahrbaren Roboters auf Basis des Raspberry Pis
 
-[Physical Computing](https://de.wikipedia.org/wiki/Physical_Computing) macht einfach mehr Spaß als das *trockene* Programmieren am Computer. Wir Menschen können mit physischen Objekten leichter eine Verbindung aufbauen als mit abstrakten Aufgabenstellungen. Zielstellungen wie *Ding beweg dich* oder *mach' dies und das* ergeben sich bei physischen Objekten natürlich, ohne dass es einer zusätzlichen Motivation bedarf. Ein **selbstfahrender Roboter** erscheint hier als ideale Hardwarebasis.
+[Physical Computing](https://de.wikipedia.org/wiki/Physical_Computing) macht einfach mehr Spaß als das trockene Programmieren am Computer. Wir Menschen können leichter eine Verbindnung zu physischen Objekten aufbauen als zu abstrakten Aufgabenstellungen. Zielstellungen wie *Ding beweg dich* oder *mach' dies und das* ergeben sich bei physischen Objekten natürlich, ohne dass es einer zusätzlichen Motivation bedarf. Ein **selbstfahrender Roboter** erscheint hier als ideale Hardwarebasis.
 
 Mit dem [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) der Raspberry Pi Foundation steht ein leistungsstarker und kostengünstiger Einplatinenrechner zur Verfügung. Seine offene Architektur erlaubt es verschiedene Betriebssysteme und Softwarepakete auf ihm laufen zu lassen und ihn mit eigener Hardware zu integrieren. Seine große Beliebtheit im akademischen und Hobbybereich hat zu einer sehr aktiven Community und einem umfangreichen Angebot an Erweiterungen und Anleitungen geführt. Wir wählen den Raspberry Pi 3 Model B als Steuereinheit für den Roboter, da er ein **sehr breites Spektrum von Anwendungen** ermöglicht - von der Ansteuerung von einzelnen Komponenten (Motor an/aus), über die Programmierung mit Standardprogrammiersprachen wie Python, JavaScript und Java bis zur Bilderkennung und künstlichen Intelligenz.
 
