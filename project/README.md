@@ -25,20 +25,21 @@ Mit dem [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-
 
 Das umfangreiche und teilweise unübersichtliche Angebot an Erweiterungen für den Raspberry Pi und an Roboterkomponenten macht es dem Einsteiger bisweilen schwer geeignete und zueinander passende Komponenten auszuwählen und in ersten eigenen Projekten zu nutzen. Diese Hürde soll durch die **genaue Vorgabe von Komponenten** und **detailierten Aufbauanweisungen** genommen werden. Mit diesen erreicht der Schüler - mit Hilfe eines Kursleiters, Lehrers oder der Eltern - sicher das Ziel einen programmierbaren Roboters zu erschaffen. Die Programmierkurse sind auf diese Hardwarekomponenten abgestimmt. Von dem vorgegebenen Modell ausgehend können eigene Umbauten und Erweiterungen vorgenommen werden. Die Vielzahl der Projekte in der Community laden geradezu dazu ein.
 
+Die relativ geringen Anschaffungskosten sollen es möglichst vielen Kindern und Eltern ermöglichen den Schüler-Roboter selber zu besitzen. Die ständige Verfügbarkeit *zu Hause* schafft zusätzliche Möglichkeiten zur selbständigen Nutzung.
+
 ### 2. Erstellung Unterlagen Programmierkurs
 
-Programmierkurse in verschiedensten Umgebungen und unterschiedlichen Anforderungen an Vorkenntnissen sind mit dem Schüler-Roboter denkbar. Ziel ist es, über die Zeit mehrere Kurse zu entwickeln, die in unterschiedlichen Settings genutzt werden können - z.B geleiteter Kurs über zwei Tage, oder wöchentlich 90 Minuten, oder selbständiges Erarbeiten.
+Programmierkurse in verschiedensten Umgebungen und unterschiedlichen Anforderungen an Vorkenntnissen sind mit dem Schüler-Roboter denkbar. Ziel ist es, über die Zeit mehrere Kurse zu entwickeln, die jeweils in unterschiedlichen Settings genutzt werden können - z.B geleiteter Kurs über zwei Tage, oder wöchentlich 90 Minuten, oder selbständiges Erarbeiten.
 
-Es erscheint naheliegend mit einem Kurs, der wenige Vorkenntisse erfordert, zu beginnen. Die Wahl fällt auf die visuelle Programmiersprache **[Scratch](https://de.wikipedia.org/wiki/Scratch_(Programmiersprache))** des MIT Media Labs, mit der der Roboter gesteuert werden soll. Scratch unterstützt die Grundelemente der [imperativen Programmierung](https://de.wikipedia.org/wiki/Imperative_Programmierung) (Sequenz, Verzweigung, Schleifen) ohne den Schüler mit dem Komplexität von Syntax zu belästigen. Konzepte wie Variablen, Unterprogramme, Ereignisorientierung und Parallelausführung können erlernt werden.
+Es erscheint naheliegend mit einem Kurs, der wenige Vorkenntisse erfordert, zu beginnen. Die Wahl fällt auf die visuelle Programmiersprache **[Scratch](https://de.wikipedia.org/wiki/Scratch_(Programmiersprache))** des MIT Media Labs, mit der der Roboter gesteuert werden soll. Scratch unterstützt die Grundelemente der [imperativen Programmierung](https://de.wikipedia.org/wiki/Imperative_Programmierung) (Sequenz, Verzweigung, Schleifen) ohne den Schüler mit dem Komplexität von Syntax von Computerprogrammen zu belästigen. Konzepte wie Variablen, Unterprogramme, Ereignisorientierung und Parallelausführung können erlernt werden. Die Scratch Programmiersprache kann über eine Schnittstelle erweitert werden. Eine Anbindung an die Hardware des Schüler-Roboters ist zu erstellen.
 
+### 3. Angebot und Durchführung von ersten Kursen zum Bau und der Programmierung des Schüler-Roboters
 
-### 3. Angebot und Durchführung von Kursen zum Bau und der Programmierung des Schüler-Roboters
-
-TODO
+Hier geht es darum die Projektidee in der Realität zu überprüfen. Wie hoch ist das Interesse an einem Schüler-Roboter? Wie werden Schüler und Eltern am sinnvollsten über das Angebot informiert? Ist die Zahlungsbereitschaft für den Kauf der Komponenten ausreichend? Wie gut kommt der Kurs an? Können Kurse kostendeckend angeboten werden? 
 
 ### 4. Scale
 
-TODO
+
 
 ## Hindernisse
 
