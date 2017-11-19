@@ -1,3 +1,5 @@
+[Home](..)
+
 # Über das Projekt
 
 ## Vision
@@ -13,19 +15,22 @@ Schaffung einer leistungsstarken und kostengünstigen Plattform auf der Schüler
 1. Teilen der Ergebnisse mit der Community
 1. Freude am Lernen
 
-## Vorgehensweisen
+## Ziele
 
 ### 1. Definition eines fahrbaren Roboters auf Basis des Raspberry Pis
 
 [Physical Computing](https://de.wikipedia.org/wiki/Physical_Computing) macht einfach mehr Spaß als das trockene Programmieren am Computer. Wir Menschen können leichter eine Verbindnung zu physischen Objekten aufbauen als zu abstrakten Aufgabenstellungen. Zielstellungen wie *Ding beweg dich* oder *mach' dies und das* ergeben sich bei physischen Objekten natürlich, ohne dass es einer zusätzlichen Motivation bedarf. Ein **selbstfahrender Roboter** erscheint hier als ideale Hardwarebasis.
 
-Mit dem [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) der Raspberry Pi Foundation steht ein leistungsstarker und kostengünstiger Einplatinenrechner zur Verfügung. Seine offene Architektur erlaubt es verschiedene Betriebssysteme und Softwarepakete auf ihm laufen zu lassen und ihn mit eigener Hardware zu integrieren. Seine große Beliebtheit im akademischen und Hobbybereich hat zu einer sehr aktiven Community und einem umfangreichen Angebot an Erweiterungen und Anleitungen geführt. Wir wählen den Raspberry Pi 3 Model B als Steuereinheit für den Roboter, da er ein **sehr breites Spektrum von Anwendungen** ermöglicht - von der Ansteuerung von einzelnen Komponenten (Motor an/aus), über die Programmierung mit Standardprogrammiersprachen wie Python, JavaScript und Java bis zur Bilderkennung und künstlichen Intelligenz.
+Mit dem [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) der Raspberry Pi Foundation steht ein leistungsstarker und kostengünstiger Einplatinenrechner zur Verfügung. Seine offene Architektur erlaubt es verschiedene Betriebssysteme und Softwarepakete auf ihm laufen zu lassen und ihn mit eigener Hardware zu integrieren. Seine große Beliebtheit im akademischen und Hobbybereich hat zu einer sehr aktiven Community und einem umfangreichen Angebot an Erweiterungen und Anleitungen geführt. Wir wählen den Raspberry Pi 3 Model B als Steuereinheit für den Roboter, da er ein **sehr breites Spektrum von Anwendungen** ermöglicht - von der Ansteuerung einzelner Komponenten (Motor an/aus), über die Programmierung mit Standardprogrammiersprachen wie Python, JavaScript und Java, die Nutzung von Roboterbetriebssystemen, bis zur Bilderkennung und künstlichen Intelligenz.
 
 Das umfangreiche und teilweise unübersichtliche Angebot an Erweiterungen für den Raspberry Pi und an Roboterkomponenten macht es dem Einsteiger bisweilen schwer geeignete und zueinander passende Komponenten auszuwählen und in ersten eigenen Projekten zu nutzen. Diese Hürde soll durch die **genaue Vorgabe von Komponenten** und **detailierten Aufbauanweisungen** genommen werden. Mit diesen erreicht der Schüler - mit Hilfe eines Kursleiters, Lehrers oder der Eltern - sicher das Ziel einen programmierbaren Roboters zu erschaffen. Die Programmierkurse sind auf diese Hardwarekomponenten abgestimmt. Von dem vorgegebenen Modell ausgehend können eigene Umbauten und Erweiterungen vorgenommen werden. Die Vielzahl der Projekte in der Community laden geradezu dazu ein.
 
 ### 2. Erstellung Unterlagen Programmierkurs
 
-TODO
+Programmierkurse in verschiedensten Umgebungen und unterschiedlichen Anforderungen an Vorkenntnissen sind mit dem Schüler-Roboter denkbar. Ziel ist es, über die Zeit mehrere Kurse zu entwickeln, die in unterschiedlichen Settings genutzt werden können - z.B geleiteter Kurs über zwei Tage, oder wöchentlich 90 Minuten, oder selbständiges Erarbeiten.
+
+Es erscheint naheliegend mit einem Kurs, der wenige Vorkenntisse erfordert, zu beginnen. Die Wahl fällt auf die visuelle Programmiersprache **[Scratch](https://de.wikipedia.org/wiki/Scratch_(Programmiersprache))** des MIT Media Labs, mit der der Roboter gesteuert werden soll. Scratch unterstützt die Grundelemente der [imperativen Programmierung](https://de.wikipedia.org/wiki/Imperative_Programmierung) (Sequenz, Verzweigung, Schleifen) ohne den Schüler mit dem Komplexität von Syntax zu belästigen. Konzepte wie Variablen, Unterprogramme, Ereignisorientierung und Parallelausführung können erlernt werden.
+
 
 ### 3. Angebot und Durchführung von Kursen zum Bau und der Programmierung des Schüler-Roboters
 
@@ -41,10 +46,8 @@ TODO
 * Interesse der Schüler und Eltern ungetestet
 * Zahlungsbereitschaft der Eltern ungetestet
 
-## Maßnahmen
+## Ergebnisse
 
 TODO
 
-Referenz: Die Gliederung orientiert sich an Salesforces [V2MOM](https://trailhead.salesforce.com/de/modules/manage_the_sfdc_organizational_alignment_v2mom/units/msfw_oav2m_creating_org_alignment_v2mom).
-
-[Home](..)
+Referenz: Die Gliederung orientiert sich an Salesforces [V2MOM](https://trailhead.salesforce.com/de/modules/manage_the_sfdc_organizational_alignment_v2mom/units/msfw_oav2m_creating_org_alignment_v2mom). (Es wurde jedoch eine andere deutsche Übersetzung gewählt.)
