@@ -35,20 +35,45 @@ Es erscheint naheliegend mit einem Kurs, der wenige Vorkenntisse erfordert, zu b
 
 ### 3. Angebot und Durchführung von ersten Kursen zum Bau und der Programmierung des Schüler-Roboters
 
-Hier geht es darum die Projektidee in der Realität zu überprüfen. Wie hoch ist das Interesse an einem Schüler-Roboter? Wie werden Schüler und Eltern am sinnvollsten über das Angebot informiert? Ist die Zahlungsbereitschaft für den Kauf der Komponenten ausreichend? Wie gut kommt der Kurs an? Können Kurse kostendeckend angeboten werden? 
+Hier geht es darum die Projektidee in der Realität zu überprüfen.
+* Wie groß ist das Interesse an einem Schüler-Roboter?
+* Wie werden Schüler und Eltern am sinnvollsten über das Angebot informiert?
+* Ist die Zahlungsbereitschaft für den Kauf der Komponenten ausreichend?
+* Wie kommt der Kurs an?
+* Können geleitete Kurse kostendeckend angeboten werden?
 
-### 4. Scale
+### 4. Wachstum und Nachhaltigkeit
 
-
+Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine große Zahl von Freiwilligen oder eine Finanzierungsquelle wird das langfristig nicht gelingen. Ziel ist es ein Betriebsmodell und Partner zu finden, die das Angebot des Schüler-Roboters langfristig ermöglichen.
 
 ## Hindernisse
 
-* Derzeit nur eine Person involviert - ehrenamtlich
+* Derzeit nur eine Person involviert - ehrenamtlich.
 * Interesse der Schüler und Eltern ungetestet
 * Zahlungsbereitschaft der Eltern ungetestet
 
-## Ergebnisse
+## Messbare Ergebnisse
 
-TODO
+### 1. Hardwarebasis (Version 0) definiert
+
+* Ziel: bis Ende Dezember 2017
+* Beschreibung kann stichpunktartig sein
+
+### 2. Integration mit Scratch implementiert
+
+* Ziel: bis Ende Dezember 2017
+* Abhängigkeit zu #1
+* funktionierend und als Open Source released
+
+### 3. Kurs zum Bau des Roboters und einfache Scratch Programmierung vorbereitet
+
+* Ziel: bis Ende Dezember 2017
+* Abhängigkeiten zu #1 und #2
+* Beschreibungen können stichpunktartig sein
+
+### 4. Ersten Kurs gehalten
+
+* Ziel: bis Ende Januar 2018
+* Abhängigkeit zu #3
 
 Referenz: Die Gliederung orientiert sich an Salesforces [V2MOM](https://trailhead.salesforce.com/de/modules/manage_the_sfdc_organizational_alignment_v2mom/units/msfw_oav2m_creating_org_alignment_v2mom). (Es wurde jedoch eine andere deutsche Übersetzung gewählt.)
