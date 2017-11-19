@@ -1,6 +1,4 @@
-# Schüler-Roboter
-
-Bau und Programmierung eines leistungsfähigen Roboters.
+![Schüler Roboter](images/rover_front.jpg)
 
 * [Über das Projekt](project)
 * Hardware (TODO)
