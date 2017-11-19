@@ -57,6 +57,9 @@ Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine 
 ### 1. Hardwarebasis (Version 0) definiert
 
 * Ziel: bis Ende Dezember 2017
+* Gesamtpreis der Komponenten: < 175 € (50% Listpreis des kommerziellen Marktführers)
+* Nachbaubar durch Schüler mit Hilfe Erwachsener
+* Nur haushaltsübliche Werkzeuge werden benötigt, oder liegen bei (ok: Schere, Schraubendreher; nicht ok: Lötkolben, Spannungsmessgerät)
 * Beschreibung kann stichpunktartig sein
 
 ### 2. Integration mit Scratch implementiert
