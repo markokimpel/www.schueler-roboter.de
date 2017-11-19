@@ -15,7 +15,7 @@ Schaffung einer leistungsstarken und kostengünstigen Plattform auf der Schüler
 1. Teilen der Ergebnisse mit der Community
 1. Freude am Lernen
 
-## Ziele
+## Handlungen
 
 ### 1. Definition eines fahrbaren Roboters auf Basis des Raspberry Pis
 
@@ -76,4 +76,4 @@ Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine 
 * Ziel: bis Ende Januar 2018
 * Abhängigkeit zu #3
 
-Referenz: Die Gliederung orientiert sich an Salesforces [V2MOM](https://trailhead.salesforce.com/de/modules/manage_the_sfdc_organizational_alignment_v2mom/units/msfw_oav2m_creating_org_alignment_v2mom). (Es wurde jedoch eine andere deutsche Übersetzung gewählt.)
+Referenz: Die Gliederung orientiert sich an Salesforces [V2MOM](https://trailhead.salesforce.com/de/modules/manage_the_sfdc_organizational_alignment_v2mom/units/msfw_oav2m_creating_org_alignment_v2mom). (Es wurde eine andere deutsche Übersetzung gewählt.)
