@@ -53,4 +53,4 @@ Bitte diese Kritikpunkte nicht als direkte Kritik am RasPiRobot Rover Kit misver
 ![vorn](images/v0_12.jpg)
 ![seite](images/v0_9.jpg)
 ![Labyrinth 1](images/v0_labyrinth1.jpg)
-![Labyrinth 2](images/v0_labyrinth1.jpg)
+![Labyrinth 2](images/v0_labyrinth2.jpg)
