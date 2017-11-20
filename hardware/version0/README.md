@@ -18,7 +18,7 @@ Komponente | Bezug / Preis
 Ladegerät für AA Ni-MH Akkus | bereits vorhanden
 **Gesamt** | **ca. 140 €**
 
-PS: Die Auswahl der Komponenten basiert auf persönlichen Erfahrungen und Präferenzen. Die Produkte können von einem beliebigen Händler bezogen werden - Bezugsquellen und Preise werden nur beispielhaft angegeben. Sollten wir von einem Hersteller oder Händler Vergünstigungen - jeglicher Art - für die Auswahl oder das Verlinken erhalten haben, wird das explizit erwähnt.
+PS: Die Auswahl der Komponenten basiert auf persönlichen Erfahrungen und Präferenzen. Bezugsquellen und Preise werden nur beispielhaft angegeben. Wir haben von keinem Hersteller oder Händler Vergünstigungen - jeglicher Art - für die Auswahl oder das Verlinken der Produkte erhalten.
 
 ## Kritik
 
