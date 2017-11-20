@@ -45,3 +45,12 @@ Bitte diese Kritikpunkte nicht als direkte Kritik am RasPiRobot Rover Kit misver
 * Die Batterien/Akkus können nur schwer von Kindern eingelegt werden. Das Batterienfach befindet sich auf der Unterseite. Der Roboter kann nicht auf seine Oberseite gelegt werden - dann würden Ultraschall-Sensor oder Driver Board verbiegen. Kinder können den Roboter nicht in einer Hand halten und wenden - aufgrund seiner Größe müssten sie ihn an nur einer Ecke festhalten und dafür ist er zu schwer.
 * Batterien waren für uns aufgrund des entstehenden Abfalls keine Option. Die 6 Ni-MH Akkus konnten jedoch nicht wirklich überzeugen. Ihre Kapazität 6x min. 2500mAh (bei 1,2V) war für den Betrieb völlig ausreichend. Die Ladezeit ist jedoch sehr lang: die meisten Ladegeräte können maximal 4 Akkus gleichzeitig laden. D.h. man benötigt zwei Durchläufe um 6 Akkus zu laden. Praktisch wird man sich ein zweites Pack an Akkus zulegen.
 * Da es keine Ladestandsanzeige gibt, kann der Moment, an dem der Raspi plötzlich abstürzt nicht vorausgesagt werden. Ärgerlich, wenn man länger nicht gespeichert hat.
+
+## Fotos
+
+![oben vorn](images/v0_top11.jpg)
+![oben hinten](images/v0_top7.jpg)
+![vorn](images/v0_12.jpg)
+![seite](images/v0_9.jpg)
+![Labyrinth 1](images/v0_labyrinth1.jpg)
+![Labyrinth 2](images/v0_labyrinth1.jpg)
