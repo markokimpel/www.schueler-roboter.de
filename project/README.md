@@ -15,7 +15,7 @@ Schaffung einer leistungsstarken und kostengünstigen Plattform auf der Schüler
 1. Teilen der Ergebnisse mit der Community
 1. Freude am Lernen
 
-## Handlungen
+## Ziele
 
 ### 1. Definition eines fahrbaren Roboters auf Basis des Raspberry Pis
 
