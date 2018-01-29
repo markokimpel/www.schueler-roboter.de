@@ -31,7 +31,13 @@ PS: Die Auswahl der Komponenten basiert auf persönlichen Erfahrungen und Präfe
 
 ## 3D Modell
 
-* [Base Plate](3d_model/SR1 Base Plate Rev 3.stl)
+* [Hauptplatte](3d_model/SR1%20Base%20Plate%20Rev%203.stl)
+* [Raspberryhalterung](3d_model/SR1%20Raspberry%20Socket%20Rev%203.stl)
+* [Abstandshalter Raspberryhalterung](3d_model/SR1%20Raspberry%20Socket%20Spacers%20Rev%201.stl)
+* [Motorhalterung rechts](3d_model/SR1%20Motor%20Bracket%20R%20Rev%204.stl)
+* [Motorhalterung links](3d_model/SR1%20Motor%20Bracket%20L%20Rev%204.stl)
+* [Ultraschallsensorhalterung](3d_model/SR1%20Sonar%20Bracket%20Rev%202.stl) (3x benötigt)
+* [Käfig mit Kamerahalterung](3d_model/SR1%20Cage%20Rev%200.stl)
 
 ## Fotos
 
