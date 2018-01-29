@@ -32,7 +32,7 @@ PS: Die Auswahl der Komponenten basiert auf persönlichen Erfahrungen und Präfe
 ## 3D Modell
 
 * [Hauptplatte](3d_model/SR1%20Base%20Plate%20Rev%203.stl)
-* [Raspberryhalterung](3d_model/SR1%20Raspberry%20Socket%20Rev%203.stl)
+* [Raspberryhalterung](3d_model/SR1%20Raspberry%20Socket%20Rev%203.stl) (basiert auf [Raspberry Pi Case - HifiBerry Dac+](https://www.thingiverse.com/thing:2325301) von B_Dubb, veröffentlicht am 16. May 2017)
 * [Abstandshalter Raspberryhalterung](3d_model/SR1%20Raspberry%20Socket%20Spacers%20Rev%201.stl)
 * [Motorhalterung rechts](3d_model/SR1%20Motor%20Bracket%20R%20Rev%204.stl)
 * [Motorhalterung links](3d_model/SR1%20Motor%20Bracket%20L%20Rev%204.stl)
