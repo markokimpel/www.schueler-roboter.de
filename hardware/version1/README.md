@@ -29,6 +29,10 @@ Ladegerät für AA Ni-MH Akkus | bereits vorhanden
 
 PS: Die Auswahl der Komponenten basiert auf persönlichen Erfahrungen und Präferenzen. Bezugsquellen und Preise werden nur beispielhaft angegeben. Wir haben von keinem Hersteller oder Händler Vergünstigungen - jeglicher Art - für die Auswahl oder das Verlinken der Produkte erhalten.
 
+## 3D Modell
+
+* [Base Plate](3d_model/SR1 Base Plate Rev 3.stl)
+
 ## Fotos
 
 ![vorn](images/v1_12.jpg)
