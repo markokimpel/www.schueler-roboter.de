@@ -66,7 +66,7 @@ Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine 
 
 * Ziel: bis Ende Dezember 2017
 * Abhängigkeit zu #1
-* funktionierend und als Open Source released
+* funktionierend und als Open Source [released](https://github.com/markokimpel/rrbscratchextension)
 
 ### 3. Kurs zum Bau des Roboters und einfache Scratch Programmierung vorbereitet
 
