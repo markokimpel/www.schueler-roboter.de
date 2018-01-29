@@ -39,6 +39,8 @@ PS: Die Auswahl der Komponenten basiert auf persönlichen Erfahrungen und Präfe
 * [Ultraschallsensorhalterung](3d_model/SR1%20Sonar%20Bracket%20Rev%202.stl) (3x benötigt)
 * [Käfig mit Kamerahalterung](3d_model/SR1%20Cage%20Rev%200.stl)
 
+Gedruckt wurde mit Prusa i3 MK2S, PLA, 200 µm.
+
 ## Fotos
 
 ![vorn](images/v1_12.jpg)
