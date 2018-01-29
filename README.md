@@ -1,6 +1,8 @@
 ![Schüler Roboter](images/rover_front.jpg)
 
 * [Über das Projekt](project)
-* [Hardware](hardware)
-* Software (TODO)
-* Programmieren mit Scratch (TODO)
+* Kurse
+  * [Bau des Roboters](hardware)
+  * Basisinstallation Software (TODO)
+  * Programmieren mit Scratch (TODO)
+    * [Scratch Erweiterung](https://github.com/markokimpel/rrbscratchextension) für RasPiRobot Board
