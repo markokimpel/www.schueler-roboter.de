@@ -25,3 +25,23 @@
 
 * Das geht einfach: Offene Dokumente speichern, dann die Power Taste (rechts hinten am GoPiGo3 Board) drücken. Die LED daneben beginnt rot zu blinken. Offene Programme werden beendet und das Betriebssystem wird heruntergefahren. Die LED geht aus, wenn der Roboter vollständig heruntergefahren wurde. Du kannst nun die Akkus entfernen.
 
+## GoPiGo3 Server starten
+
+* Scratch benötigt eine Erweiterung um den Roboter steuern zu können. Teil der Erweiterung ist der GoPiGo3 Server. Dieser muss zuerst gestartet werden.
+* Terminal öffnen und ausführen
+```
+pi@student-robot:~ $ cd gopigoscratchextension/
+pi@student-robot:~/gopigoscratchextension $ cd gpg3server/
+pi@student-robot:~/gopigoscratchextension/gpg3server $ ./run.sh 
+Server listening at 0.0.0.0:8080
+
+GPG3 Server homepage : http://127.0.0.1:8080/
+Scratch extension URL: http://127.0.0.1:8080/scratch_extension.js
+
+Press Ctrl-C to stop server
+```
+* Bitte das Terminal offen lassen, während man mit Scratch arbeitet. Das Schliessen des Terminals würde den Server stoppen.
+* Optional: Um das Funktionieren des Roboters zu prüfen, im Browser die GPG3 Server homepage (im Beispiel `http://127.0.0.1:8080/`) öffnen. Dann zu *Controller UI* gehen.
+
+## Scratch starten
+
