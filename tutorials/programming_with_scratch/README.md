@@ -13,12 +13,12 @@
   * Starte den Roboter indem du die Power Taste (rechts hinten am GoPiGo3 Board) drückst. Die grüne LED daneben beginnt zu blinken. Das bedeutet, das Betriebssystem wird geladen. Wenn die LED ständig grün leuchtet ist der Roboter betriebsbereit.
   * Übrigens: Wenn die LED neben der Power Taste beginnt gelb oder gar violett zu leuchten, dann bedeutet das die Akkus sind fast leer. Dann den Roboter ausschalten und Akkus wechseln.
 * Mit WLAN verbinden
-  * Der Roboter bietet ein WLAN Netzwerk an. Der Netzwerkname (SSID) ist `student-robot`, bei Arbeitsgruppen `student-robot[zahl]`. Das voreingestellte Passwort ist `changeitnow`. Bei Arbeitsgruppen erfrage das Passwort von deinem Gruppenleiter.
+  * Der Roboter bietet ein WLAN Netzwerk an. Der Netzwerkname (SSID) ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*. Das voreingestellte Passwort ist *changeitnow*. Bei Arbeitsgruppen erfrage das Passwort von deinem Gruppenleiter.
   * Verbinde dich mit deinem Arbeitsrechner zum WLAN des Roboters. Wennn du dich mit dem Roboter WLAN verbindest, verlierst du eine evtl. vorher bestehende WLAN Verbindung zum lokalen WLAN Router und damit zum Internet.
 * Mit VNC Viewer verbinden
   * Mit dem VNC Viewer verbindest du dich zum Roboter und kannst den Desktop des Roboters sehen.
   * Bei Raspbian ist der VNC Viewer bereits installiert (Menüpunkt *Internet*). Für Windows kann er von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
-  * Server-Adresse ist `student-robot`, bei Arbeitsgruppen `student-robot[zahl]`, Benutzname ist `pi`, Passwort ist `myrobot`. Beim ersten Aufruf mit der Fingerprint des Servers bestätigt werden.
+  * Server-Adresse ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*, Benutzname ist *pi*, Passwort ist *myrobot*. Beim ersten Aufruf mit der Fingerprint des Servers bestätigt werden.
   * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
 
 ## Roboter ausschalten
@@ -45,7 +45,7 @@ Press Ctrl-C to stop server
 
 ## Roboterfunktionen kennen lernen
 
-* Im Browser die GPG3 Server homepage (im Beispiel `http://127.0.0.1:8080/`) öffnen. Dann zu *Controller UI* gehen.
+* Im Browser die GPG3 Server homepage (im Beispiel *http://127.0.0.1:8080/*) öffnen. Dann zu *Controller UI* gehen.
 
 ## Scratch starten
 
@@ -54,7 +54,22 @@ Press Ctrl-C to stop server
 * Das Laden von Erweiterungen funktioniert in Scratch 2 so:
   * Umschalttaste (Shift-Taste) gedrückt halten und Menü *Datei* anklicken.
   * Durch das Drücken der Umschalttaste werden weitere Menüpunkte angezeigt. Wir wählen *Import experimental extension*.
-  * Die *Scratch extension URL* (im Beispiel `http://127.0.0.1:8080/scratch_extension.js`) eingeben.
+  * Die *Scratch extension URL* (im Beispiel *http://127.0.0.1:8080/scratch_extension.js*) eingeben.
   * Im Bereich *Skripte* werden in der Gruppe *Weitere Blöcke* Funktionen angeboten, die du zum Steuern des Roboters benutzen kannst.
   
-# 
+# Projekte laden und speichern in Scratch
+
+* Das Laden und Speichern von Projekten mit Erweiterungen ist etwas hakelig in Scratch 2. Wird in einem Projekt eine Erweiterung verwendet, so verwendet Scratch beim Speichern des Projekts immer den Dateiendung *.sbx* (auch wenn man eine andere angibt). Beim Laden besteht Scratch jedoch auf die Dateiendung *.sb2*.
+* Ein Workaround ist, die Projekte mit *.sbx* Dateinamen zu speichern und einen Link vom *.sb2* Dateinamen auf den *.sbx* Dateinamen zu erstellen. Damit steht der Inhalt der Datei unter zwei verschiedenen Dateinamen zur Verfügung. Bei Laden des Projektes wählt man dann einfach den *.sb2* Dateinamen und läd somit den Inhalt der *.sbx* Datei.
+* Im Terminal:
+```
+pi@student-robot:~/Scratch $ ls -l
+insgesamt 60
+-rw------- 1 pi pi 58064 Apr 15 13:53 Project.sbx
+pi@student-robot:~/Scratch $ ln -s Project.sbx Project.sb2
+pi@student-robot:~/Scratch $ ls -l
+insgesamt 60
+lrwxrwxrwx 1 pi pi    11 Apr 15 13:58 Project.sb2 -> Project.sbx
+-rw------- 1 pi pi 58064 Apr 15 13:53 Project.sbx
+pi@student-robot:~/Scratch $ 
+```
