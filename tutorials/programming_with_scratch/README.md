@@ -74,3 +74,55 @@ lrwxrwxrwx 1 pi pi    11 Apr 15 13:58 Project.sb2 -> Project.sbx
 -rw------- 1 pi pi 58064 Apr 15 13:53 Project.sbx
 pi@student-robot:~/Scratch $ 
 ```
+
+## Übung 1: Blinken
+
+### Erlernte Programmiertechniken
+
+* Sequenz
+* Schleife
+
+### Aufgabe 1.1
+
+* Blinke 2x mit beiden Blinkern
+* Blinken: Blinker LED an für eine Zeitspanne, dann Blinker LED aus für eine Zeitspanne.
+* Finde einen geeigneten Block in der Gruppe *Weitere Blöcke* zur Steuerung.
+* Nutze den *warte* Block aus der Gruppe *Steuerung*. Tipp: Nutze die englische Notation (Punkt statt Komma) bei der Eingabe eines Bruchteils einer Sekunde (z.B. *0.5*).
+* Finde eine geeignete Zeitdauer für das Blinken.
+
+![Solution 1.1](images/1.1_solution.png)
+[Solution 1.1](scratch/1.1_solution.sbx)
+
+### Aufgabe 1.2
+
+* Blinke 10x mit beiden Blinkern
+* Suche einen gegeigneten Block in der Gruppe *Steuerung* um ein *schönes* Programm zu schreiben.
+* Warum ist ein Programm mit einer Schleife *schöner*?
+
+![Solution 1.2](images/1.2_solution.png)
+[Solution 1.2](scratch/1.2_solution.sbx)
+
+## Übung 2: Musterfahrt
+
+### Programmiertechniken
+
+* Sequenz
+* Schleife
+
+
+## Übung X: Manuelle Steuerung
+
+* Ereignisorientierung
+
+## Übung Y: Automatische Steuerung
+
+
+## TODOs
+
+* Sequenz
+* Verzweigung
+* Schleife
+* Ereignisorientierung
+* Parallelität
+* Variablen 
+* Unterprogramme
