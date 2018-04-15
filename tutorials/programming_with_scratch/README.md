@@ -18,7 +18,7 @@
 * Mit VNC Viewer verbinden
   * Mit dem VNC Viewer verbindest du dich zum Roboter und kannst den Desktop des Roboters sehen.
   * Bei Raspbian ist der VNC Viewer bereits installiert (Menüpunkt *Internet*). Für Windows kann er von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
-  * Server-Adresse ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*, Benutzname ist *pi*, Passwort ist *myrobot*. Beim ersten Aufruf mit der Fingerprint des Servers bestätigt werden.
+  * Server-Adresse ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*. Beim ersten Aufruf muss die Identität des Servers bestätigt werden. Benutzname ist *pi*, Passwort ist *myr0bot*.
   * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
 
 ## Roboter ausschalten
@@ -49,7 +49,7 @@ Press Ctrl-C to stop server
 
 ## Scratch starten
 
-* Menüpunkt *Entwicklung*, *Scratch 2* starten
+* Menüpunkt *Programming*, *Scratch 2* starten
 * Die Sprache kann bei Bedarf geändert werden. Hierzu den Erdball links oben anklicken und die gewünschte Sprache wählen. Viele Texte, aber nicht alle, erscheinen dann in der gewählten Sprache.
 * Das Laden von Erweiterungen funktioniert in Scratch 2 so:
   * Umschalttaste (Shift-Taste) gedrückt halten und Menü *Datei* anklicken.
@@ -64,11 +64,11 @@ Press Ctrl-C to stop server
 * Im Terminal:
 ```
 pi@student-robot:~/Scratch $ ls -l
-insgesamt 60
+total 60
 -rw------- 1 pi pi 58064 Apr 15 13:53 Project.sbx
 pi@student-robot:~/Scratch $ ln -s Project.sbx Project.sb2
 pi@student-robot:~/Scratch $ ls -l
-insgesamt 60
+total 60
 lrwxrwxrwx 1 pi pi    11 Apr 15 13:58 Project.sb2 -> Project.sbx
 -rw------- 1 pi pi 58064 Apr 15 13:53 Project.sbx
 pi@student-robot:~/Scratch $ 
