@@ -17,7 +17,7 @@
   * Verbinde dich mit deinem Arbeitsrechner zum WLAN des Roboters. Wennn du dich mit dem Roboter WLAN verbindest, verlierst du eine evtl. vorher bestehende WLAN Verbindung zum lokalen WLAN Router und damit zum Internet.
 * Mit VNC Viewer verbinden
   * Mit dem VNC Viewer verbindest du dich zum Roboter und kannst den Desktop des Roboters sehen.
-  * Bei Raspbian ist der VNC Viewer bereits installiert. Für Windows kann er von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
+  * Bei Raspbian ist der VNC Viewer bereits installiert (Menüpunkt *Internet*). Für Windows kann er von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
   * Server-Adresse ist `student-robot`, bei Arbeitsgruppen `student-robot[zahl]`, Benutzname ist `pi`, Passwort ist `myrobot`. Beim ersten Aufruf mit der Fingerprint des Servers bestätigt werden.
   * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
 
@@ -40,8 +40,21 @@ Scratch extension URL: http://127.0.0.1:8080/scratch_extension.js
 
 Press Ctrl-C to stop server
 ```
+* Bitte die angezeigten URLs für *GPG3 Server homepage* und *Scratch extension URL* beachten. Diese werden später gebraucht.
 * Bitte das Terminal offen lassen, während man mit Scratch arbeitet. Das Schliessen des Terminals würde den Server stoppen.
-* Optional: Um das Funktionieren des Roboters zu prüfen, im Browser die GPG3 Server homepage (im Beispiel `http://127.0.0.1:8080/`) öffnen. Dann zu *Controller UI* gehen.
+
+## Roboterfunktionen kennen lernen
+
+* Im Browser die GPG3 Server homepage (im Beispiel `http://127.0.0.1:8080/`) öffnen. Dann zu *Controller UI* gehen.
 
 ## Scratch starten
 
+* Menüpunkt *Entwicklung*, *Scratch 2* starten
+* Die Sprache kann bei Bedarf geändert werden. Hierzu den Erdball links oben anklicken und die gewünschte Sprache wählen. Viele Texte, aber nicht alle, erscheinen dann in der gewählten Sprache.
+* Das Laden von Erweiterungen funktioniert in Scratch 2 so:
+  * Umschalttaste (Shift-Taste) gedrückt halten und Menü *Datei* anklicken.
+  * Durch das Drücken der Umschalttaste werden weitere Menüpunkte angezeigt. Wir wählen *Import experimental extension*.
+  * Die *Scratch extension URL* (im Beispiel `http://127.0.0.1:8080/scratch_extension.js`) eingeben.
+  * Im Bereich *Skripte* werden in der Gruppe *Weitere Blöcke* Funktionen angeboten, die du zum Steuern des Roboters benutzen kannst.
+  
+# 
