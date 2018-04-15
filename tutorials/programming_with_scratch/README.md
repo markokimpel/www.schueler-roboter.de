@@ -90,8 +90,11 @@ pi@student-robot:~/Scratch $
 * Nutze den *warte* Block aus der Gruppe *Steuerung*. Tipp: Nutze die englische Notation (Punkt statt Komma) bei der Eingabe eines Bruchteils einer Sekunde (z.B. *0.5*).
 * Finde eine geeignete Zeitdauer für das Blinken.
 
-![Solution 1.1](images/1.1_solution.png)
-[Solution 1.1](scratch/1.1_solution.sbx)
+### Beispiellösung 1.1
+
+![Screenshot](images/1.1_solution.png)
+
+[1.1_solution.sbx](scratch/1.1_solution.sbx)
 
 ### Aufgabe 1.2
 
