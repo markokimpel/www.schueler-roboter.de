@@ -162,6 +162,42 @@ pi@student-robot:~/Scratch $
 
 [2.2_solution.sbx](scratch/2.2_solution.sbx)
 
+## Übung 3: Bewegungslichter
+
+### Programmiertechniken
+
+* Sequenz
+* Schleife
+* Parallelisierung
+
+### Aufgabe 3.1
+
+* Viele große Fahrzeuge nutzen Warntöne oder Warnlichter um ihrer Umgebung anzuzeigen, dass sie sich bewegen.
+* Nutze die Augen des Roboters als Warnlicht. Es soll regelmäßig kurz rot aufblitzen.
+* Die Warnlichter sollen beginnen zu blitzen, wenn das Programm startet (Nutzer klickt grünes Fähnchen) und aufhören, wenn es endet (Nutzer klickt rotes Stopp-Symbol).
+* Der Roboter bewegt sich in dieser Aufgabe noch nicht.
+
+*Beispiellösung*
+
+![Screenshot](images/3.1_solution.png)
+
+[3.1_solution.sbx](scratch/3.1_solution.sbx)
+
+### Aufgabe 3.2
+
+* Füge dem Projekt ein weiteres Script - mit eigenem *wenn grüne Fahne angeklickt* Startblock - hinzu. Das Script soll die aus Aufgabe 2.1 bekannte Aufgabenstellung - ein Quadrat abfahren - lösen.
+* Führe das Projekt aus. Was stellst du fest?
+
+*Beispiellösung*
+
+![Screenshot](images/3.2_solution.png)
+
+[3.2_solution.sbx](scratch/3.2_solution.sbx)
+
+Beobachtung:
+* Scripte zum Fahren und Blitzen werden gleichzeitig ausgeführt.
+* Wenn das Script zum Fahren endet, läuft das Script zum Blitzen weiter - bis das Programm gestoppt wird.
+* Das Blitzscript müsste automatisch gestoppt werden, wenn das Fahrscript endet.
 
 
 
@@ -169,8 +205,9 @@ pi@student-robot:~/Scratch $
 
 
 
+Blitzen bei Fahrtende stoppen
 
-Blinker - immer
+Blinker beim Abbiegen
 
 ## Übung X: Manuelle Steuerung
 
@@ -185,7 +222,7 @@ Blinker - immer
 * Verzweigung
 / Schleife
 * Ereignisorientierung
-* Parallelität
+/ Parallelität
 * Variablen 
 * Unterprogramme
 
