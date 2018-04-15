@@ -45,7 +45,8 @@ Press Ctrl-C to stop server
 
 ## Roboterfunktionen kennen lernen
 
-* Im Browser die GPG3 Server homepage (im Beispiel *http://127.0.0.1:8080/*) öffnen. Dann zu *Controller UI* gehen.
+* Im Browser die GPG3 Server homepage (im Beispiel *http://127.0.0.1:8080/*) öffnen.
+* Zu *Controller UI* gehen.
 
 ## Scratch starten
 
