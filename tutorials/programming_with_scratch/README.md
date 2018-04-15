@@ -115,6 +115,62 @@ pi@student-robot:~/Scratch $
 * Sequenz
 * Schleife
 
+### Aufgabe 2.1
+
+* Lass deinen Roboter folgendes Muster fahren.
+```
++------+
+|      |
+|      |
+|      |
+^------+
+```
+* Kantenlänge ist jeweils 30 cm.
+* Am Ende soll der Roboter auf der Ausgangsposition stehen und in die gleiche Richtung schauen.
+* Kann das Programm mit einer Schleife vereinfacht werden?
+
+*Beispiellösung*
+
+![Screenshot](images/2.1_solution.png)
+
+[2.1_solution.sbx](scratch/2.1_solution.sbx)
+
+### Aufgabe 2.2
+
+* Lass deinen Roboter folgendes Muster fahren.
+```
+^----+
+     |
+     |
++----+
+|
+|
++----+
+     |
+     |
++----+
+|
+|
+^
+```
+* Kantenlänge ist jeweils 30 cm.
+* Kann das Programm mit einer Schleife vereinfacht werden?
+
+*Beispiellösung*
+
+![Screenshot](images/2.2_solution.png)
+
+[2.2_solution.sbx](scratch/2.2_solution.sbx)
+
+
+
+
+
+
+
+
+
+Blinker - immer
 
 ## Übung X: Manuelle Steuerung
 
@@ -125,10 +181,14 @@ pi@student-robot:~/Scratch $
 
 ## TODOs
 
-* Sequenz
+/ Sequenz
 * Verzweigung
-* Schleife
+/ Schleife
 * Ereignisorientierung
 * Parallelität
 * Variablen 
 * Unterprogramme
+
+*Copyright 2018 Marko Kimpel*
+
+*Licensed under the GNU General Public License version 3, or (at your option) any later version.*
