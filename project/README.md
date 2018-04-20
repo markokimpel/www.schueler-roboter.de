@@ -4,12 +4,11 @@
 
 ## Vision
 
-Schaffung einer leistungsstarken und kostengünstigen Plattform auf der Schüler mit Freunde Computerkenntnisse erwerben können.
+Schaffung einer offenen und leistungsstarken Plattform auf der Schüler jeden Alters mit Freunde Computerkenntnisse erwerben können.
 
 ## Werte
 
 1. Nutzung weit verbreiteter Technologien und offener Standards
-1. Hardwarekosten unter 50% des kommerziellen Marktführers
 1. Genaue und leicht zu folgende Anweisungen um definierte Ziele zu erreichen
 1. Leichte Erweiterbarkeit durch den Schüler
 1. Teilen der Ergebnisse mit der Community
@@ -25,7 +24,7 @@ Mit dem [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-
 
 Das umfangreiche und teilweise unübersichtliche Angebot an Erweiterungen für den Raspberry Pi und an Roboterkomponenten macht es dem Einsteiger bisweilen schwer geeignete und zueinander passende Komponenten auszuwählen und in ersten eigenen Projekten zu nutzen. Diese Hürde soll durch die **genaue Vorgabe von Komponenten** und **detailierten Aufbauanweisungen** genommen werden. Mit diesen erreicht der Schüler - mit Hilfe eines Kursleiters, Lehrers oder der Eltern - sicher das Ziel einen programmierbaren Roboters zu erschaffen. Die Programmierkurse sind auf diese Hardwarekomponenten abgestimmt. Von dem vorgegebenen Modell ausgehend können eigene Umbauten und Erweiterungen vorgenommen werden. Die Vielzahl der Projekte in der Community laden geradezu dazu ein.
 
-Die relativ geringen Anschaffungskosten sollen es möglichst vielen Kindern und Eltern ermöglichen den Schüler-Roboter selber zu besitzen. Die ständige Verfügbarkeit *zu Hause* schafft zusätzliche Möglichkeiten zur selbständigen Nutzung.
+Relativ geringe Anschaffungskosten sollen es möglichst vielen Interessenten ermöglichen den Schüler-Roboter selber zu besitzen. Die ständige Verfügbarkeit *zu Hause* schafft zusätzliche Möglichkeiten zur selbständigen Nutzung.
 
 ### 2. Erstellung Unterlagen Programmierkurs
 
@@ -54,30 +53,28 @@ Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine 
 
 ## Messbare Ergebnisse
 
-### 1. Hardwarebasis (Version 0) definiert
+### 1. Hardwarebasis definiert
 
-* Ziel: bis Ende Dezember 2017
-* Gesamtpreis der Komponenten: < 175 € (50% Listpreis des kommerziellen Marktführers)
+* Der [GoPiGo3](https://www.dexterindustries.com/gopigo3/) wurde als Hardwarebasis ausgewählt.
 * Nachbaubar durch Schüler mit Hilfe Erwachsener
 * Nur haushaltsübliche Werkzeuge werden benötigt, oder liegen bei (ok: Schere, Schraubendreher; nicht ok: Lötkolben, Spannungsmessgerät)
-* Beschreibung kann stichpunktartig sein
+* TODO: [Anleitung](../tutorials/build_a_robot)
 
 ### 2. Integration mit Scratch implementiert
 
-* Ziel: bis Ende Dezember 2017
 * Abhängigkeit zu #1
-* funktionierend und als Open Source [released](https://github.com/markokimpel/rrbscratchextension)
+* Veröffentlichung als Open Source
+* In Arbeit: [GoPiGo Scratch Extension](https://github.com/markokimpel/gopigoscratchextension)
 
-### 3. Kurs zum Bau des Roboters und einfache Scratch Programmierung vorbereitet
+### 3. Kurs Scratch Programmierung vorbereitet
 
-* Ziel: bis Ende Dezember 2017
 * Abhängigkeiten zu #1 und #2
 * Beschreibungen können stichpunktartig sein
+* In Arbeit: [Programmieren mit Scratch](../tutorials/programming_with_scratch)
 
 ### 4. Ersten Kurs gehalten
 
-* Ziel: bis Ende Januar 2018
 * Abhängigkeit zu #3
-
+* TODO
 
 Referenz: Die Gliederung orientiert sich an Salesforces [V2MOM](https://trailhead.salesforce.com/de/modules/manage_the_sfdc_organizational_alignment_v2mom/units/msfw_oav2m_creating_org_alignment_v2mom). (Es wurde eine andere deutsche Übersetzung gewählt.)
