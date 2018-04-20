@@ -260,21 +260,19 @@ Beobachtung:
 
 ## TODOs
 
-Übung: Blinker beim Abbiegen
+Übung X: Blinker beim Abbiegen
+Übung X: Lidar
+Übung X: IFR Approach
+Übung Y: Object Avoidance
 
-Übung: Radar
-
-Übung: IFR Approach
-
-Übung Y: Automatische Steuerung
-
-/ Sequenz
-/ Verzweigung
-/ Schleife
-/ Ereignisorientierung
-/ Parallelität
-/ Variablen 
-/ Unterprogramme
+Programmiertechniken:
+- Sequenz
+- Verzweigung
+- Schleife
+- Ereignisorientierung
+- Parallelität
+- Variablen 
+- Unterprogramme
 
 *Copyright 2018 Marko Kimpel*
 
