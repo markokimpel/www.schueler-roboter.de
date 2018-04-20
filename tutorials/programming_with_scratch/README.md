@@ -50,6 +50,7 @@ Press Ctrl-C to stop server
 
 ## Scratch starten
 
+* Scratch ist Teil der Rasbian Distribution und damit Teil des Schüler-Roboter Images.
 * Menüpunkt *Programming*, *Scratch 2* starten
 * Die Sprache kann bei Bedarf geändert werden. Hierzu den Erdball links oben anklicken und die gewünschte Sprache wählen. Viele Texte, aber nicht alle, erscheinen dann in der gewählten Sprache.
 * Das Laden von Erweiterungen funktioniert in Scratch 2 so:
@@ -74,6 +75,7 @@ lrwxrwxrwx 1 pi pi    11 Apr 15 13:58 Project.sb2 -> Project.sbx
 -rw------- 1 pi pi 58064 Apr 15 13:53 Project.sbx
 pi@student-robot:~/Scratch $ 
 ```
+* Nach dem Laden des Projektes erscheinen Blöcke aus der Erweiterung rot. Lade nun die Erweiterung wie oben beschrieben. Die Blöcke erscheinen dann grau und können benutzt werden.
 
 ## Übung 1: Blinken
 
@@ -199,19 +201,52 @@ Beobachtung:
 * Wenn das Script zum Fahren endet, läuft das Script zum Blitzen weiter - bis das Programm gestoppt wird.
 * Das Blitzscript müsste automatisch gestoppt werden, wenn das Fahrscript endet.
 
+### Aufgabe 3.3
+
+* In der Gruppe Steuerung gibt es einen Block zum Stoppen von Scripten.
+* Nutze diesen Block so, dass am Ende der Fahrtstrecke das Warnlicht abgeschaltet wird.
+
+*Beispiellösung*
+
+![Screenshot](images/3.3_solution.png)
+
+[3.3_solution.sbx](scratch/3.3_solution.sbx)
+
+## Übung 4: Manuelle Robotersteuerung
+
+### Programmiertechniken
+
+* Ereignisorientierung
+* Sequenz
+* Schleife
+* Parallelisierung
+
+### Aufgabe 4.1
+
+* Der Roboter soll über die Richtungstasten (Pfeil nach oben, unten, links, rechts) gesteuert werden. Die Leertaste soll den Roboter anhalten. Wird eine Richtungstaste gedrückt, bewegt sich der Roboter solange in diese Richtung, bis eine andere Richtung, oder Stopp gewählt wird.
+* Nutze den *Wenn Taste gedrückt* Block aus der Gruppe Ereignisse.
+* Der Roboter soll sich langsam bewegen. Vorwärts/rückwärts bei maximal 50% Geschwindigkeit, links/rechts bei maximal 30% Geschwindigkeit.
+* Tipp: Implementiere zuerst die Stopp-Taste. :-)
+
+*Beispiellösung*
+
+![Screenshot](images/4.1_solution.png)
+
+[4.1_solution.sbx](scratch/4.1_solution.sbx)
 
 
 
 
 
 
-Blitzen bei Fahrtende stoppen
+
 
 Blinker beim Abbiegen
 
-## Übung X: Manuelle Steuerung
+## Überung: Radar
 
-* Ereignisorientierung
+## Übung: IFR Approach
+
 
 ## Übung Y: Automatische Steuerung
 
@@ -221,7 +256,7 @@ Blinker beim Abbiegen
 / Sequenz
 * Verzweigung
 / Schleife
-* Ereignisorientierung
+/ Ereignisorientierung
 / Parallelität
 * Variablen 
 * Unterprogramme
