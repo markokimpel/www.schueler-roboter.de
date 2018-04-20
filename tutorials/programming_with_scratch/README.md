@@ -203,7 +203,7 @@ Beobachtung:
 
 ### Aufgabe 3.3
 
-* In der Gruppe Steuerung gibt es einen Block zum Stoppen von Scripten.
+* In der Gruppe *Steuerung* gibt es einen Block zum Stoppen von Scripten.
 * Nutze diesen Block so, dass am Ende der Fahrtstrecke das Warnlicht abgeschaltet wird.
 
 *Beispiellösung*
@@ -217,15 +217,15 @@ Beobachtung:
 ### Programmiertechniken
 
 * Ereignisorientierung
-* Sequenz
-* Schleife
-* Parallelisierung
+* Verzweigung
+* Variablen
+* Unterprogramme
 
 ### Aufgabe 4.1
 
 * Der Roboter soll über die Richtungstasten (Pfeil nach oben, unten, links, rechts) gesteuert werden. Die Leertaste soll den Roboter anhalten. Wird eine Richtungstaste gedrückt, bewegt sich der Roboter solange in diese Richtung, bis eine andere Richtung, oder Stopp gewählt wird.
-* Nutze den *Wenn Taste gedrückt* Block aus der Gruppe Ereignisse.
-* Der Roboter soll sich langsam bewegen. Vorwärts/rückwärts bei maximal 50% Geschwindigkeit, links/rechts bei maximal 30% Geschwindigkeit.
+* Nutze den *Wenn Taste gedrückt* Block aus der Gruppe *Ereignisse*.
+* Der Roboter soll sich langsam bewegen: vorwärts/rückwärts bei 50% Geschwindigkeit, links/rechts bei 30% Geschwindigkeit.
 * Tipp: Implementiere zuerst die Stopp-Taste. :-)
 
 *Beispiellösung*
@@ -234,32 +234,47 @@ Beobachtung:
 
 [4.1_solution.sbx](scratch/4.1_solution.sbx)
 
+### Aufgabe 4.2
 
+* Erlaube dem Roboter mit unterschiedlichen Geschwindigkeiten vorwärts und rückwärts zu fahren.
+* Zur Steuerung werden die Tasten Pfeil nach oben und Pfeil nach unten benutzt. Beim Drücken der Pfeil nach oben Taste wird die Geschwindigkeit beim Vorwärtsfahren erhöht bzw. die Geschwindigkeit beim Rückwärtsfahren reduziert. Beispiele: Roboter steht, 1x Pfeil nach oben -> 50% vorwärts, nochmaliges Drücken -> 100% vorwärts. Die Pfeil nach unten Taste reduziert die Geschwindigkeit beim Vorwärtsfahren und erhöht die Geschwindigkeit beim Rückwärtsfahren. Beispiele: Roboter fährt mit 100% vorwärts, 1x Pfeil nach unten -> 50% vorwärts, nochmaliges Drücken -> Stopp, nochmaliges Drücken -> 50% rückwärts, nochmaliges Drücken -> 100% rückwärts.
+* Benutze eine Variable um dir die gewählte Vorwärts/Rückwärts-Geschwindigkeit zu merken. Variablen findest du in der Gruppe *Daten* in Scratch.
 
+*Beispiellösung*
 
+![Screenshot](images/4.2_solution.png)
 
+[4.2_solution.sbx](scratch/4.2_solution.sbx)
 
+### Aufgabe 4.3
 
+* Enthalten mehrere Scripte den gleichen Programmcode, kann es sinnvoll sein, diesen in einen weiteren Block zu verschieben und von verschiedenen Stellen her aufzurufen.
+* Definiere einen neuen Block in der Gruppe *Weitere Blöcke*. Dieser Block die zum Vorwärts-/Rückwärtsfahren notwendigen Schritte enthalten.
 
-Blinker beim Abbiegen
+*Beispiellösung*
 
-## Überung: Radar
+![Screenshot](images/4.3_solution.png)
 
-## Übung: IFR Approach
-
-
-## Übung Y: Automatische Steuerung
+[4.3_solution.sbx](scratch/4.3_solution.sbx)
 
 
 ## TODOs
 
+## Übung: Blinker beim Abbiegen
+
+## Übung: Radar
+
+## Übung: IFR Approach
+
+## Übung Y: Automatische Steuerung
+
 / Sequenz
-* Verzweigung
+/ Verzweigung
 / Schleife
 / Ereignisorientierung
 / Parallelität
-* Variablen 
-* Unterprogramme
+/ Variablen 
+/ Unterprogramme
 
 *Copyright 2018 Marko Kimpel*
 
