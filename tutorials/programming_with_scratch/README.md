@@ -260,13 +260,13 @@ Beobachtung:
 
 ## TODOs
 
-## Übung: Blinker beim Abbiegen
+Übung: Blinker beim Abbiegen
 
-## Übung: Radar
+Übung: Radar
 
-## Übung: IFR Approach
+Übung: IFR Approach
 
-## Übung Y: Automatische Steuerung
+Übung Y: Automatische Steuerung
 
 / Sequenz
 / Verzweigung
