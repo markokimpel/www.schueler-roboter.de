@@ -1,6 +1,6 @@
 [Home](../..)
 
-# Programmierung mit Scratch
+# Programmieren mit Scratch
 
 ## Voraussetzungen
 
