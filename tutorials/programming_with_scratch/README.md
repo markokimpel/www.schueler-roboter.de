@@ -257,13 +257,16 @@ Beobachtung:
 
 [4.3_solution.sbx](scratch/4.3_solution.sbx)
 
-
 ## TODOs
 
+Übung X: Farbspiel Augen
 Übung X: Blinker beim Abbiegen
-Übung X: Lidar
+Übung X: Notbremssystem
+Übung X: Ladar Screen
 Übung X: IFR Approach
-Übung Y: Object Avoidance
+Übung X: Object Avoidance
+Übung X: Kamera
+übung X: Durch Labyrinth fahren
 
 Programmiertechniken:
 - Sequenz
@@ -273,6 +276,9 @@ Programmiertechniken:
 - Parallelität
 - Variablen 
 - Unterprogramme
+
+- Script zum erstellen von .sb2 links für .sbx Dateien
+- Link zum Starten von gpg3server auf Desktop
 
 *Copyright 2018 Marko Kimpel*
 
