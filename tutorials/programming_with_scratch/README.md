@@ -41,6 +41,7 @@ Scratch extension URL: http://127.0.0.1:8080/scratch_extension.js
 
 Press Ctrl-C to stop server
 ```
+
 * Bitte die angezeigten URLs für *GPG3 Server homepage* und *Scratch extension URL* beachten. Diese werden später gebraucht.
 * Bitte das Terminal offen lassen, während man mit Scratch arbeitet. Das Schliessen des Terminals würde den Server stoppen.
 
@@ -65,6 +66,7 @@ Press Ctrl-C to stop server
 * Das Laden und Speichern von Projekten mit Erweiterungen ist etwas hakelig in Scratch 2. Wird in einem Projekt eine Erweiterung verwendet, so verwendet Scratch beim Speichern des Projekts immer den Dateiendung *.sbx* (auch wenn man eine andere angibt). Beim Laden besteht Scratch jedoch auf die Dateiendung *.sb2*.
 * Ein Workaround ist, die Projekte mit *.sbx* Dateinamen zu speichern und einen Link vom *.sb2* Dateinamen auf den *.sbx* Dateinamen zu erstellen. Damit steht der Inhalt der Datei unter zwei verschiedenen Dateinamen zur Verfügung. Bei Laden des Projektes wählt man dann einfach den *.sb2* Dateinamen und läd somit den Inhalt der *.sbx* Datei.
 * Im Terminal:
+
 ```
 pi@student-robot:~/Scratch $ ls -l
 total 60
@@ -76,6 +78,7 @@ lrwxrwxrwx 1 pi pi    11 Apr 15 13:58 Project.sb2 -> Project.sbx
 -rw------- 1 pi pi 58064 Apr 15 13:53 Project.sbx
 pi@student-robot:~/Scratch $ 
 ```
+
 * Nach dem Laden des Projektes erscheinen Blöcke aus der Erweiterung rot. Lade nun die Erweiterung wie oben beschrieben. Die Blöcke erscheinen dann grau und können benutzt werden.
 
 ## Übung 1: Blinken
@@ -121,6 +124,7 @@ pi@student-robot:~/Scratch $
 ### Aufgabe 2.1
 
 * Lass deinen Roboter folgendes Muster fahren.
+
 ```
 +------+
 |      |
@@ -128,6 +132,7 @@ pi@student-robot:~/Scratch $
 |      |
 ^------+
 ```
+
 * Kantenlänge ist jeweils 30 cm.
 * Am Ende soll der Roboter auf der Ausgangsposition stehen und in die gleiche Richtung schauen.
 * Kann das Programm mit einer Schleife vereinfacht werden?
@@ -141,6 +146,7 @@ pi@student-robot:~/Scratch $
 ### Aufgabe 2.2
 
 * Lass deinen Roboter folgendes Muster fahren.
+
 ```
 ^----+
      |
@@ -156,6 +162,7 @@ pi@student-robot:~/Scratch $
 |
 ^
 ```
+
 * Kantenlänge ist jeweils 30 cm.
 * Kann das Programm mit einer Schleife vereinfacht werden?
 
