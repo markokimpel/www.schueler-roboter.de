@@ -29,6 +29,7 @@
 
 * Scratch benötigt eine Erweiterung um den Roboter steuern zu können. Teil der Erweiterung ist der GoPiGo3 Server. Dieser muss zuerst gestartet werden.
 * Terminal öffnen und ausführen
+
 ```
 pi@student-robot:~ $ cd gopigoscratchextension/
 pi@student-robot:~/gopigoscratchextension $ cd gpg3server/
