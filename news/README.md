@@ -8,4 +8,4 @@ Foto: [Devoxx4Kids Thüringen](https://twitter.com/Devoxx4KidsTh/status/98784373
 ![Scratch](images/2018-04-21_Scratch.jpg)
 Schüler haben ein Scratch Programm geschrieben, dass den Roboter voll autonom durch ein Labyrinth fahren lässt.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8GMmT0kK9h0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/8GMmT0kK9h0/0.jpg)](http://www.youtube.com/watch?v=8GMmT0kK9h0)
