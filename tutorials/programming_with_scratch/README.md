@@ -268,12 +268,19 @@ Beobachtung:
 ## TODOs
 
 Übung X: Farbspiel Augen
+
 Übung X: Blinker beim Abbiegen
+
 Übung X: Notbremssystem
+
 Übung X: Ladar Screen
+
 Übung X: IFR Approach
+
 Übung X: Object Avoidance
+
 Übung X: Kamera
+
 übung X: Durch Labyrinth fahren
 
 Programmiertechniken:
