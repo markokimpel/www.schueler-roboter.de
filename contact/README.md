@@ -4,4 +4,4 @@
 
 Fragen, Anregungen, du möchtest über zukünftige Veranstaltungen informiert werden?
 
-Email: info@schueler-roboter.de
+Email: <a href="mailto:info@schueler-roboter.de">info@schueler-roboter.de</a>
