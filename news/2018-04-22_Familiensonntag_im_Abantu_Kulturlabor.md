@@ -1,4 +1,4 @@
-[Home](../..) - [News](README.md)
+[Home](../..) [News](README.md)
 
 # 22-Apr-2018 Familiensonntag im Abantu Kulturlabor
 
