@@ -13,4 +13,4 @@ Schüler haben ein Scratch Programm geschrieben, dass den Roboter voll autonom d
 
 [![Roboter in Labyrinth](https://img.youtube.com/vi/aE33v_i1N6c/0.jpg)](https://youtu.be/aE33v_i1N6c)
 
-Robi im Labyrinth
+Video: Robi im Labyrinth
