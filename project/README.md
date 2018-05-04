@@ -64,7 +64,7 @@ Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine 
 
 * Abhängigkeit zu #1
 * Veröffentlichung als Open Source
-* In Arbeit: [GoPiGo Scratch Extension](https://github.com/markokimpel/gopigoscratchextension)
+* :white_check_mark: [GoPiGo Scratch Extension](https://github.com/markokimpel/gopigoscratchextension) veröffentlicht
 
 ### 3. Kurs Scratch Programmierung vorbereitet
 
