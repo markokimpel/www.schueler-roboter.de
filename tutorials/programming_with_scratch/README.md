@@ -375,8 +375,6 @@ Neue Figure *Blinker*:
 
 ## TODOs
 
-Übung X: Farbspiel Augen
-
 Übung X: Ladar Screen
 
 Übung X: IFR Approach
