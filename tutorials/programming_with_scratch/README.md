@@ -284,12 +284,14 @@ Beobachtung:
 
 ![Screenshot](images/5.1a_solution.png)
 
+Neue Figure *Blinker*:
+
 ![Screenshot](images/5.1b_solution.png)
 
-- Beim Drücken der Tasten S oder D wird eine Nachricht gesendet und nicht auf deren Verarbeitungsende gewartet. Damit wird ein neuer Ausführungspfad (Thread) für den Empfänger der Nachricht gestartet.
-- Der Ausführungspfad realisiert eine Endlosschleife, die den jeweiligen Blinker regelmäßig an und aus schaltet. Die Endlosschleife wird durch den Block *Stoppe andere Scripte der Figur* von aussen beendet.
-
 [5.1_solution.sbx](scratch/5.1_solution.sbx)
+
+- Beim Drücken der Tasten S oder D wird eine Nachricht gesendet und nicht auf deren Verarbeitungsende gewartet (asynchrone Verarbeitung). Damit wird ein neuer Ausführungspfad (Thread) für den Empfänger der Nachricht gestartet.
+- Der Ausführungspfad ist realisiert als Endlosschleife, die den jeweiligen Blinker regelmäßig an und aus schaltet. Die Endlosschleife wird durch den Block *Stoppe andere Skripte der Figur* durch ein anders Skript der Figur.
 
 ### Aufgabe 5.2
 
