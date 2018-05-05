@@ -323,17 +323,63 @@ Neue Figure *Blinker*:
 
 [6.1_solution.sbx](scratch/6.1_solution.sbx)
 
+## Übung 7: Hindernisvermeidung
+
+### Programmiertechniken
+
+* Schleife
+* Verzweigung
+* Variablen
+
+### Aufgabe 7.1
+
+* In dieser Übung soll der Roboter lernen, sich selbständig in seiner Umgebung zu bewegen - ohne anzustossen. Wir beginnen einfach und erweitern das Programm schrittweise.
+* Nach Programmstart soll der Roboter geradeaus fahren, bis er in ca. 20 cm Entfernung ein Hindernis erkennt. Da soll er stehen bleiben und das Programm endet.
+* Tipp: Schreibe auch ein Skript um den Roboter im Notfall mit einem Tastendruck stoppen zu können - eine Art *Notaus*.
+
+*Beispiellösung*
+
+![Screenshot](images/7.1_solution.png)
+
+[7.1_solution.sbx](scratch/7.1_solution.sbx)
+
+### Aufgabe 7.2
+
+* Der Roboter soll vor Hindernissen so lange stehen bleiben, bis diese sich wegbewegen (z.B. ein Mensch). Ist das Hindernis mindestens 30 cm vom Roboter entfernt, setzt er seine Fahrt fort. Bis er wieder auf ein Hindernis trifft...
+
+*Beispiellösung*
+
+![Screenshot](images/7.2_solution.png)
+
+[7.2_solution.sbx](scratch/7.2_solution.sbx)
+
+### Aufgabe 7.3
+
+* Statt vor dem Hindernis stehen zu bleiben und zu warten, soll sich der Roboter langsam auf der Stelle drehen und damit eine freie Bahn suchen. Ist mehr als 30 cm Platz setzt er seine Fahrt fort. Er ist dem Hindernis ausgewichen.
+
+*Beispiellösung*
+
+![Screenshot](images/7.3_solution.png)
+
+[7.3_solution.sbx](scratch/7.3_solution.sbx)
+
+### Aufgabe 7.4
+
+* Stösst der Roboter auf ein Hindernis, soll er den Servo Motor nutzen, um die Entfernungen rechts und links von ihm zu ermitteln. In die Richtung, wo der meiste Platz ist, soll er seine Fahrt fortsetzen. 
+
+*Beispiellösung*
+
+![Screenshot](images/7.4_solution.png)
+
+[7.4_solution.sbx](scratch/7.4_solution.sbx)
+
 ## TODOs
 
 Übung X: Farbspiel Augen
 
-Übung X: Notbremssystem
-
 Übung X: Ladar Screen
 
 Übung X: IFR Approach
-
-Übung X: Object Avoidance
 
 Übung X: Kamera
 
