@@ -55,22 +55,22 @@ Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine 
 
 ### 1. Hardwarebasis definiert
 
-* Der [GoPiGo3](https://www.dexterindustries.com/gopigo3/) wurde als Hardwarebasis ausgewählt.
 * Nachbaubar durch Schüler mit Hilfe Erwachsener
 * Nur haushaltsübliche Werkzeuge werden benötigt, oder liegen bei (ok: Schere, Schraubendreher; nicht ok: Lötkolben, Spannungsmessgerät)
-* TODO: [Anleitung](../tutorials/build_a_robot)
+* DONE: Der [GoPiGo3](https://www.dexterindustries.com/gopigo3/) wurde als Hardwarebasis ausgewählt. Vielen Dank an die [Lichtwerkstatt](http://www.acp.uni-jena.de/lichtwerkstatt) des Abbe Center of Photonics für die Untestützung.
+* TODO: [Anleitung](../tutorials/build_a_robot/)
 
 ### 2. Integration mit Scratch implementiert
 
 * Abhängigkeit zu #1
 * Veröffentlichung als Open Source
-* :white_check_mark: [GoPiGo Scratch Extension](https://github.com/markokimpel/gopigoscratchextension) veröffentlicht
+* DONE: [GoPiGo Scratch Extension](https://github.com/markokimpel/gopigoscratchextension) veröffentlicht
 
 ### 3. Kurs Scratch Programmierung vorbereitet
 
 * Abhängigkeiten zu #1 und #2
 * Beschreibungen können stichpunktartig sein
-* In Arbeit: [Programmieren mit Scratch](../tutorials/programming_with_scratch)
+* IN_PROGRESS: [Programmieren mit Scratch](../tutorials/programming_with_scratch/)
 
 ### 4. Ersten Kurs gehalten
 
