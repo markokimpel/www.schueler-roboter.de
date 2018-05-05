@@ -57,7 +57,7 @@ Hochwertige Kursunterlagen zu erstellen und zu pflegen ist aufwendig. Ohne eine 
 
 * Nachbaubar durch Schüler mit Hilfe Erwachsener
 * Nur haushaltsübliche Werkzeuge werden benötigt, oder liegen bei (ok: Schere, Schraubendreher; nicht ok: Lötkolben, Spannungsmessgerät)
-* DONE: Der [GoPiGo3](https://www.dexterindustries.com/gopigo3/) wurde als Hardwarebasis ausgewählt. Vielen Dank an die [Lichtwerkstatt](http://www.acp.uni-jena.de/lichtwerkstatt) des Abbe Center of Photonics für die Untestützung.
+* DONE: Der [GoPiGo3](https://www.dexterindustries.com/gopigo3/) wurde als Hardwarebasis ausgewählt. Vielen Dank an die [Lichtwerkstatt](http://www.acp.uni-jena.de/lichtwerkstatt) des Abbe Center of Photonics für die Unterstützung.
 * TODO: [Anleitung](../tutorials/build_a_robot/)
 
 ### 2. Integration mit Scratch implementiert
