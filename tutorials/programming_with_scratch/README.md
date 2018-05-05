@@ -303,6 +303,26 @@ Neue Figure *Blinker*:
 
 [5.2_solution.sbx](scratch/5.2_solution.sbx)
 
+## Übung 6: Geschwindigkeitsmessung
+
+### Programmiertechniken
+
+* Schleife
+* Verzweigung
+* Variablen
+
+### Aufgabe 6.1
+
+* Der Roboter hat einen Entfernungssensor. Nutze ihn um die Geschwindigkeit eines ihm entgegenkommenden Objekts zu ermitteln.
+* Die Geschwindigkeit soll in cm/s und km/h angezeigt werden.
+* Idee: Es werden zwei Entfernungsmessungen durchgeführt. Zu jeder Messung wird die Zeit mit Hilfe der *Stoppuhr* ermittelt. Aus dem Entfernungsunterschied und der dafür benötigten Zeitdauer wird die Geschwindigkeit errechnet.
+
+*Beispiellösung*
+
+![Screenshot](images/6.1_solution.png)
+
+[6.1_solution.sbx](scratch/6.1_solution.sbx)
+
 ## TODOs
 
 Übung X: Farbspiel Augen
