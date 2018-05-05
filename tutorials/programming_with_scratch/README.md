@@ -83,7 +83,7 @@ pi@student-robot:~/Scratch $
 
 ## Übung 1: Blinken
 
-### Erlernte Programmiertechniken
+### Programmiertechniken
 
 * Sequenz
 * Schleife
@@ -172,7 +172,7 @@ pi@student-robot:~/Scratch $
 
 [2.2_solution.sbx](scratch/2.2_solution.sbx)
 
-## Übung 3: Bewegungslichter
+## Übung 3: Warnlichter beim Fahren
 
 ### Programmiertechniken
 
@@ -265,11 +265,45 @@ Beobachtung:
 
 [4.3_solution.sbx](scratch/4.3_solution.sbx)
 
+## Übung 5: Blinken beim Abbiegen
+
+### Programmiertechniken
+
+* Ereignisorientierung
+* Nachrichten
+* Klassen
+* Parallelisierung
+
+### Aufgabe 5.1
+
+* Die manuelle Robotersteuerung aus Übung 4 soll um die Funktion des Blinkens erweitert werden. Als Blinker werden die roten LEDs an der Vorderseite des GoPiGo3 genutzt.
+* Über die Tasten *S* und *D* soll der linke bzw. rechte Blinker aktiviert werden. Nach der Aktivierung blinkt er regelmäßig, bis ein anderer Blinker oder die Taste *X* gedrückt wird. Taste X schaltet die Blinker ab.
+* Die Blinkfunktion soll über eine weitere Figur realisiert werden, die auf die Nachrichten *flash_left_blinker*, *flash_right_blinker* und *stop_blinkers* reagiert. Diese Nachrichten werden jeweils bei Druck der Tasten S, D und X gesendet.
+
+*Beispiellösung*
+
+![Screenshot](images/5.1a_solution.png)
+
+![Screenshot](images/5.1b_solution.png)
+
+- Beim Drücken der Tasten S oder D wird eine Nachricht gesendet und nicht auf deren Verarbeitungsende gewartet. Damit wird ein neuer Ausführungspfad (Thread) für den Empfänger der Nachricht gestartet.
+- Der Ausführungspfad realisiert eine Endlosschleife, die den jeweiligen Blinker regelmäßig an und aus schaltet. Die Endlosschleife wird durch den Block *Stoppe andere Scripte der Figur* von aussen beendet.
+
+[5.1_solution.sbx](scratch/5.1_solution.sbx)
+
+### Aufgabe 5.2
+
+* Die Blinker sollen nicht nur manuell ausgeschaltet werden können, sondern gehen automatisch aus, wenn nach der Kurvenfahrt wieder in die Geradeausfahrt gewechselt wird.
+
+*Beispiellösung*
+
+![Screenshot](images/5.2_solution.png)
+
+[5.2_solution.sbx](scratch/5.2_solution.sbx)
+
 ## TODOs
 
 Übung X: Farbspiel Augen
-
-Übung X: Blinker beim Abbiegen
 
 Übung X: Notbremssystem
 
@@ -288,9 +322,11 @@ Programmiertechniken:
 - Verzweigung
 - Schleife
 - Ereignisorientierung
-- Parallelität
+- Parallelisierung
+- Nachrichten
 - Variablen 
 - Unterprogramme
+- Klassen
 
 - Script zum erstellen von .sb2 links für .sbx Dateien
 - Link zum Starten von gpg3server auf Desktop
