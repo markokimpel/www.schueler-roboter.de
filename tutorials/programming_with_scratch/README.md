@@ -83,7 +83,7 @@ pi@student-robot:~/Scratch $
 
 ## Übung 1: Blinken
 
-### Erlernte Programmiertechniken
+### Programmiertechniken
 
 * Sequenz
 * Schleife
@@ -172,7 +172,7 @@ pi@student-robot:~/Scratch $
 
 [2.2_solution.sbx](scratch/2.2_solution.sbx)
 
-## Übung 3: Bewegungslichter
+## Übung 3: Warnlichter beim Fahren
 
 ### Programmiertechniken
 
@@ -265,19 +265,119 @@ Beobachtung:
 
 [4.3_solution.sbx](scratch/4.3_solution.sbx)
 
+## Übung 5: Blinken beim Abbiegen
+
+### Programmiertechniken
+
+* Ereignisorientierung
+* Nachrichten
+* Klassen
+* Parallelisierung
+
+### Aufgabe 5.1
+
+* Die manuelle Robotersteuerung aus Übung 4 soll um die Funktion des Blinkens erweitert werden. Als Blinker werden die roten LEDs an der Vorderseite des GoPiGo3 genutzt.
+* Über die Tasten *S* und *D* soll der linke bzw. rechte Blinker aktiviert werden. Nach der Aktivierung blinkt er regelmäßig, bis ein anderer Blinker oder die Taste *X* gedrückt wird. Taste X schaltet die Blinker ab.
+* Die Blinkfunktion soll über eine weitere Figur realisiert werden, die auf die Nachrichten *flash_left_blinker*, *flash_right_blinker* und *stop_blinkers* reagiert. Diese Nachrichten werden jeweils bei Druck der Tasten S, D und X gesendet.
+
+*Beispiellösung*
+
+![Screenshot](images/5.1a_solution.png)
+
+Neue Figure *Blinker*:
+
+![Screenshot](images/5.1b_solution.png)
+
+[5.1_solution.sbx](scratch/5.1_solution.sbx)
+
+- Beim Drücken der Tasten S oder D wird eine Nachricht gesendet und nicht auf deren Verarbeitungsende gewartet (asynchrone Verarbeitung). Damit wird ein neuer Ausführungspfad (Thread) für den Empfänger der Nachricht gestartet.
+- Der Ausführungspfad ist realisiert als Endlosschleife, die den jeweiligen Blinker regelmäßig an und aus schaltet. Die Endlosschleife wird durch den Block *Stoppe andere Skripte der Figur* durch ein anders Skript der Figur.
+
+### Aufgabe 5.2
+
+* Die Blinker sollen nicht nur manuell ausgeschaltet werden können, sondern gehen automatisch aus, wenn nach der Kurvenfahrt wieder in die Geradeausfahrt gewechselt wird.
+
+*Beispiellösung*
+
+![Screenshot](images/5.2_solution.png)
+
+[5.2_solution.sbx](scratch/5.2_solution.sbx)
+
+## Übung 6: Geschwindigkeitsmessung
+
+### Programmiertechniken
+
+* Schleife
+* Verzweigung
+* Variablen
+
+### Aufgabe 6.1
+
+* Der Roboter hat einen Entfernungssensor. Nutze ihn um die Geschwindigkeit eines ihm entgegenkommenden Objekts zu ermitteln.
+* Die Geschwindigkeit soll in cm/s und km/h angezeigt werden.
+* Idee: Es werden zwei Entfernungsmessungen durchgeführt. Zu jeder Messung wird die Zeit mit Hilfe der *Stoppuhr* ermittelt. Aus dem Entfernungsunterschied und der dafür benötigten Zeitdauer wird die Geschwindigkeit errechnet.
+
+*Beispiellösung*
+
+![Screenshot](images/6.1_solution.png)
+
+[6.1_solution.sbx](scratch/6.1_solution.sbx)
+
+## Übung 7: Hindernisvermeidung
+
+### Programmiertechniken
+
+* Schleife
+* Verzweigung
+* Variablen
+
+### Aufgabe 7.1
+
+* In dieser Übung soll der Roboter lernen, sich selbständig in seiner Umgebung zu bewegen - ohne anzustossen. Wir beginnen einfach und erweitern das Programm schrittweise.
+* Nach Programmstart soll der Roboter geradeaus fahren, bis er in ca. 20 cm Entfernung ein Hindernis erkennt. Da soll er stehen bleiben und das Programm endet.
+* Tipp: Schreibe auch ein Skript um den Roboter im Notfall mit einem Tastendruck stoppen zu können - eine Art *Notaus*.
+
+*Beispiellösung*
+
+![Screenshot](images/7.1_solution.png)
+
+[7.1_solution.sbx](scratch/7.1_solution.sbx)
+
+### Aufgabe 7.2
+
+* Der Roboter soll vor Hindernissen so lange stehen bleiben, bis diese sich wegbewegen (z.B. ein Mensch). Ist das Hindernis mindestens 30 cm vom Roboter entfernt, setzt er seine Fahrt fort. Bis er wieder auf ein Hindernis trifft...
+
+*Beispiellösung*
+
+![Screenshot](images/7.2_solution.png)
+
+[7.2_solution.sbx](scratch/7.2_solution.sbx)
+
+### Aufgabe 7.3
+
+* Statt vor dem Hindernis stehen zu bleiben und zu warten, soll sich der Roboter langsam auf der Stelle drehen und damit eine freie Bahn suchen. Ist mehr als 30 cm Platz setzt er seine Fahrt fort. Er ist dem Hindernis ausgewichen.
+
+*Beispiellösung*
+
+![Screenshot](images/7.3_solution.png)
+
+[7.3_solution.sbx](scratch/7.3_solution.sbx)
+
+### Aufgabe 7.4
+
+* Stösst der Roboter auf ein Hindernis, soll er den Servo Motor nutzen, um die Entfernungen rechts und links von ihm zu ermitteln. In die Richtung, wo der meiste Platz ist, soll er seine Fahrt fortsetzen. 
+
+*Beispiellösung*
+
+![Screenshot](images/7.4_solution.png)
+
+[7.4_solution.sbx](scratch/7.4_solution.sbx)
+
 ## TODOs
-
-Übung X: Farbspiel Augen
-
-Übung X: Blinker beim Abbiegen
-
-Übung X: Notbremssystem
 
 Übung X: Ladar Screen
 
 Übung X: IFR Approach
-
-Übung X: Object Avoidance
 
 Übung X: Kamera
 
@@ -288,9 +388,11 @@ Programmiertechniken:
 - Verzweigung
 - Schleife
 - Ereignisorientierung
-- Parallelität
+- Parallelisierung
+- Nachrichten
 - Variablen 
 - Unterprogramme
+- Klassen
 
 - Script zum erstellen von .sb2 links für .sbx Dateien
 - Link zum Starten von gpg3server auf Desktop
