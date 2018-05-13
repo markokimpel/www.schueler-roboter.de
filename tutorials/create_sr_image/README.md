@@ -23,6 +23,10 @@ TODO
 1. Eine große Datei *.placeholder* (Datei in [zip](files/placeholder1.5gb.zip)) in das Verzeichnis *os/* legen. Die Datei dient dazu, Platz in der ersten Partition zu reservieren. Dadurch können auch größere Updates installiert werden.
 1. microSD Karte mit mindestens 8GB mit einer Partition und FAT32 formatieren.
 1. Dateien auf die Karte kopieren.
+1. Karte in den Raspberry stecken.
+1. Netzwerkkabel in den Raspberry stecken.
+1. Raspberry anschalten. Es muss keine Tastatur oder Monitor mit dem Raspberry verbunden sein. Der Raspberry installiert selbständig Raspbian. Die Installation ist abgeschlossen, wenn die Schreib LED aus bleibt.
+1. 
 
 ## Referenzen
 
