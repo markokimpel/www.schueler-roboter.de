@@ -51,7 +51,18 @@ sudo shutdown -r now
     - Boot Options > Desktop / CLI: Desktop Autologin
     - Interface Options: enable Camera, VNC, SPI, I2C
     - Reboot
-1. *.bashrc* hinzufügen `alias ll='ls -laF'`
+1. In *.bashrc* hinzufügen `alias ll='ls -laF'`
+
+TODO
+
+1. Root Partition sichern
+    ```
+    sudo apt install bsdtar
+    sudo mkdir /mnt/transfer
+    sudo mount -t cifs -o user=username //fileserver/folder /mnt/transfer
+    cd /
+    sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpf /mnt/transfer/myroot.tar .
+    ```
 
 ## Referenzen
 
