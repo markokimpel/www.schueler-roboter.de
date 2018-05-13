@@ -28,16 +28,21 @@ TODO
 1. Raspberry anschalten. Es muss keine Tastatur oder Monitor mit dem Raspberry verbunden sein. Der Raspberry installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 1. Netzwerkadresse ermitteln
 1. Mit Raspberry über ssh verbinden. Nutzername/Passwort sind *pi*/*raspberry*.
-1. Passwort ändern. 'passwd', *raspberry*, 2x *myr0bot*
-1. `sudo apt update`
-1. `sudo apt upgrade`
-1. reboot if needed
+1. Passwort ändern. `passwd`, *raspberry*, 2x *myr0bot*
+1. Raspbian aktualisieren
+
+    ```
+    sudo apt update
+    sudo apt upgrade
+    ```
+
+    - reboot if needed
 1. `sudo raspi-config`
     - Network Options > Hostname: *student-robot*
     - Boot Options > Desktop / CLI: Desktop Autologin
     - Interface Options: enable Camera, VNC, SPI, I2C
     - Reboot
-1. 
+1. *.bashrc* hinzufügen `alias ll='ls -laF'`
 
 ## Referenzen
 
