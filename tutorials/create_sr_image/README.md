@@ -2,7 +2,7 @@
 
 # Basisinstallation Software
 
-Für die meisten Nutzer sind nur die Punkte *SD Karte initial beschreiben* und *SD Karte aktualisieren* relevant.
+Für die meisten Nutzer sind nur die Punkte *SD Karte initial beschreiben* und *SD Karte aktualisieren* relevant. Gruppenleiter sollten auch *Installation zurücksetzen* lesen. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages gedacht.
 
 ## SD Karte initial beschreiben
 
@@ -12,7 +12,16 @@ TODO
 
 TODO
 
-## SD Kartenabbild erstellen
+## Installation zurücksetzen
+
+TODO
+
+```
+sudo rm /media/pi/SETTINGS/installed_os.json
+sudo shutdown -r now
+```
+
+## SD Kartenimage erstellen
 
 1. NOOBS von https://www.raspberrypi.org/downloads/noobs/ herunterladen, z.B. *NOOBS_v2_8_1.zip*.
 1. SHA-256 kontrollieren
