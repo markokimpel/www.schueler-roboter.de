@@ -333,7 +333,6 @@ Vor *exit 0* einfügen
 ```
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iptables -t nat -A POSTROUTING -o wlan1 -j MASQUERADE
-
 ```
 
 Wpa_supplicant soll nur wlan1 steuern (nicht aber den Access Point wlan0).
