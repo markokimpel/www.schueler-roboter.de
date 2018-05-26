@@ -376,6 +376,12 @@ DI_Sensors installieren - wird für den Abstandssensor benötigt.
 curl -L https://dexterindustries.com/update_sensors | sudo bash
 ```
 
+Modul I2C_mutex nachinstallieren. Das fehlt derzeit irgendwie bei den anderen Packages.
+
+```
+curl -L https://dexterindustries.com/update_tools | sudo bash -s - --install-python-package --use-python3-exe-too --update-aptget --install-deb-deps
+```
+
 ### GoPiGo Scratch Erweiterung installieren
 
 Die Erweiterung installieren.
@@ -393,8 +399,6 @@ Die Erweiterung testen.
 * Mit *VNC Viewer* zu *student-robot* verbinden
 * Bildschirmauflösung auf 1280x1024 ändern: Menu > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig
 * In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`
-
-
 
 TODO
 
