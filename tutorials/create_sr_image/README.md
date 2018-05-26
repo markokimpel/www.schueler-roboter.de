@@ -287,6 +287,64 @@ wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 ```
 
+Position der Konfigurationsdatei festlegen
+
+```
+sudo nano /etc/default/hostapd
+```
+
+Zeile *#DAEMON_CONF=""* ändern in
+
+```
+DAEMON_CONF="/etc/hostapd/hostapd.conf"
+```
+
+Services starten
+
+```
+sudo systemctl start hostapd
+sudo systemctl start dnsmasq
+```
+
+IP-Forwarding aktivieren
+
+```
+sudo nano /etc/sysctl.conf
+```
+
+Ändere Zeile *#net.ipv4.ip_forward=1* in
+
+```
+net.ipv4.ip_forward=1
+```
+
+Masquerate für ausgehende Verbindungen auf eth0 und wlan1.
+
+```
+sudo nano /etc/rc.local
+```
+
+Vor *exit 0* einfügen
+
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o wlan1 -j MASQUERADE
+
+```
+
+Wpa_supplicant soll nur wlan1 steuern (nicht aber den Access Point wlan0).
+
+```
+sudo mv /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant-wlan1.conf
+```
+
+Reboot
+
+```
+sudo shutdown -r now
+```
+
+
 
 TODO
 
