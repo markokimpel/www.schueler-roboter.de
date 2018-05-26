@@ -39,7 +39,7 @@ sudo shutdown -r now
 
 ## SD Kartenimage erstellen
 
-### Kopieren von reinem Raspbian auf die SD Karte
+### Kopieren von NOOBS und Raspbian auf die SD Karte
 
 Die folgenden Schritte auf einem anderen Rechner als dem Raspberry Pi ausführen (z.B. einem Windows Laptop). Der Rechner muss auf die SD Karte schreiben können.
 
@@ -163,6 +163,46 @@ Bei den *ls aliases* hinzufügen
 alias ll='ls -laF'
 ```
 
+Feste Namen den Wi-Fi Adaptern zuweisen.
+
+Nach dem Einstecken des USB WLAN Adapters hat der Raspberry Pi zwei WLAN Schnittstellen. Diese heissen *wlan0* und *wlan1*. Welche Schnittstelle welchen Namen bekommt ist zufällig und kann sich zwischen Neustarts ändern. Damit lässt sich kein Access Point aufsetzen oder Firewall Regeln definieren. Die *Predictable Network Interface Names* sind nur bedingt hilfreich. Beim Raspberry bekommt der USB WLAN Adapter damit eine ID, die seine MAC Adresse beinhaltet. Das macht die Konfiguration aufwendiger, wenn das gleiche SD Kartenimage für mehrere Raspberries benutzt werden soll. Schlimmer noch: das interne WLAN ist manchmal wlan0, manchmal wlan1. Folgende Änderungen erzwingen den namen wlan0 für das interne WLAN und wlan1 für einen USB Adapter. Nur ein WLAN USB Adapter darf gleichzeitig benutzt werden.
+
+Neue Datei anlegen
+
+```
+sudo nano /etc/udev/rules.d/72-wlan-geo-dependent.rules
+```
+
+Als Inhalt einfügen
+
+```
+#
+# +---------------+
+# | wlan1 | wlan1 |
+# +-------+-------+
+# | wlan1 | wlan1 |
+# +---------------+ (RPI USB ports with position independent device names for a maximum of 1 optional wifi dongle)
+# 
+# | wlan0 | (onboard wifi)
+#
+ACTION=="add", SUBSYSTEM=="net", SUBSYSTEMS=="sdio", KERNELS=="mmc1:0001:1", NAME="wlan0"
+ACTION=="add", SUBSYSTEM=="net", SUBSYSTEMS=="usb",  KERNELS=="1-1.2",       NAME="wlan1"
+ACTION=="add", SUBSYSTEM=="net", SUBSYSTEMS=="usb",  KERNELS=="1-1.4",       NAME="wlan1"
+ACTION=="add", SUBSYSTEM=="net", SUBSYSTEMS=="usb",  KERNELS=="1-1.3",       NAME="wlan1"
+ACTION=="add", SUBSYSTEM=="net", SUBSYSTEMS=="usb",  KERNELS=="1-1.5",       NAME="wlan1"
+```
+
+Neu starten
+
+```
+sudo shutdown -r now
+```
+
+*wlan0* sollte jetzt der interne WLAN Adapter sein, *wlan1* der USB Adapter, *eth0* der Kabelport und *lo* das Loopback Device.
+
+```
+ifconfig
+```
 
 
 TODO
@@ -179,3 +219,5 @@ TODO
 ## Referenzen
 
 * https://github.com/raspberrypi/noobs
+* https://www.raspberrypi.org/forums/viewtopic.php?t=198946
+* https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
