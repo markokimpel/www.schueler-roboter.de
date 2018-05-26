@@ -313,9 +313,9 @@ Neue Figure *Blinker*:
 
 ### Aufgabe 6.1
 
-* Der Roboter hat einen Entfernungssensor. Nutze ihn um die Geschwindigkeit eines ihm entgegenkommenden Objekts zu ermitteln.
+* Der Roboter hat einen Abstandssensor. Nutze ihn um die Geschwindigkeit eines ihm entgegenkommenden Objekts zu ermitteln.
 * Die Geschwindigkeit soll in cm/s und km/h angezeigt werden.
-* Idee: Es werden zwei Entfernungsmessungen durchgeführt. Zu jeder Messung wird die Zeit mit Hilfe der *Stoppuhr* ermittelt. Aus dem Entfernungsunterschied und der dafür benötigten Zeitdauer wird die Geschwindigkeit errechnet.
+* Idee: Es werden zwei Abstandsmessungen durchgeführt. Zu jeder Messung wird die Zeit mit Hilfe der *Stoppuhr* ermittelt. Aus dem Abstandsunterschied und der dafür benötigten Zeitdauer wird die Geschwindigkeit errechnet.
 
 *Beispiellösung*
 
@@ -365,7 +365,7 @@ Neue Figure *Blinker*:
 
 ### Aufgabe 7.4
 
-* Stösst der Roboter auf ein Hindernis, soll er den Servo Motor nutzen, um die Entfernungen rechts und links von ihm zu ermitteln. In die Richtung, wo der meiste Platz ist, soll er seine Fahrt fortsetzen. 
+* Stösst der Roboter auf ein Hindernis, soll er den Servo Motor nutzen, um den Freiraum rechts und links von ihm zu ermitteln. In die Richtung, wo der meiste Platz ist, soll er seine Fahrt fortsetzen. 
 
 *Beispiellösung*
 
