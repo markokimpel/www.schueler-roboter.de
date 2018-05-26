@@ -2,13 +2,29 @@
 
 # Basisinstallation Software
 
-Für die meisten Nutzer sind nur die Punkte *SD Karte initial beschreiben* und *SD Karte aktualisieren* relevant. Gruppenleiter sollten auch *Installation zurücksetzen* lesen. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages gedacht.
+Der Roboter nutzt einen Raspberry Pi als Herzstück. Das Standard-Betriebssystem für den Raspberry Pi ist [Raspbian](https://de.wikipedia.org/wiki/Raspberry_Pi#Raspbian). Es gibt aber auch Alternativen. Beispielsweise bietet Dexter Industries für den GoPiGo3 [DexterOS](https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics/), [Raspbian for Robots](https://www.dexterindustries.com/raspberry-pi-robot-software/) und [Cinch](https://www.dexterindustries.com/howto/use-cinch-operating-system/) an. DexterOS ist leicht zu benutzen und zu updaten, beinhaltet eine Scratch-ähnliche Umgebung namens Bloxter ([Onlineversion](http://www.bloxter.com/)) und eine Entwicklungsumgebung für Python. DexterOS ist Closed Source und nicht erweiterbar - kein freier Zugriff auf das Dateisystem, keine Installation eigener Software. Raspbian for Robots basiert auf Raspbian, mit zusätzlicher Software von Dexter Industries. Cinch soll das Erstellen eines Wi-Fi Access Points ermöglichen.
+
+Für die Experimente mit dem Schüler-Roboter wird eine eigene Softwareinstallation benutzt:
+* Basis ist ein reines Raspbian.
+* Mit Bibliotheken um den GoPiGo3 anzusteuern.
+* Sie enthält weitere Software für die Workshops, z.B. Integration mit Scratch 2 Offline Editor und ScratchX.
+* Der im GoPiGo3 verbaute Raspberry Pi muss nicht mit Tastatur, Maus oder Bildschirm verbunden werden - er wird *headless* betrieben.
+* Funktionen zum Aktualisieren und Zurücksetzen der Installation.
+* Die SD Karte muss für Aktualisierungen und zum Zurücksetzen der Installation nicht entfernt werden.
+* Automatische Erstellung eines Wi-Fi Access Points zum leichten kabellosen Verbinden mit dem Roboter.
+* Zusätzlich kann sich der Roboter über einen USB WLAN Adapter mit dem lokalen WLAN verbinden.
+
+Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel *SD Karte initial beschreiben* und *SD Karte aktualisieren*. Gruppenleiter sollten auch *Installation anpassen* und *Installation zurücksetzen* lesen. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
 
 ## SD Karte initial beschreiben
 
 TODO
 
 ## SD Karte aktualisieren
+
+TODO
+
+## Installation anpassen
 
 TODO
 
@@ -23,10 +39,14 @@ sudo shutdown -r now
 
 ## SD Kartenimage erstellen
 
-1. NOOBS von https://www.raspberrypi.org/downloads/noobs/ herunterladen, z.B. *NOOBS_v2_8_1.zip*.
-1. SHA-256 kontrollieren
-1. Zip Datei entpacken. Der Inhalt wird in den nächsten Schritten modifiziert und dann auf eine SD Karte geschrieben.
-1. Parameter ` silentinstall` an die Parameterliste in *recovery.cmdline* anhängen. Dieser Parameter wird für die initiale headless Installation und bei Updates benötigt. Ist bereits ein Betriebssystem installiert, wird NOOBS kein silentinstall durchführen. Damit kann der Parameter immer in der Datei bleiben.
+NOOBS von https://www.raspberrypi.org/downloads/noobs/ herunterladen, z.B. *NOOBS_v2_8_1.zip*.
+
+SHA-256 kontrollieren.
+
+Zip Datei entpacken. Der Inhalt wird in den nächsten Schritten modifiziert und dann auf eine SD Karte geschrieben.
+
+Parameter ` silentinstall` an die Parameterliste in *recovery.cmdline* anhängen. Dieser Parameter wird für die initiale headless Installation und bei Updates benötigt. Ist bereits ein Betriebssystem installiert, wird NOOBS kein silentinstall durchführen. Damit kann der Parameter immer in der Datei bleiben.
+
 1. Eine leere Datei *[ssh](files/ssh)* erstellen. Die Datei liegt auf der gleichen Ebene wie *recovery.cmdline*. Die Datei wird beim Partitionsetup in die boot Partition kopiert und sorgt beim Boot Vorgang dafür, dass der ssh Server gestartet wird und man sich somit remote anmelden kann.
 1. In Verzeichnis *os/* alle Betriebssysteme ausser *Raspbian* löschen (z.B. LibreELEC_RPi, LibreELEC_RPi2).
 1. Eine große Datei *.placeholder* (Datei in [zip](files/placeholder1.5gb.zip)) in das Verzeichnis *os/* legen. Die Datei dient dazu, Platz in der ersten Partition zu reservieren. Dadurch können auch größere Updates installiert werden.
