@@ -214,7 +214,52 @@ ifconfig
 
 ### Access Point, DHCP und DNS Server installieren
 
+Dnsmasq (DHCP und DNS Server) und hostapd (Access Point Software) installieren.
 
+```
+sudo apt-get install dnsmasq hostapd
+```
+
+Services stoppen, bis wir mit der Konfiguration fertig sind.
+
+```
+sudo systemctl stop dnsmasq
+sudo systemctl stop hostapd
+```
+
+Der interne WLAN Adapter (*wlan0*) wird als Access Point genutzt. Ihm wird eine statische IP Adresse zugewiesen.
+
+```
+sudo nano /etc/dhcpcd.conf
+```
+
+Am Ende der Datei einfügen
+
+```
+interface wlan0
+    static ip_address=192.168.42.1/24
+```
+
+Dhcpcd neu starten.
+
+```
+sudo systemctl restart dhcpcd
+```
+
+Dnsmasq konfigurieren
+
+```
+sudo nano /etc/dnsmasq.conf
+```
+
+Am Ende der Datei einfügen
+
+```
+no-hosts
+address=/student-robot/192.168.42.1
+interface=wlan0
+    dhcp-range=192.168.42.100,192.168.42.200,255.255.255.0,24h
+```
 
 
 TODO
