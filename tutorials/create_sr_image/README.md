@@ -14,9 +14,13 @@ Für die Experimente mit dem Schüler-Roboter wird eine eigene Softwareinstallat
 * Automatische Erstellung eines Wi-Fi Access Points zum leichten kabellosen Verbinden mit dem Roboter.
 * Zusätzlich kann sich der Roboter über einen USB WLAN Adapter mit dem lokalen WLAN verbinden.
 
-Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel *SD Karte initial beschreiben* und *SD Karte aktualisieren*. Gruppenleiter sollten auch *Installation anpassen* und *Installation zurücksetzen* lesen. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
+Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel *SD Karte initial beschreiben*, *Mit Roboter verbinden* und *SD Karte aktualisieren*. Gruppenleiter sollten ausserdem *Installation anpassen* und *Installation zurücksetzen* lesen. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
 
 ## SD Karte initial beschreiben
+
+TODO
+
+## Mit Roboter verbinden
 
 TODO
 
@@ -38,6 +42,8 @@ sudo shutdown -r now
 ```
 
 ## SD Kartenimage erstellen
+
+Wer sich nicht mit den Details der Installation herumschlagen möchte nimmt ein vorhandenes Kartenimage (siehe *SD Karte initial beschreiben*) und kann diesen Abschnitt ignorieren. :-)
 
 ### Kopieren von NOOBS und Raspbian auf die SD Karte
 
@@ -198,11 +204,17 @@ Neu starten
 sudo shutdown -r now
 ```
 
-*wlan0* sollte jetzt der interne WLAN Adapter sein, *wlan1* der USB Adapter, *eth0* der Kabelport und *lo* das Loopback Device.
+Zuweisung der Gerätenamen kontrollieren
 
 ```
 ifconfig
 ```
+
+*wlan0* sollte jetzt der interne WLAN Adapter sein, *wlan1* der USB Adapter, *eth0* das Ethernet Kabel und *lo* das Loopback Device.
+
+### Access Point, DHCP und DNS Server installieren
+
+
 
 
 TODO
