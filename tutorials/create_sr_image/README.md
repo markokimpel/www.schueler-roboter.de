@@ -353,14 +353,6 @@ Reboot
 sudo shutdown -r now
 ```
 
-Funktion des Access Points prüfen. Netzwerkkabel ist noch eingesteckt.
-
-Laptop mit Netzwerk SSID *student-robot* verbinden. Passwort ist *changeitnow*. Der Laptop sollte eine IP Adresse im Bereich *192.168.42.100-200* erhalten.
-
-Mit ssh nach *student-robot* (oder *192.168.42.1*) verbinden.
-
-Auf eine Internetseite, z.B. https://www.schueler-roboter.de/ zugreifen (geht nur, wenn über Ethernet auf das Internet zugegriffen werden kann).
-
 ### GoPiGo3 Software installieren
 
 GoPiGo3 Software installieren und Reboot. Die Software beinhaltet u.a. einen Service für die GoPiGo3 Power LED und den Power Schalter, sowie Python Bibliotheken für GoPiGo3 Hardware.
@@ -390,29 +382,53 @@ Die Erweiterung installieren.
 git clone https://github.com/markokimpel/gopigoscratchextension.git ~/student-robot.org/gopigoscratchextension/
 ```
 
-Die Erweiterung testen.
+### Installation testen
 
 * Akku mit GoPiGo3 verbinden.
 * USB Kabel entfernen.
 * Ethernet Kabel entfernen.
-* Laptop mit Access Point *student-robot* verbinden
-* Mit *VNC Viewer* zu *student-robot* verbinden
-* Bildschirmauflösung auf 1280x1024 ändern: Menu > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig
+* Laptop mit Access Point *student-robot*, passwort *changeitnow* verbinden.
+* Der Laptop sollte eine IP Adresse im Bereich 192.168.4.100-200 erhalten haben.
+* Mit *VNC Viewer* zu *student-robot* verbinden, Nutzer *pi*/*myr0bot*.
+* Bildschirmauflösung auf 1280x1024 ändern: Menü > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig
+* Bluetooth abschalten
+* Adapter wlan1 mit lokalem WLAN verbinden.
+* Öffentliche Webseite, z.B. https://www.schueler-roboter.de/, auf Laptop öffnen (bedeutet, dass IP Forwarding funktioniert).
 * In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`
+* Scratch 2 starten: Menü *Programming* > *Scratch 2*
+* Beispielprogramm *~/student-robot.org/gopigoscratchextension/scratch_examples/Simple Manual Rover.sb2* öffnen
+* Experimentelle Erweiterung laden: *http://student-robot:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)
+* Bewegungen testen
+* Abstandssensor testen
+* In weiterem Terminal: `cd ~/student-robot.org/gopigoscratchextension/streamingserver/`, `./run.sh`
+* Video in Browser testen: http://student-robot:8081/
+* Beide Server stoppen
+* Zugangsdaten zum lokalen Netzwerk löschen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
 
-TODO
+### Root Partition sichern
 
-sudo apt autoremove
-
-Root Partition sichern
+Nicht benötigte Pakete entfernen, ggf. Reboot.
 
 ```
- sudo apt install bsdtar
- sudo mkdir /mnt/transfer
- sudo mount -t cifs -o user=username //fileserver/folder /mnt/transfer
- cd /
- sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpf /mnt/transfer/myroot.tar .
- ```
+sudo apt autoremove
+[ -f /var/run/reboot-required ] && sudo shutdown -r now
+```
+
+Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der Partition gespeichert werden, z.B. auf einem SMB Share.
+
+```
+sudo apt install bsdtar
+sudo mkdir /mnt/transfer
+sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
+cd /
+sudo sh -c "bsdtar --numeric-owner --format gnutar --one-file-system -cpf - . | xz -9 -e > /mnt/transfer/customroot.tar.xz"
+```
+
+Während der Ausführung von bsdtar werden die folgenden Fehlermeldungen auf stderr ausgegeben. Sie können ignoriert werden.
+* *bsdtar: Couldn't list extended attributes: No data available*: diese Fehlermeldung bezieht sich auf das Verzeichnis /media/pi/
+* Viele Male *: tar format cannot archive socket*: diese Fehlermeldung bezieht sich auf Sockets im Verzeichnis /var/lib/samba/private/msg.sock/
+
+TODO
 
 ## Referenzen
 
