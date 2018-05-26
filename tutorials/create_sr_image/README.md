@@ -71,11 +71,11 @@ Die lokalen Dateien behalten. Wir brauchen sie später bei der Erstellung des Im
 
 ### Raspbian konfigurieren
 
-SD Karte in den Raspberry stecken.
+SD Karte in den Raspberry Pi des GoPiGo3 stecken.
 
-Netzwerkkabel in den Raspberry stecken.
+Ethernet Netzwerkkabel in den Raspberry stecken.
 
-Raspberry anschalten. Es muss keine Tastatur oder Monitor mit dem Raspberry verbunden sein. Der Raspberry installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+Raspberry Pi/GoPiGo3 anschalten. Es muss keine Tastatur oder Monitor mit dem Raspberry verbunden sein. Der Raspberry installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Netzwerkadresse ermitteln
 
@@ -343,6 +343,15 @@ Reboot
 ```
 sudo shutdown -r now
 ```
+
+Funktion des Access Points prüfen. Netzwerkkabel ist noch eingesteckt.
+
+Laptop mit Netzwerk SSID *student-robot* verbinden. Passwort ist *changeitnow*. Der Laptop sollte eine IP Adresse im Bereich *192.168.42.100-200* erhalten.
+
+Mit ssh nach *student-robot* (oder *192.168.42.1*) verbinden.
+
+Auf eine Internetseite, z.B. https://www.schueler-roboter.de/ zugreifen.
+
 
 
 
