@@ -63,7 +63,7 @@ Dateien auf die Karte kopieren.
 
 Die lokalen Dateien behalten. Wir brauchen sie später bei der Erstellung des Images.
 
-### Raspbian konfigurieren und weitere Software installieren
+### Raspbian konfigurieren
 
 SD Karte in den Raspberry stecken.
 
@@ -75,7 +75,13 @@ Netzwerkadresse ermitteln
 
 Mit Raspberry über ssh verbinden. Nutzername/Passwort sind *pi*/*raspberry*.
 
-Passwort ändern. `passwd`, *raspberry*, 2x *myr0bot*
+Passwort ändern.
+
+```
+passwd
+```
+
+*raspberry*, 2x *myr0bot*
 
 Raspbian aktualisieren, reboot wenn notwendig.
 
@@ -96,7 +102,68 @@ sudo raspi-config
 - Interfacing Options: enable Camera, VNC, SPI, I2C
 - Finish, reboot
 
-1. In *.bashrc* hinzufügen `alias ll='ls -laF'`
+Samba installieren. Damit kann auf Verzeichnisse zugegriffen werden, und Windows Clients finden den Raspberry mit dem Namen.
+
+```
+sudo apt install samba
+```
+
+Nutzer *pi* hinzufügen
+
+```
+sudo smbpasswd -a pi
+```
+
+2x *myr0bot*
+
+Samba Konfiguration anpassen
+
+```
+sudo nano /etc/samba/smb.conf
+```
+
+Im Bereich *[homes]* *read only = yes* ändern in
+
+```
+   read only = no
+```
+
+Am Ende der Datei folgendes Share hinzufügen
+
+```
+[root]
+   comment = root
+   path = /
+   read only = yes
+   valid users = pi
+```
+
+Parameter überprüfen
+
+```
+testparm
+```
+
+Samba neu starten
+
+```
+sudo systemctl restart smbd
+sudo systemctl restart nmbd
+```
+
+*ll* in der bash erlauben
+
+```
+nano .bashrc
+```
+
+Bei den *ls aliases* hinzufügen
+
+```
+alias ll='ls -laF'
+```
+
+
 
 TODO
 
