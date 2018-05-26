@@ -75,7 +75,11 @@ SD Karte in den Raspberry Pi des GoPiGo3 stecken.
 
 Ethernet Netzwerkkabel in den Raspberry stecken.
 
-Raspberry Pi/GoPiGo3 anschalten. Es muss keine Tastatur oder Monitor mit dem Raspberry verbunden sein. Der Raspberry installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+Der Raspberry Pi/GoPiGo3 wird während der Softwareinstallation vorzugsweise über den USB Anschluss mit Strom versorgt. Die Akkus können entfernt werden.
+
+Raspberry Pi anschalten (durch Einstecken des USB Kabels). Die Power LED des GoPiGo3 wird erst dann korrekt über An/Aus und Batteriezustand informieren, wenn die entsprechende Software installiert wurde.
+
+Der Raspberry installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Netzwerkadresse ermitteln
 
@@ -352,6 +356,20 @@ Mit ssh nach *student-robot* (oder *192.168.42.1*) verbinden.
 
 Auf eine Internetseite, z.B. https://www.schueler-roboter.de/ zugreifen.
 
+### GoPiGo3 Software installieren
+
+GoPiGo3 Software installieren und Reboot
+
+```
+curl -L dexterindustries.com/update_gopigo3 | sudo bash
+sudo shutdown -r now
+```
+
+DI_Sensors installieren - wird für den Abstandssensor benötigt.
+
+```
+curl -L dexterindustries.com/update_sensors | sudo bash
+```
 
 
 
@@ -372,3 +390,5 @@ TODO
 * https://www.raspberrypi.org/forums/viewtopic.php?t=198946
 * https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 * https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
+* https://github.com/DexterInd/GoPiGo3
+* https://github.com/DexterInd/DI_Sensors
