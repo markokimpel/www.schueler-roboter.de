@@ -167,10 +167,16 @@ sudo systemctl restart nmbd
 nano .bashrc
 ```
 
-Bei den *ls aliases* hinzufügen
+Bei den *ls aliases* hinzufügen. Änderung gilt erst für die nächste bash session.
 
 ```
 alias ll='ls -laF'
+```
+
+Midnight Commander (ein textbasierter Dateimanager) installieren.
+
+```
+sudo apt install mc
 ```
 
 Feste Namen den Wi-Fi Adaptern zuweisen.
@@ -353,35 +359,56 @@ Laptop mit Netzwerk SSID *student-robot* verbinden. Passwort ist *changeitnow*. 
 
 Mit ssh nach *student-robot* (oder *192.168.42.1*) verbinden.
 
-Auf eine Internetseite, z.B. https://www.schueler-roboter.de/ zugreifen.
+Auf eine Internetseite, z.B. https://www.schueler-roboter.de/ zugreifen (geht nur, wenn über Ethernet auf das Internet zugegriffen werden kann).
 
 ### GoPiGo3 Software installieren
 
-GoPiGo3 Software installieren und Reboot
+GoPiGo3 Software installieren und Reboot. Die Software beinhaltet u.a. einen Service für die GoPiGo3 Power LED und den Power Schalter, sowie Python Bibliotheken für GoPiGo3 Hardware.
 
 ```
-curl -L dexterindustries.com/update_gopigo3 | sudo bash
+curl -L https://dexterindustries.com/update_gopigo3 | sudo bash
 sudo shutdown -r now
 ```
 
 DI_Sensors installieren - wird für den Abstandssensor benötigt.
 
 ```
-curl -L dexterindustries.com/update_sensors | sudo bash
+curl -L https://dexterindustries.com/update_sensors | sudo bash
 ```
+
+### GoPiGo Scratch Erweiterung installieren
+
+Die Erweiterung installieren.
+
+```
+git clone https://github.com/markokimpel/gopigoscratchextension.git ~/student-robot.org/gopigoscratchextension/
+```
+
+Die Erweiterung testen.
+
+* Akku mit GoPiGo3 verbinden.
+* USB Kabel entfernen.
+* Ethernet Kabel entfernen.
+* Laptop mit Access Point *student-robot* verbinden
+* Mit *VNC Viewer* zu *student-robot* verbinden
+* Bildschirmauflösung auf 1280x1024 ändern: Menu > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig
+* In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`
 
 
 
 TODO
 
-1. Root Partition sichern
-    ```
-    sudo apt install bsdtar
-    sudo mkdir /mnt/transfer
-    sudo mount -t cifs -o user=username //fileserver/folder /mnt/transfer
-    cd /
-    sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpf /mnt/transfer/myroot.tar .
-    ```
+sudo apt autoremove
+
+Root Partition sichern
+
+```
+ sudo apt install bsdtar
+ sudo mkdir /mnt/transfer
+ sudo mount -t cifs -o user=username //fileserver/folder /mnt/transfer
+ cd /
+ sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpf /mnt/transfer/myroot.tar .
+ ```
 
 ## Referenzen
 
