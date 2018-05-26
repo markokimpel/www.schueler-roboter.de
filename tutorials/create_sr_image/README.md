@@ -257,8 +257,34 @@ Am Ende der Datei einfügen
 ```
 no-hosts
 address=/student-robot/192.168.42.1
+
 interface=wlan0
     dhcp-range=192.168.42.100,192.168.42.200,255.255.255.0,24h
+```
+
+Neue Konfigurationsdatei für hostapd erstellen
+
+```
+sudo nano /etc/hostapd/hostapd.conf
+```
+
+Als Inhalt einfügen
+
+```
+interface=wlan0
+driver=nl80211
+ssid=student-robot
+hw_mode=g
+channel=1
+wmm_enabled=0
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=changeitnow
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
 ```
 
 
@@ -278,3 +304,4 @@ TODO
 * https://github.com/raspberrypi/noobs
 * https://www.raspberrypi.org/forums/viewtopic.php?t=198946
 * https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
+* https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
