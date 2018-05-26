@@ -385,7 +385,7 @@ git clone https://github.com/markokimpel/gopigoscratchextension.git ~/student-ro
 ### Installation testen
 
 * Akku mit GoPiGo3 verbinden.
-* USB Kabel entfernen.
+* USB Stromversorgung entfernen.
 * Ethernet Kabel entfernen.
 * Laptop mit Access Point *student-robot*, passwort *changeitnow* verbinden.
 * Der Laptop sollte eine IP Adresse im Bereich 192.168.4.100-200 erhalten haben.
@@ -413,6 +413,8 @@ Nicht benötigte Pakete entfernen, ggf. Reboot.
 sudo apt autoremove
 [ -f /var/run/reboot-required ] && sudo shutdown -r now
 ```
+
+Da das Sichern eine langlaufende und datenintensive Operation ist, sollte der Raspberry Pi über USB mit Strom versorgt und der Netzwerkkabelanschluss benutzt werden.
 
 Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der Partition gespeichert werden, z.B. auf einem SMB Share.
 
