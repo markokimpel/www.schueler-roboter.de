@@ -5,14 +5,14 @@
 Der Roboter nutzt einen Raspberry Pi als Herzstück. Das Standard-Betriebssystem für den Raspberry Pi ist [Raspbian](https://de.wikipedia.org/wiki/Raspberry_Pi#Raspbian). Es gibt aber auch Alternativen. Beispielsweise bietet Dexter Industries für den GoPiGo3 [DexterOS](https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics/), [Raspbian for Robots](https://www.dexterindustries.com/raspberry-pi-robot-software/) und [Cinch](https://www.dexterindustries.com/howto/use-cinch-operating-system/) an. DexterOS ist leicht zu benutzen und zu updaten, beinhaltet eine Scratch-ähnliche Umgebung namens Bloxter ([Onlineversion](http://www.bloxter.com/)) und eine Entwicklungsumgebung für Python. DexterOS ist Closed Source und nicht erweiterbar - kein freier Zugriff auf das Dateisystem, keine Installation eigener Software. Raspbian for Robots basiert auf Raspbian, mit zusätzlicher Software von Dexter Industries. Cinch soll das Erstellen eines Wi-Fi Access Points ermöglichen.
 
 Für die Experimente mit dem Schüler-Roboter wird eine eigene Softwareinstallation benutzt:
-* Basis ist ein reines Raspbian.
+* Basis ist ein aktuelles Raspbian.
 * Mit Bibliotheken um den GoPiGo3 anzusteuern.
 * Sie enthält weitere Software für die Workshops, z.B. Integration mit Scratch 2 Offline Editor und ScratchX.
 * Der im GoPiGo3 verbaute Raspberry Pi muss nicht mit Tastatur, Maus oder Bildschirm verbunden werden - er wird *headless* betrieben.
 * Funktionen zum Aktualisieren und Zurücksetzen der Installation.
 * Die SD Karte muss für Aktualisierungen und zum Zurücksetzen der Installation nicht entfernt werden.
 * Automatische Erstellung eines Wi-Fi Access Points zum leichten kabellosen Verbinden mit dem Roboter.
-* Zusätzlich kann sich der Roboter über einen USB WLAN Adapter mit dem lokalen WLAN verbinden.
+* Zusätzlich kann sich der Roboter über einen USB WLAN Adapter mit dem lokalen WLAN verbinden. Damit sind die Nutzung des Access Points und Internet gleichzeitig möglich.
 
 Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel *SD Karte initial beschreiben*, *Mit Roboter verbinden* und *SD Karte aktualisieren*. Gruppenleiter sollten ausserdem *Installation anpassen* und *Installation zurücksetzen* lesen. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
 
@@ -423,14 +423,55 @@ sudo apt install bsdtar
 sudo mkdir /mnt/transfer
 sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
 cd /
-sudo sh -c "bsdtar --numeric-owner --format gnutar --one-file-system -cpf - . | xz -9 -e > /mnt/transfer/customroot.tar.xz"
+sudo sh -c "bsdtar --numeric-owner --format gnutar --one-file-system -cpf - . | xz -9 -e > /mnt/transfer/root.tar.xz"
 ```
 
 Während der Ausführung von bsdtar werden die folgenden Fehlermeldungen auf stderr ausgegeben. Sie können ignoriert werden.
-* *bsdtar: Couldn't list extended attributes: No data available*: diese Fehlermeldung bezieht sich auf das Verzeichnis /media/pi/
 * Viele Male *: tar format cannot archive socket*: diese Fehlermeldung bezieht sich auf Sockets im Verzeichnis /var/lib/samba/private/msg.sock/
+* *bsdtar: Couldn't list extended attributes: No data available*: diese Fehlermeldung bezieht sich auf das Verzeichnis /media/pi/
 
-TODO
+### Root Partition in NOOBS integrieren
+
+Jetzt wird das ausgepackte NOOBS Image aus dem ersten Schritt weiter modifiziert.
+
+Verzeichnis *os/Raspbian/* in *os/RaspbianForStudentRobot/* umbenennen.
+
+Die folgenden Änderungen erfolgen im Verzeichnis *os/RaspbianForStudentRobot/*.
+
+Beim Editieren von Textdateien auf Unix Zeilenendungen achten.
+
+Datei *os.json* anpassen. Neuer Inhalt:
+
+```
+{
+    "description": "Raspbian with modifications for the Student-Robot",
+    "kernel": "4.14",
+    "name": "RaspbianForStudentRobot",
+    "password": "myr0bot",
+    "release_date": "2018-05-27",
+    "supported_models": [
+        "Pi 3"
+    ],
+    "url": "https://www.student-robot.org/",
+    "username": "pi",
+    "version": "stretch"
+}
+```
+
+In Datei *partitions.json* for partition *root* folgende Werte anpassen:
+
+* *uncompressed_tarball_size*: Größe in MB, z.B. `4173`
+* *partition_size_nominal*: mindestens `5000`
+
+Datei *Raspbian.png* in *RaspbianForStudentRobot.png* umbenennen.
+
+Datei *[README.txt](files/README.txt)* dem Verzeichnis hinzufügen.
+
+Datei *root.tar.xz* durch die oben erzeugte Version ersetzen.
+
+Das gesamte NOOBS Verzeichnis in ein zip, z.B. *RaspbianForStudentRobot_2018-05-27.zip*, einpacken. Dateien wie *recovery.cmdline* liegen direkt im Wurzelverzeichnis.
+
+Glückwunsch, du hast ein neues SD Kartenimage erzeugt. Dieses kann nun wie in *SD Karte initial beschreiben* und *SD Karte aktualisieren* beschrieben genutzt werden.
 
 ## Referenzen
 
