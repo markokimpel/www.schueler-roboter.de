@@ -424,7 +424,7 @@ sudo apt install bsdtar
 sudo mkdir /mnt/transfer
 sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
 cd /
-sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpf /mnt/transfer/root.tar.xz .
+sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpvf /mnt/transfer/root.tar.xz .
 ```
 
 Während der Ausführung von bsdtar werden die folgenden Fehlermeldungen auf stderr ausgegeben. Sie können ignoriert werden.
