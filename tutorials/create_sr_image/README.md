@@ -61,7 +61,7 @@ Eine leere Datei *[ssh](files/ssh)* erstellen. Die Datei liegt im gleichen Verze
 
 In Verzeichnis *os/* alle Betriebssysteme ausser *Raspbian* löschen (z.B. *LibreELEC_RPi*, *LibreELEC_RPi2*).
 
-Eine große Datei *.placeholder* (Datei in [zip](files/placeholder1.5gb.zip)) in das Verzeichnis *os/* legen. Die Datei dient dazu, Platz in der ersten Partition zu reservieren. Dadurch können auch größere Updates installiert werden.
+Eine große Datei *.placeholder* (Datei in [zip](files/placeholder1.5gb.zip)) in das Verzeichnis *os/* legen. Die Datei dient dazu, Platz in der ersten Partition zu reservieren. Dadurch können später auch größere Updates installiert werden.
 
 microSD Karte mit mindestens 8GB mit einer Partition und FAT32 formatieren.
 
@@ -403,7 +403,8 @@ git clone https://github.com/markokimpel/gopigoscratchextension.git ~/student-ro
 * In weiterem Terminal: `cd ~/student-robot.org/gopigoscratchextension/streamingserver/`, `./run.sh`
 * Video in Browser testen: http://student-robot:8081/
 * Beide Server stoppen
-* Zugangsdaten zum lokalen Netzwerk löschen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
+* Zugriff auf Samba Shares. Nutzer *pi*/*myr0bot*. Share *\\\\student-robot\\root* sollte nur lesbar sein, *\\\\student-robot\\pi* sollte auch schreibbar sein.
+* Zugangsdaten zum lokalen Netzwerk löschen damit sie nicht im image auftauchen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
 
 ### Root Partition sichern
 
@@ -414,21 +415,27 @@ sudo apt autoremove
 [ -f /var/run/reboot-required ] && sudo shutdown -r now
 ```
 
-Da das Sichern eine langlaufende und datenintensive Operation ist, sollte der Raspberry Pi über USB mit Strom versorgt und der Netzwerkkabelanschluss benutzt werden.
+Da das Sichern eine langlaufende und datenintensive Operation ist, sollte der Raspberry Pi über USB mit Strom versorgt und der Kabel-Netzwerkanschluss benutzt werden.
 
-Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der Partition gespeichert werden, z.B. auf einem SMB Share.
+Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der zu sichernden Partition gespeichert werden, z.B. auf einem SMB Share.
 
 ```
 sudo apt install bsdtar
 sudo mkdir /mnt/transfer
 sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
 cd /
-sudo sh -c "bsdtar --numeric-owner --format gnutar --one-file-system -cpf - . | xz -9 -e > /mnt/transfer/root.tar.xz"
+sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpf /mnt/transfer/root.tar.xz .
 ```
 
 Während der Ausführung von bsdtar werden die folgenden Fehlermeldungen auf stderr ausgegeben. Sie können ignoriert werden.
 * Viele Male *: tar format cannot archive socket*: diese Fehlermeldung bezieht sich auf Sockets im Verzeichnis /var/lib/samba/private/msg.sock/
 * *bsdtar: Couldn't list extended attributes: No data available*: diese Fehlermeldung bezieht sich auf das Verzeichnis /media/pi/
+
+Das Komprimieren geht am schnellsten, wenn eine schnelle CPU mit mehreren Kernen und viel Speicher zur Verfügung stehen. Das geht ausserhalb des Raspberry Pis am besten. Neuere Versionen von *xz* unterstützen die Option `-T 0`. Damit werden mehrere Ausführungs-Threads genutzt.
+
+```
+xz -k -9 -e -T 0 root.tar
+```
 
 ### Root Partition in NOOBS integrieren
 
