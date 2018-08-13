@@ -406,7 +406,7 @@ git clone https://github.com/markokimpel/gopigoscratchextension.git ~/student-ro
 * Zugriff auf Samba Shares. Nutzer *pi*/*myr0bot*. Share *\\\\student-robot\\root* sollte nur lesbar sein, *\\\\student-robot\\pi* sollte auch schreibbar sein.
 * Zugangsdaten zum lokalen Netzwerk löschen damit sie nicht im image auftauchen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
 
-### Partitionen sichern
+### Partition sichern
 
 Nicht benötigte Pakete entfernen, ggf. Reboot.
 
@@ -417,14 +417,12 @@ sudo apt autoremove
 
 Da das Sichern eine langlaufende und datenintensive Operation ist, sollte der Raspberry Pi über USB mit Strom versorgt und der Kabel-Netzwerkanschluss benutzt werden.
 
-Sichern der Boot Partition und Root Partition mit bsdtar. Die Archive müssen ausserhalb der zu sichernden Partitionen gespeichert werden, z.B. auf einem SMB Share.
+Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der zu sichernden Partition gespeichert werden, z.B. auf einem SMB Share.
 
 ```
 sudo apt install bsdtar
 sudo mkdir /mnt/transfer
 sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
-cd /boot
-sudo bsdtar --numeric-owner --format gnutar -cpvf /mnt/transfer/boot.tar .
 cd /
 sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpvf /mnt/transfer/root.tar .
 ```
@@ -438,13 +436,10 @@ Während der Ausführung von bsdtar in der Root Partition werden die folgenden F
 Das Komprimieren geht am schnellsten, wenn eine schnelle CPU mit mehreren Kernen und viel Speicher zur Verfügung stehen. Das geht ausserhalb des Raspberry Pis am besten. Neuere Versionen von *xz* unterstützen die Option `-T 0`. Damit werden mehrere Ausführungs-Threads genutzt.
 
 ```
-xz -k -9 -e -T 0 boot.tar
 xz -k -9 -e -T 0 root.tar
 ```
 
 ### Partitionen in NOOBS integrieren
-
-TODO: boot partition in Beschreibung einfügen
 
 Jetzt wird das ausgepackte NOOBS Image aus dem ersten Schritt weiter modifiziert.
 
@@ -480,6 +475,8 @@ In Datei *partitions.json* for partition *root* folgende Werte anpassen:
 Datei *Raspbian.png* in *RaspbianForStudentRobot.png* umbenennen.
 
 Datei *[README.txt](files/README.txt)* dem Verzeichnis hinzufügen.
+
+TODO: Datei boot.tar.gz ändern (in config.txt dtparam=i2c_arm=on und dtparam=spi=on unkommentieren, weitere Änderungen).
 
 Datei *root.tar.xz* durch die oben erzeugte Version ersetzen.
 
