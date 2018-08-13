@@ -49,7 +49,7 @@ Wer sich nicht mit den Details der Installation herumschlagen möchte nimmt ein 
 
 Die folgenden Schritte auf einem anderen Rechner als dem Raspberry Pi ausführen (z.B. einem Windows Laptop). Der Rechner muss auf die SD Karte schreiben können.
 
-*NOOBS* (nicht *NOOBS Lite*) von https://www.raspberrypi.org/downloads/noobs/ herunterladen, z.B. *NOOBS_v2_8_1.zip*.
+*NOOBS* (nicht *NOOBS Lite*) von https://www.raspberrypi.org/downloads/noobs/ herunterladen, z.B. *NOOBS_v2_8_2.zip*.
 
 SHA-256 kontrollieren.
 
