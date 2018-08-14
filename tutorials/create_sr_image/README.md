@@ -358,20 +358,14 @@ sudo shutdown -r now
 GoPiGo3 Software installieren und Reboot. Die Software beinhaltet u.a. einen Service für die GoPiGo3 Power LED und den Power Schalter, sowie Python Bibliotheken für GoPiGo3 Hardware.
 
 ```
-curl -L https://dexterindustries.com/update_gopigo3 | sudo bash
+curl -L https://dexterindustries.com/update_gopigo3 | bash
 sudo shutdown -r now
 ```
 
 DI_Sensors installieren - wird für den Abstandssensor benötigt.
 
 ```
-curl -L https://dexterindustries.com/update_sensors | sudo bash
-```
-
-Modul I2C_mutex nachinstallieren. Das fehlt derzeit irgendwie bei den anderen Packages.
-
-```
-curl -L https://dexterindustries.com/update_tools | sudo bash -s - --install-python-package --use-python3-exe-too --update-aptget --install-deb-deps
+curl -L https://dexterindustries.com/update_sensors | bash
 ```
 
 ### GoPiGo Scratch Erweiterung installieren
@@ -382,11 +376,20 @@ Die Erweiterung installieren.
 git clone https://github.com/markokimpel/gopigoscratchextension.git ~/student-robot.org/gopigoscratchextension/
 ```
 
+Zur Vorbereitung des Tests Raspberry runterfahren. 
+
+```
+sudo shutdown -h now
+```
+
+Warten bis grüne LED nicht mehr leuchtet. Dann USB Stromversorgung entfernen.
+
+Ethernetkabel entfernen.
+
 ### Installation testen
 
 * Akku mit GoPiGo3 verbinden.
-* USB Stromversorgung entfernen.
-* Ethernet Kabel entfernen.
+* GoPiGo3 über Power Taste starten. LED daneben sollte während des Ladens des Betriebssystems grün blinken. Dann sollte sie ständig grün leuchten.
 * Laptop mit Access Point *student-robot*, passwort *changeitnow* verbinden.
 * Der Laptop sollte eine IP Adresse im Bereich 192.168.4.100-200 erhalten haben.
 * Mit *VNC Viewer* zu *student-robot* verbinden, Nutzer *pi*/*myr0bot*.
