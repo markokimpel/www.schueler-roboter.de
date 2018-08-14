@@ -431,8 +431,7 @@ Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der zu sichern
 sudo apt install bsdtar
 sudo mkdir /mnt/transfer
 sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
-cd /
-sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpvf /mnt/transfer/root.tar .
+sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpvf /mnt/transfer/root.tar -C / .
 ```
 
 TODO: Dateien/Verzeichnisse ausschliessen
