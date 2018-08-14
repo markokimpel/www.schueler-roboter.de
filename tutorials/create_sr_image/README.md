@@ -73,17 +73,17 @@ Die lokalen Dateien behalten. Wir brauchen sie später bei der Erstellung des Im
 
 SD Karte in den Raspberry Pi des GoPiGo3 stecken.
 
-Ethernet Netzwerkkabel in den Raspberry stecken.
+Ethernet Netzwerkkabel in den Raspberry Pi stecken.
 
 Der Raspberry Pi/GoPiGo3 wird während der Softwareinstallation vorzugsweise über den USB Anschluss mit Strom versorgt. Die Akkus können entfernt werden.
 
 Raspberry Pi anschalten (durch Einstecken des USB Kabels). Die Power LED des GoPiGo3 wird erst dann korrekt über An/Aus und Batteriezustand informieren, wenn die entsprechende Software installiert wurde.
 
-Der Raspberry installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+Der Raspberry Pi installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Netzwerkadresse ermitteln
 
-Mit Raspberry über ssh verbinden. Nutzername/Passwort sind *pi*/*raspberry*.
+Mit Raspberry Pi über ssh verbinden. Nutzername/Passwort sind *pi*/*raspberry*.
 
 Passwort ändern.
 
@@ -112,7 +112,7 @@ sudo raspi-config
 - Interfacing Options: enable Camera, VNC, SPI, I2C
 - Finish, reboot
 
-Samba installieren. Damit kann auf Verzeichnisse zugegriffen werden, und Windows Clients finden den Raspberry mit dem Namen.
+Samba installieren. Damit kann auf Verzeichnisse zugegriffen werden, und Windows Clients finden den Raspberry Pi mit dem Namen.
 
 ```
 sudo apt install samba
@@ -181,7 +181,7 @@ sudo apt install mc
 
 Feste Namen den Wi-Fi Adaptern zuweisen.
 
-Nach dem Einstecken des USB WLAN Adapters hat der Raspberry Pi zwei WLAN Schnittstellen. Diese heissen *wlan0* und *wlan1*. Welche Schnittstelle welchen Namen bekommt ist zufällig und kann sich zwischen Neustarts ändern. Damit lässt sich kein Access Point aufsetzen oder Firewall Regeln definieren. Die *Predictable Network Interface Names* sind nur bedingt hilfreich. Beim Raspberry bekommt der USB WLAN Adapter damit eine ID, die seine MAC Adresse beinhaltet. Das macht die Konfiguration aufwendiger, wenn das gleiche SD Kartenimage für mehrere Raspberries benutzt werden soll. Schlimmer noch: das interne WLAN ist manchmal wlan0, manchmal wlan1. Folgende Änderungen erzwingen den namen wlan0 für das interne WLAN und wlan1 für einen USB Adapter. Nur ein WLAN USB Adapter darf gleichzeitig benutzt werden.
+Nach dem Einstecken des USB WLAN Adapters hat der Raspberry Pi zwei WLAN Schnittstellen. Diese heissen *wlan0* und *wlan1*. Welche Schnittstelle welchen Namen bekommt ist zufällig und kann sich zwischen Neustarts ändern. Damit lässt sich kein Access Point aufsetzen oder Firewall Regeln definieren. Die *Predictable Network Interface Names* sind nur bedingt hilfreich. Beim Raspberry Pi bekommt der USB WLAN Adapter damit eine ID, die seine MAC Adresse beinhaltet. Das macht die Konfiguration aufwendiger, wenn das gleiche SD Kartenimage für mehrere Raspberries benutzt werden soll. Schlimmer noch: das interne WLAN ist manchmal wlan0, manchmal wlan1. Folgende Änderungen erzwingen den namen wlan0 für das interne WLAN und wlan1 für einen USB Adapter. Nur ein WLAN USB Adapter darf gleichzeitig benutzt werden.
 
 Neue Datei anlegen
 
@@ -376,7 +376,7 @@ Die Erweiterung installieren.
 git clone https://github.com/markokimpel/gopigoscratchextension.git ~/student-robot.org/gopigoscratchextension/
 ```
 
-Zur Vorbereitung des Tests Raspberry runterfahren. 
+Zur Vorbereitung des Tests Raspberry Pi runterfahren. 
 
 ```
 sudo shutdown -h now
@@ -391,9 +391,11 @@ Ethernetkabel entfernen.
 * Akku mit GoPiGo3 verbinden.
 * GoPiGo3 über Power Taste starten. LED daneben sollte während des Ladens des Betriebssystems grün blinken. Dann sollte sie ständig grün leuchten.
 * Laptop mit Access Point *student-robot*, passwort *changeitnow* verbinden.
-* Der Laptop sollte eine IP Adresse im Bereich 192.168.4.100-200 erhalten haben.
+* Der Laptop sollte eine IP Adresse im Bereich 192.168.42.100-200 erhalten haben.
 * Mit *VNC Viewer* zu *student-robot* verbinden, Nutzer *pi*/*myr0bot*.
-* Bildschirmauflösung auf 1280x1024 ändern: Menü > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig
+* Konfigurationstool mit Cancel abbrechen. Das Standardimage soll nicht auf eine spezielle Sprache oder Zeitzone eingestellt sein. Das kann bei *Installation anpassen* gemacht werden.
+* Bildschirmauflösung auf 1280x1024 ändern: Menü > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig, evtl. erneut mit Access Point verbinden
+* GoPiGo3 Verknüpfungen auf dem Desktop löschen. Die sind für die Integration mit Scratch 1 und verwirren deshalb eher.
 * Bluetooth abschalten
 * Adapter wlan1 mit lokalem WLAN verbinden.
 * Öffentliche Webseite, z.B. https://www.schueler-roboter.de/, auf Laptop öffnen (bedeutet, dass IP Forwarding funktioniert).
@@ -402,14 +404,19 @@ Ethernetkabel entfernen.
 * Beispielprogramm *~/student-robot.org/gopigoscratchextension/scratch_examples/Simple Manual Rover.sb2* öffnen
 * Experimentelle Erweiterung laden: *http://student-robot:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)
 * Bewegungen testen
-* Abstandssensor testen
+* Abstandssensor testen (Doppelklick auf *distance* Block)
 * In weiterem Terminal: `cd ~/student-robot.org/gopigoscratchextension/streamingserver/`, `./run.sh`
 * Video in Browser testen: http://student-robot:8081/
 * Beide Server stoppen
 * Zugriff auf Samba Shares. Nutzer *pi*/*myr0bot*. Share *\\\\student-robot\\root* sollte nur lesbar sein, *\\\\student-robot\\pi* sollte auch schreibbar sein.
 * Zugangsdaten zum lokalen Netzwerk löschen damit sie nicht im image auftauchen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
+* GoPiGo3 über Power Taste herunterfahren. Während des Herunterfahrens blinkt sie rot, dann geht sie aus.
 
 ### Partition sichern
+
+Ethernetkabel mit Raspberry Pi verbinden.
+
+Stromversorgung vorzugsweise über USB Port. Die Akkus können entfernt werden.
 
 Nicht benötigte Pakete entfernen, ggf. Reboot.
 
@@ -417,8 +424,6 @@ Nicht benötigte Pakete entfernen, ggf. Reboot.
 sudo apt autoremove
 [ -f /var/run/reboot-required ] && sudo shutdown -r now
 ```
-
-Da das Sichern eine langlaufende und datenintensive Operation ist, sollte der Raspberry Pi über USB mit Strom versorgt und der Kabel-Netzwerkanschluss benutzt werden.
 
 Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der zu sichernden Partition gespeichert werden, z.B. auf einem SMB Share.
 
