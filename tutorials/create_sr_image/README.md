@@ -412,7 +412,7 @@ Ethernetkabel entfernen.
 * Zugangsdaten zum lokalen Netzwerk löschen damit sie nicht im image auftauchen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
 * GoPiGo3 über Power Taste herunterfahren. Während des Herunterfahrens blinkt sie rot, dann geht sie aus.
 
-### Partition sichern
+### Partitionen sichern
 
 Ethernetkabel mit Raspberry Pi verbinden.
 
@@ -425,12 +425,22 @@ sudo apt autoremove
 [ -f /var/run/reboot-required ] && sudo shutdown -r now
 ```
 
-Sichern der Root Partition mit bsdtar. Das Archiv muss ausserhalb der zu sichernden Partition gespeichert werden, z.B. auf einem SMB Share.
+Die Partitionen werden mit *bsdtar* gesichert.
 
 ```
 sudo apt install bsdtar
+```
+
+Die Archive müssen ausserhalb der zu sichernden Partition gespeichert werden, z.B. auf einem SMB Share.
+
+```
 sudo mkdir /mnt/transfer
 sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
+```
+
+Root Partition mit bsdtar sichern.
+
+```
 sudo bsdtar --numeric-owner --format gnutar --one-file-system -cpvf /mnt/transfer/root.tar -C / .
 ```
 
@@ -440,10 +450,27 @@ Während der Ausführung von bsdtar in der Root Partition werden die folgenden F
 * Viele Male *: tar format cannot archive socket*: diese Fehlermeldung bezieht sich auf Sockets im Verzeichnis /var/lib/samba/private/msg.sock/
 * *bsdtar: Couldn't list extended attributes: No data available*: diese Fehlermeldung bezieht sich auf das Verzeichnis /media/pi/
 
+In der Datei *config.txt* der Boot Partition werden Informationen zur Aktivierung der Kamera, der Schnittstellen SPI und I2C, sowie die voreingestellte Bildschirmauflösung abgelegt. Wir erzeugen ein neues Archiv der Boot Partition auf der Basis des Originalarchivs und ersetzen dann die Datei config.txt. Damit bleiben andere, umgebungsspezifische Änderungen in der Partition aussen vor.
+
+```
+sudo mkdir /mnt/p1
+sudo mount /dev/mmcblk0p1 /mnt/p1
+cd ~
+cp /mnt/p1/os/Raspbian/boot.tar.xz boot_org.tar.xz
+unxz boot_org.tar.xz
+bsdtar --numeric-owner --format gnutar -cpvf boot.tar --exclude config.txt @boot_org.tar
+bsdtar --numeric-owner --format gnutar -rpvf boot.tar -C /boot ./config.txt
+sudo mv boot.tar /mnt/transfer/boot.tar
+rm boot_org.tar
+sudo umount /mnt/p1
+sudo rmdir /mnt/p1/
+```
+
 Das Komprimieren geht am schnellsten, wenn eine schnelle CPU mit mehreren Kernen und viel Speicher zur Verfügung stehen. Das geht ausserhalb des Raspberry Pis am besten. Neuere Versionen von *xz* unterstützen die Option `-T 0`. Damit werden mehrere Ausführungs-Threads genutzt.
 
 ```
 xz -k -9 -e -T 0 root.tar
+xz -k -9 -e -T 0 boot.tar
 ```
 
 ### Partitionen in NOOBS integrieren
