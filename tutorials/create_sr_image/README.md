@@ -26,7 +26,29 @@ TODO
 
 ## SD Karte aktualisieren
 
-TODO
+Es werden die Installationsdateien für RaspbianForStudentRobot in der NOOBS Partition aktualisiert. Diese werden beim nächsten Zurücksetzen der Installation benutzt. Die Installation selber wird bei diesem Prozess nicht verändert. Auch wird NOOBS nicht aktualisiert.
+
+Als Quelle für das Image wird ein SMB Share angenommen.
+
+```
+sudo mkdir /mnt/transfer
+sudo mount -r -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
+
+sudo mkdir /mnt/noobs
+sudo mount /dev/mmcblk0p1 /mnt/noobs
+
+sudo rm -r /mnt/noobs/os/*
+
+sudo unzip /mnt/transfer/<image>.zip os/* -x os/.placeholder -d /mnt/noobs/
+
+sudo umount /mnt/transfer
+sudo rmdir /mnt/transfer
+
+sudo umount /mnt/noobs
+sudo rmdir /mnt/noobs
+```
+
+Siehe Kapitel *Installation zurücksetzen* zum Installieren des neuen Images.
 
 ## Installation anpassen
 
@@ -34,12 +56,18 @@ TODO
 
 ## Installation zurücksetzen
 
-TODO
+Die vorhandene Installation wird gelöscht und neu aufgesetzt. Alle gespeicherten Daten gehen dabei vorloren. Das ist sinnvoll, wenn der Roboter von mehreren Personen genutzt wird und Reste eines Workshops beseitigt werden sollen, oder wenn eine neue Version installiert werden soll. Wichtige Dateien bitte vorher sichern.
+
+Wird die u.g. Datei gelöscht wird NOOBS beim Neustart automatisch das Image neu installieren und dann booten.
 
 ```
 sudo rm /media/pi/SETTINGS/installed_os.json
 sudo shutdown -r now
 ```
+
+Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+
+Achtung beim ersten Verbinden: Hostname und Passwort wurden bei der Installation auch zurückgesetzt. Siehe Kapitel *Mit Roboter verbinden* für Voreinstellungen.
 
 ## SD Kartenimage erstellen
 
@@ -453,17 +481,24 @@ Während der Ausführung von bsdtar in der Root Partition werden die folgenden F
 In der Datei *config.txt* der Boot Partition werden Informationen zur Aktivierung der Kamera, der Schnittstellen SPI und I2C, sowie die voreingestellte Bildschirmauflösung abgelegt. Wir erzeugen ein neues Archiv der Boot Partition auf der Basis des Originalarchivs und ersetzen dann die Datei config.txt. Damit bleiben andere, umgebungsspezifische Änderungen in der Partition aussen vor.
 
 ```
-sudo mkdir /mnt/p1
-sudo mount /dev/mmcblk0p1 /mnt/p1
+sudo mkdir /mnt/noobs
+sudo mount -r /dev/mmcblk0p1 /mnt/noobs
 cd ~
-cp /mnt/p1/os/Raspbian/boot.tar.xz boot_org.tar.xz
+cp /mnt/noobs/os/Raspbian/boot.tar.xz boot_org.tar.xz
 unxz boot_org.tar.xz
 bsdtar --numeric-owner --format gnutar -cpvf boot.tar --exclude config.txt @boot_org.tar
 bsdtar --numeric-owner --format gnutar -rpvf boot.tar -C /boot ./config.txt
 sudo mv boot.tar /mnt/transfer/boot.tar
 rm boot_org.tar
-sudo umount /mnt/p1
-sudo rmdir /mnt/p1/
+sudo umount /mnt/noobs
+sudo rmdir /mnt/noobs
+```
+
+Das SMB Share wieder entfernen.
+
+```
+sudo umount /mnt/transfer
+sudo rmdir /mnt/transfer
 ```
 
 Das Komprimieren geht am schnellsten, wenn eine schnelle CPU mit mehreren Kernen und viel Speicher zur Verfügung stehen. Das geht ausserhalb des Raspberry Pis am besten. Neuere Versionen von *xz* unterstützen die Option `-T 0`. Damit werden mehrere Ausführungs-Threads genutzt.
