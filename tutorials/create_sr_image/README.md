@@ -11,10 +11,10 @@ Für die Experimente mit dem Schüler-Roboter wird eine eigene Softwareinstallat
 * Der im GoPiGo3 verbaute Raspberry Pi muss nicht mit Tastatur, Maus oder Bildschirm verbunden werden - er wird *headless* betrieben.
 * Funktionen zum Aktualisieren und Zurücksetzen der Installation.
 * Die SD Karte muss für Aktualisierungen und zum Zurücksetzen der Installation nicht entfernt werden.
-* Automatische Erstellung eines Wi-Fi Access Points zum leichten kabellosen Verbinden mit dem Roboter.
+* Automatische Erstellung eines Wi-Fi Access Points zum leichten kabellosen Verbinden mit dem Roboter. Ein WLAN wird nicht benötigt.
 * Zusätzlich kann sich der Roboter über einen USB WLAN Adapter mit dem lokalen WLAN verbinden. Damit sind die Nutzung des Access Points und Internet gleichzeitig möglich.
 
-Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel *SD Karte initial beschreiben*, *Mit Roboter verbinden* und *SD Karte aktualisieren*. Gruppenleiter sollten ausserdem *Installation anpassen* und *Installation zurücksetzen* lesen. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
+Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel *SD Karte initial beschreiben* und *Mit Roboter verbinden*. Gruppenleiter sollten ausserdem *Installation anpassen* und *Installation zurücksetzen* lesen. In *SD Karte aktualisieren* ist beschrieben, wie die Installation ohne das Entfernen der SD Karte aktualisiert werden kann. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
 
 ## SD Karte initial beschreiben
 
@@ -26,7 +26,9 @@ TODO
 
 ## SD Karte aktualisieren
 
-Es werden die Installationsdateien für RaspbianForStudentRobot in der NOOBS Partition aktualisiert. Diese werden beim nächsten Zurücksetzen der Installation benutzt. Die Installation selber wird bei diesem Prozess nicht verändert. Auch wird NOOBS nicht aktualisiert.
+Eine neue Version von RaspbianForStudentRobot kann ohne das Entfernen der SD Karte aus dem Raspberry Pi installiert werden. Die notwendigen Schritte werden hier beschrieben. Wen das Entfernen der SD Karte nicht stört kann alternativ den Schritten in *SD Karte initial beschreiben* folgen.
+
+In der NOOBS Partition liegen die Installationsdateien für RaspbianForStudentRobot. Diese soll aktualisiert werden. Die Installation selber wird bei diesem Prozess nicht verändert. Erst beim nächsten Zurücksetzen der Installation werden die neuen Installationsdateien benutzt. NOOBS wird bei diesem Prozess nicht aktualisiert.
 
 Als Quelle für das Image wird ein SMB Share angenommen.
 
@@ -50,15 +52,11 @@ sudo rmdir /mnt/noobs
 
 Siehe Kapitel *Installation zurücksetzen* zum Installieren des neuen Images.
 
-## Installation anpassen
-
-TODO
-
 ## Installation zurücksetzen
 
-Die vorhandene Installation wird gelöscht und neu aufgesetzt. Alle gespeicherten Daten gehen dabei vorloren. Das ist sinnvoll, wenn der Roboter von mehreren Personen genutzt wird und Reste eines Workshops beseitigt werden sollen, oder wenn eine neue Version installiert werden soll. Wichtige Dateien bitte vorher sichern.
+Die vorhandene Installation wird gelöscht und neu aufgesetzt. Alle gespeicherten Daten gehen dabei vorloren. Das ist hilfreich, wenn der Roboter von mehreren Personen genutzt wird und Änderungen des Vorgängers entfernt werden sollen, oder wenn eine neue Version installiert werden soll. Wichtige Dateien bitte vorher sichern.
 
-Wird die u.g. Datei gelöscht wird NOOBS beim Neustart automatisch das Image neu installieren und dann booten.
+Wird die u.g. Datei gelöscht, wird der NOOBS Installer beim Neustart automatisch das Image neu installieren und dann die Installation booten.
 
 ```
 sudo rm /media/pi/SETTINGS/installed_os.json
@@ -68,6 +66,10 @@ sudo shutdown -r now
 Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Achtung beim ersten Verbinden: Hostname und Passwort wurden bei der Installation auch zurückgesetzt. Siehe Kapitel *Mit Roboter verbinden* für Voreinstellungen.
+
+## Installation anpassen
+
+TODO
 
 ## SD Kartenimage erstellen
 
