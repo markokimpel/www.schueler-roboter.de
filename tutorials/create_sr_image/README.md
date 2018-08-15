@@ -63,7 +63,7 @@ sudo rm /media/pi/SETTINGS/installed_os.json
 sudo shutdown -r now
 ```
 
-Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 15 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Achtung beim ersten Verbinden: Hostname und Passwort wurden bei der Installation auch zurückgesetzt. Siehe Kapitel *Mit Roboter verbinden* für Voreinstellungen.
 
@@ -109,7 +109,7 @@ Der Raspberry Pi/GoPiGo3 wird während der Softwareinstallation vorzugsweise üb
 
 Raspberry Pi anschalten (durch Einstecken des USB Kabels). Die Power LED des GoPiGo3 wird erst dann korrekt über An/Aus und Batteriezustand informieren, wenn die entsprechende Software installiert wurde.
 
-Der Raspberry Pi installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 20 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+Der Raspberry Pi installiert und bootet selbständig Raspbian. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 15 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Netzwerkadresse ermitteln
 
