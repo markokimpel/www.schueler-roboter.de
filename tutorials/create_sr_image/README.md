@@ -491,7 +491,7 @@ Datei *os.json* anpassen. Neuer Inhalt:
     "kernel": "4.14",
     "name": "RaspbianForStudentRobot",
     "password": "myr0bot",
-    "release_date": "2018-05-27",
+    "release_date": "2018-08-15",
     "supported_models": [
         "Pi 3"
     ],
@@ -503,18 +503,17 @@ Datei *os.json* anpassen. Neuer Inhalt:
 
 In Datei *partitions.json* for partition *root* folgende Werte anpassen:
 
-* *uncompressed_tarball_size*: Größe in MB, z.B. `4173`
-* *partition_size_nominal*: mindestens `5000`
+* *uncompressed_tarball_size*: Größe in MB (1 MB = 1.000.000 Byte), z.B. `4354`
+* *partition_size_nominal*: mindestens 400 MB mehr, z.B. `5000`
 
 Datei *Raspbian.png* in *RaspbianForStudentRobot.png* umbenennen.
 
 Datei *[README.txt](files/README.txt)* dem Verzeichnis hinzufügen.
 
-TODO: Datei boot.tar.gz ändern (in config.txt dtparam=i2c_arm=on und dtparam=spi=on unkommentieren, weitere Änderungen).
-
 Datei *root.tar.xz* durch die oben erzeugte Version ersetzen.
+Datei *boot.tar.xz* durch die oben erzeugte Version ersetzen.
 
-Das gesamte NOOBS Verzeichnis in ein zip, z.B. *RaspbianForStudentRobot_2018-05-27.zip*, einpacken. Dateien wie *recovery.cmdline* liegen direkt im Wurzelverzeichnis.
+Das gesamte NOOBS Verzeichnis in ein zip, z.B. *RaspbianForStudentRobot_2018-08-15.zip*, einpacken. Dateien wie *recovery.cmdline* liegen direkt im Wurzelverzeichnis.
 
 Glückwunsch, du hast ein neues SD Kartenimage erzeugt. Dieses kann nun wie in *SD Karte initial beschreiben* und *SD Karte aktualisieren* beschrieben genutzt werden.
 
