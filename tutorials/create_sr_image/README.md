@@ -22,7 +22,30 @@ TODO
 
 ## Mit Roboter verbinden
 
-TODO
+* Arbeitsrechner mit WLAN
+  * Du brauchst einen weiteren Computer um auf den Roboter zuzugreifen. An diesem Arbeitsrechner sitzt du und programmierst den Roboter. Der Arbeitsrechner kann ein Raspberry Pi mit Monitor, Tastatur und Maus sein, oder ein Windows Laptop. Da der Roboter über WLAN kommuniziert, muss auch der Arbeitsrechner über WLAN kommunizieren können.
+* Roboter anschalten
+  * Starte den Roboter indem du die Power Taste (rechts hinten am GoPiGo3 Board) drückst. Die grüne LED daneben beginnt zu blinken. Das bedeutet, das Betriebssystem wird geladen. Wenn die LED ständig grün leuchtet ist der Roboter betriebsbereit.
+  * Übrigens: Wenn die LED neben der Power Taste beginnt gelb oder gar violett zu leuchten, dann bedeutet das die Akkus sind fast leer. Dann den Roboter ausschalten und Akkus wechseln.
+* Arbeitsrechner mit Roboter WLAN verbinden
+  * Der Roboter bietet ein WLAN Netzwerk an. Der Netzwerkname (SSID) ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*. Das voreingestellte Passwort ist *changeitnow*. Bei Arbeitsgruppen erfrage das Passwort von deinem Gruppenleiter.
+  * Verbinde dich mit deinem Arbeitsrechner zum WLAN des Roboters. Wennn du dich mit dem Roboter WLAN verbindest, verlierst du eine evtl. vorher bestehende WLAN Verbindung zum lokalen WLAN Router und damit zum Internet. Hierfür gibt es eine Lösung - siehe unten.
+* Mit VNC Viewer am Roboter arbeiten
+  * Mit dem VNC Viewer verbindest du dich zum Roboter und kannst den Desktop des Roboters sehen.
+  * Bei Raspbian wird der VNC Viewer nicht mehr vorinstalliert. Er muss mit `sudo apt install realvnc-vnc-viewer` installiert werden. Die Verknüpfung befindet sich dann unter dem Menüpunkt *Internet*.
+  * Für Windows kann der Viewer von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
+  * Server-Adresse ist *student-robot.local*, bei Arbeitsgruppen *student-robot[zahl].local*. Beim ersten Aufruf muss die Identität des Servers bestätigt werden. Benutzname ist *pi*, das Passwort ist *myr0bot*.
+  * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
+* Roboter mit dem lokalem WLAN verbinden
+  * Wahrscheinlich war dein Arbeitsrechner über ein lokales WLAN mit dem Internet verbunden. Seitdem du dich mit dem Roboter WLAN verbunden hast, hat dein Arbeitsrechner keinen Internetzugriff mehr. Aber es gibt eine Lösung: Der Roboter hat zwei WLAN Schnittstellen. Die eine stellt das Roboter WLAN Netzwerk zur Verfügung und die andere kannst du mit dem lokalen WLAN verbinden. Dann haben dein Roboter, und über den Roboter auch dein Arbeitsrechner wieder Internetgriff.
+  * Am einfachsten richtest du die WLAN Verbindung vom Raspbian Desktop aus ein. Rechts oben in der Leiste ist das Symbol für WLAN. Dort wählst du das lokale WLAN Netzwerk aus und kannst dann das Passwort eingeben.
+* Mit ssh auf Roboter zugreifen
+  * Du kannst dich mit einem Terminal wie ssh oder PuTTY zur Kommandozeile des Roboters verbinden.
+  * Die Adresse ist *student-robot.local*, Nutzername *pi* und Passwort *myr0bot*. Beim ersten Verbinden muss die Signatur des Servers bestätigt werden.
+
+## Roboter ausschalten
+
+* Das geht einfach: Offene Dokumente speichern, dann die Power Taste (rechts hinten am GoPiGo3 Board) drücken. Die LED daneben beginnt rot zu blinken. Offene Programme werden beendet und das Betriebssystem wird heruntergefahren. Die LED geht aus, wenn der Roboter vollständig heruntergefahren wurde. Du kannst nun die Akkus entfernen.
 
 ## SD Karte aktualisieren
 
