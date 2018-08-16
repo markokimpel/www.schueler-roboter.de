@@ -137,7 +137,7 @@ Konfiguration mit raspi-config
 sudo raspi-config
 ```
 
-- Network Options > Hostname: *student-robot*
+- Network Options > Hostname: *student-robot.local*
 - Boot Options > Desktop / CLI: Desktop Autologin
 - Interfacing Options: enable Camera, VNC, SPI, I2C
 - Finish, reboot
@@ -296,7 +296,7 @@ Am Ende der Datei einfügen
 
 ```
 no-hosts
-address=/student-robot/192.168.42.1
+address=/student-robot.local/192.168.42.1
 
 interface=wlan0
     dhcp-range=192.168.42.100,192.168.42.200,255.255.255.0,24h
@@ -422,7 +422,7 @@ Ethernetkabel entfernen.
 * GoPiGo3 über Power Taste starten. LED daneben sollte während des Ladens des Betriebssystems grün blinken. Dann sollte sie ständig grün leuchten.
 * Laptop mit Access Point *student-robot*, passwort *changeitnow* verbinden.
 * Der Laptop sollte eine IP Adresse im Bereich 192.168.42.100-200 erhalten haben.
-* Mit *VNC Viewer* zu *student-robot* verbinden, Nutzer *pi*/*myr0bot*.
+* Mit *VNC Viewer* zu *student-robot.local* verbinden, Nutzer *pi*/*myr0bot*.
 * Konfigurationstool mit Cancel abbrechen. Das Standardimage soll nicht auf eine spezielle Sprache oder Zeitzone eingestellt sein. Das kann bei *Installation anpassen* gemacht werden.
 * Bildschirmauflösung auf 1280x1024 ändern: Menü > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig, evtl. erneut mit Access Point verbinden
 * GoPiGo3 Verknüpfungen auf dem Desktop löschen. Die sind für die Integration mit Scratch 1 und verwirren deshalb eher.
@@ -432,13 +432,13 @@ Ethernetkabel entfernen.
 * In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`
 * Scratch 2 starten: Menü *Programming* > *Scratch 2*
 * Beispielprogramm *~/student-robot.org/gopigoscratchextension/scratch_examples/Simple Manual Rover.sb2* öffnen
-* Experimentelle Erweiterung laden: *http://student-robot:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)
+* Experimentelle Erweiterung laden: *http://student-robot.local:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)
 * Bewegungen testen
 * Abstandssensor testen (Doppelklick auf *distance* Block)
 * In weiterem Terminal: `cd ~/student-robot.org/gopigoscratchextension/streamingserver/`, `./run.sh`
-* Video in Browser testen: http://student-robot:8081/
+* Video in Browser testen: http://student-robot.local:8081/
 * Beide Server stoppen
-* Zugriff auf Samba Shares. Nutzer *pi*/*myr0bot*. Share *\\\\student-robot\\root* sollte nur lesbar sein, *\\\\student-robot\\pi* sollte auch schreibbar sein.
+* Zugriff auf Samba Shares. Nutzer *pi*/*myr0bot*. Share *\\\\student-robot.local\\root* sollte nur lesbar sein, *\\\\student-robot.local\\pi* sollte auch schreibbar sein.
 * Zugangsdaten zum lokalen Netzwerk löschen damit sie nicht im image auftauchen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
 * GoPiGo3 über Power Taste herunterfahren. Während des Herunterfahrens blinkt sie rot, dann geht sie aus.
 
