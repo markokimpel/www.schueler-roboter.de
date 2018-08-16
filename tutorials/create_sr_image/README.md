@@ -36,6 +36,8 @@ TODO
   * Für Windows kann der Viewer von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
   * Server-Adresse ist *student-robot.local*, bei Arbeitsgruppen *student-robot[zahl].local*. Beim ersten Aufruf muss die Identität des Servers bestätigt werden. Benutzname ist *pi*, das Passwort ist *myr0bot*.
   * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
+* Roboter WLAN Passwort und Nutzerpasswort ändern
+  * TODO
 * Roboter mit dem lokalem WLAN verbinden
   * Wahrscheinlich war dein Arbeitsrechner über ein lokales WLAN mit dem Internet verbunden. Seitdem du dich mit dem Roboter WLAN verbunden hast, hat dein Arbeitsrechner keinen Internetzugriff mehr. Aber es gibt eine Lösung: Der Roboter hat zwei WLAN Schnittstellen. Die eine stellt das Roboter WLAN Netzwerk zur Verfügung und die andere kannst du mit dem lokalen WLAN verbinden. Dann haben dein Roboter, und über den Roboter auch dein Arbeitsrechner wieder Internetgriff.
   * Am einfachsten richtest du die WLAN Verbindung vom Raspbian Desktop aus ein. Rechts oben in der Leiste ist das Symbol für WLAN. Dort wählst du das lokale WLAN Netzwerk aus und kannst dann das Passwort eingeben.
