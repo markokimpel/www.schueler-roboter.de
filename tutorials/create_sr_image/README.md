@@ -566,3 +566,7 @@ Glückwunsch, du hast ein neues SD Kartenimage erzeugt. Dieses kann nun wie in *
 * https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
 * https://github.com/DexterInd/GoPiGo3
 * https://github.com/DexterInd/DI_Sensors
+
+*Copyright 2018 Marko Kimpel*
+
+*Licensed under the GNU General Public License version 3, or (at your option) any later version.*
