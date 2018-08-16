@@ -40,6 +40,7 @@ TODO
   * TODO
 * Roboter mit dem lokalem WLAN verbinden
   * Wahrscheinlich war dein Arbeitsrechner über ein lokales WLAN mit dem Internet verbunden. Seitdem du dich mit dem Roboter WLAN verbunden hast, hat dein Arbeitsrechner keinen Internetzugriff mehr. Aber es gibt eine Lösung: Der Roboter hat zwei WLAN Schnittstellen. Die eine stellt das Roboter WLAN Netzwerk zur Verfügung und die andere kannst du mit dem lokalen WLAN verbinden. Dann haben dein Roboter, und über den Roboter auch dein Arbeitsrechner wieder Internetgriff.
+  * Achtung: Ist der Roboter mit dem lokalem WLAN verbunden, können auch andere Nutzer des WLANs auf Dienste des Roboters zugreifen. Du solltest dich deshalb nur mit vertrauenswürdigen WLANs verbinden.
   * Am einfachsten richtest du die WLAN Verbindung vom Raspbian Desktop aus ein. Rechts oben in der Leiste ist das Symbol für WLAN. Dort wählst du das lokale WLAN Netzwerk aus und kannst dann das Passwort eingeben.
 * Mit ssh auf Roboter zugreifen
   * Du kannst dich mit einem Terminal wie ssh oder PuTTY zur Kommandozeile des Roboters verbinden.
