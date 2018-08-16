@@ -468,6 +468,26 @@ sudo mkdir /mnt/transfer
 sudo mount -t cifs -o user=<username> //<fileserver>/<folder> /mnt/transfer
 ```
 
+Boot Partition mit bsdtar sichern.
+
+Die Datei *cmdline.txt* beziehen wir vom Originalarchiv in der NOOBS Partition. Sie wurde während der Installation verändert. Die Datei *os_config.json* wird während der Installation erzeugt und muss deshalb nicht gesichert werden. Die Datei *config.txt* enthält Informationen zur Aktivierung der Kamera, der Schnittstellen SPI und I2C, sowie die voreingestellt Bildschirmauflösung.
+
+```
+sudo bsdtar --numeric-owner --format gnutar -cpvf /mnt/transfer/boot.tar -C /boot --exclude ./cmdline.txt --exclude ./os_config.json .
+
+sudo mkdir /mnt/noobs
+sudo mount -r /dev/mmcblk0p1 /mnt/noobs
+
+cd ~
+cp /mnt/noobs/os/Raspbian/boot.tar.xz boot.tar.xz
+unxz boot.tar.xz
+sudo bsdtar --numeric-owner --format gnutar -rpvf /mnt/transfer/boot.tar --include ./cmdline.txt @boot.tar
+rm boot.tar
+
+sudo umount /mnt/noobs
+sudo rmdir /mnt/noobs
+```
+
 Root Partition mit bsdtar sichern.
 
 ```
@@ -480,22 +500,6 @@ Während der Ausführung von bsdtar in der Root Partition werden die folgenden F
 * Viele Male *: tar format cannot archive socket*: diese Fehlermeldung bezieht sich auf Sockets im Verzeichnis /var/lib/samba/private/msg.sock/
 * *bsdtar: Couldn't list extended attributes: No data available*: diese Fehlermeldung bezieht sich auf das Verzeichnis /media/pi/
 
-In der Datei *config.txt* der Boot Partition werden Informationen zur Aktivierung der Kamera, der Schnittstellen SPI und I2C, sowie die voreingestellte Bildschirmauflösung abgelegt. Wir erzeugen ein neues Archiv der Boot Partition auf der Basis des Originalarchivs und ersetzen dann die Datei config.txt. Damit bleiben andere, umgebungsspezifische Änderungen in der Partition aussen vor.
-
-```
-sudo mkdir /mnt/noobs
-sudo mount -r /dev/mmcblk0p1 /mnt/noobs
-cd ~
-cp /mnt/noobs/os/Raspbian/boot.tar.xz boot_org.tar.xz
-unxz boot_org.tar.xz
-bsdtar --numeric-owner --format gnutar -cpvf boot.tar --exclude config.txt @boot_org.tar
-bsdtar --numeric-owner --format gnutar -rpvf boot.tar -C /boot ./config.txt
-sudo mv boot.tar /mnt/transfer/boot.tar
-rm boot_org.tar
-sudo umount /mnt/noobs
-sudo rmdir /mnt/noobs
-```
-
 Das SMB Share wieder entfernen.
 
 ```
@@ -506,8 +510,8 @@ sudo rmdir /mnt/transfer
 Das Komprimieren geht am schnellsten, wenn eine schnelle CPU mit mehreren Kernen und viel Speicher zur Verfügung stehen. Das geht ausserhalb des Raspberry Pis am besten. Neuere Versionen von *xz* unterstützen die Option `-T 0`. Damit werden mehrere Ausführungs-Threads genutzt.
 
 ```
-xz -k -9 -e -T 0 root.tar
 xz -k -9 -e -T 0 boot.tar
+xz -k -9 -e -T 0 root.tar
 ```
 
 ### Partitionen in NOOBS integrieren
@@ -547,8 +551,8 @@ Datei *Raspbian.png* in *RaspbianForStudentRobot.png* umbenennen.
 
 Datei *[README.txt](files/README.txt)* dem Verzeichnis hinzufügen.
 
-Datei *root.tar.xz* durch die oben erzeugte Version ersetzen.
 Datei *boot.tar.xz* durch die oben erzeugte Version ersetzen.
+Datei *root.tar.xz* durch die oben erzeugte Version ersetzen.
 
 Das gesamte NOOBS Verzeichnis in ein zip, z.B. *RaspbianForStudentRobot_2018-08-15.zip*, einpacken. Dateien wie *recovery.cmdline* liegen direkt im Wurzelverzeichnis.
 
