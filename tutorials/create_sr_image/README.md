@@ -2,7 +2,7 @@
 
 # Basisinstallation Software
 
-Der Roboter nutzt einen Raspberry Pi als Herzstück. Das Standard-Betriebssystem für den Raspberry Pi ist [Raspbian](https://de.wikipedia.org/wiki/Raspberry_Pi#Raspbian). Es gibt aber auch Alternativen. Beispielsweise bietet Dexter Industries für den GoPiGo3 [DexterOS](https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics/), [Raspbian for Robots](https://www.dexterindustries.com/raspberry-pi-robot-software/) und [Cinch](https://www.dexterindustries.com/howto/use-cinch-operating-system/) an. DexterOS ist leicht zu benutzen und zu updaten, beinhaltet eine Scratch-ähnliche Umgebung namens Bloxter ([Onlineversion](http://www.bloxter.com/)) und eine Entwicklungsumgebung für Python. DexterOS ist Closed Source und nicht erweiterbar - kein freier Zugriff auf das Dateisystem, keine Installation eigener Software. Raspbian for Robots basiert auf Raspbian, mit zusätzlicher Software von Dexter Industries. Cinch soll das Erstellen eines Wi-Fi Access Points ermöglichen.
+Der Roboter nutzt einen Raspberry Pi 3 Model B als Herzstück. Das Standard-Betriebssystem für den Raspberry Pi ist [Raspbian](https://de.wikipedia.org/wiki/Raspberry_Pi#Raspbian). Es gibt aber auch Alternativen. Beispielsweise bietet Dexter Industries für den GoPiGo3 [DexterOS](https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics/), [Raspbian for Robots](https://www.dexterindustries.com/raspberry-pi-robot-software/) und [Cinch](https://www.dexterindustries.com/howto/use-cinch-operating-system/) an. DexterOS ist leicht zu benutzen und zu updaten, beinhaltet eine Scratch-ähnliche Umgebung namens Bloxter ([Onlineversion](http://www.bloxter.com/)) und eine Entwicklungsumgebung für Python. DexterOS ist Closed Source und nicht erweiterbar - kein freier Zugriff auf das Dateisystem, keine Installation eigener Software. Raspbian for Robots basiert auf Raspbian, mit zusätzlicher Software von Dexter Industries. Cinch soll das Erstellen eines Wi-Fi Access Points ermöglichen.
 
 Für die Experimente mit dem Schüler-Roboter wird eine eigene Softwareinstallation benutzt:
 * Basis ist ein aktuelles Raspbian.
@@ -18,7 +18,17 @@ Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Detai
 
 ## SD Karte initial beschreiben
 
-TODO
+Um die SD Karte im GoPiGo3 zu wechseln, müssen mehrere Kabel entfernt werden. Das ist mühsam und tut den Steckverbindern auch nicht gut. Deshalb versuchen wir die Karte so selten wie möglich zu wechseln. Am Besten du beschreibst die Karte vor dem Bau des Roboters und steckst sie in den Raspberry Pi. Spätere Aktualisierungen von RaspbianForStudentRobot sind in der Regel ohne das Entfernen der Karte möglich.
+
+Zum initialen Beschreiben der SD Karte brauchst du einen weiteren Computer mit SD Kartenleser, z.B. einen Windows Laptop. Die physische Kartengröße muss microSD sein, denn nur diese akzeptiert der Raspberry Pi 3 Model B. Wir empfehlen eine Kapazität von 32 GB. Häufig werden microSD Karten mit einem Adapter verkauft. Mit diesem können sie in einem Computer genutzt werden, der nur die SD Größe unterstützt.
+
+Die SD Karte muss eine Partition haben und diese muss mit FAT32 formatiert sein. Das ist bei neue gekauften Karten in der Regel bereits der Fall. Ansonsten kann das mit Betriebssystem Boardmitteln erreicht werden, oder du nutzt den [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter_4/index.html) der [SD Association](https://www.sdcard.org/).
+
+RaspbianForStudentRobot liegt als zip Datei vor. Den Inhalt der Datei musst du auf die SD Karte kopieren.
+
+Dann stecke die Karte in den Raspberry Pi und baue den Roboter fertig zusammen.
+
+Beim ersten Start des Roboters wird das Betriebssystem automatisch installiert und dann gestartet.
 
 ## Mit Roboter verbinden
 
@@ -119,7 +129,7 @@ In Verzeichnis *os/* alle Betriebssysteme ausser *Raspbian* löschen (z.B. *Libr
 
 Eine große Datei *.placeholder* (Datei in [zip](files/placeholder1.5gb.zip)) in das Verzeichnis *os/* legen. Die Datei dient dazu, Platz in der ersten Partition zu reservieren. Dadurch können später auch größere Updates installiert werden.
 
-microSD Karte mit mindestens 8GB mit einer Partition und FAT32 formatieren.
+microSD Karte mit mindestens 8 GB mit einer Partition und FAT32 formatieren.
 
 Dateien auf die Karte kopieren.
 
