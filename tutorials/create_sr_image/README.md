@@ -117,6 +117,22 @@ Zeile *ssid* ändern.
 ssid=student-robot1
 ```
 
+```
+sudo nano /etc/dnsmasq.conf
+```
+
+Zeile *address* ändern.
+
+```
+address=/student-robot1.local/192.168.42.1
+```
+
+```
+sudo raspi-config
+```
+
+- Network Options > Hostname: *student-robot1.local*
+- Finish, reboot
 
 ## SD Kartenimage erstellen
 
