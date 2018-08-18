@@ -107,6 +107,17 @@ Achtung beim ersten Verbinden: Hostname und Passwort wurden bei der Installation
 
 TODO
 
+```
+sudo nano /etc/hostapd/hostapd.conf
+```
+
+Zeile *ssid* ändern.
+
+```
+ssid=student-robot1
+```
+
+
 ## SD Kartenimage erstellen
 
 Wer sich nicht mit den Details der Installation herumschlagen möchte nimmt ein vorhandenes Kartenimage (siehe *SD Karte initial beschreiben*) und kann diesen Abschnitt ignorieren. :-)
