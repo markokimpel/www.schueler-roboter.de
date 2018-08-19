@@ -28,7 +28,7 @@ RaspbianForStudentRobot liegt als zip Datei vor. Den Inhalt der Datei musst du a
 
 Dann stecke die Karte in den Raspberry Pi und baue den Roboter fertig zusammen.
 
-Beim ersten Start des Roboters wird das Betriebssystem automatisch installiert und dann gestartet.
+Ist der Roboter fertig zusammengebaut, die Kamera, der Servo, der Abstandssensor und der Wi-Fi Adapter installiert, kannst du den Roboter erstmalig starten. Das machst du, indem du die Power Taste (rechts hinten am GoPiGo3 Board) drückst. Beim ersten Start wird das Betriebssystem automatisch installiert und dann gestartet. Während dieses Vorgangs blinkt die grüne LED neben der Power Taste. Die kleine grüne LED neben dem mini-USB Anschluss blinkt bei Lese- und Schreiboperationen auf der SD Karte. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32 GB Samsung EVO Plus dauert die Installation etwa 12 Minuten. Die Installation ist abgeschlossen und das Betriebssystem gestartet, wenn die LED neben der Power Taste ständig grün leuchtet. Jetzt kannst du dich mit dem Roboter verbinden - siehe unten.
 
 ## Mit Roboter verbinden
 
@@ -99,7 +99,7 @@ sudo rm /media/pi/SETTINGS/installed_os.json
 sudo shutdown -r now
 ```
 
-Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 15 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32 GB Sandisk dauert die Installation etwa 15 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Achtung beim ersten Verbinden: Hostname und Passwort wurden bei der Installation auch zurückgesetzt. Siehe Kapitel *Mit Roboter verbinden* für Voreinstellungen.
 
