@@ -4,7 +4,7 @@
 
 ## Voraussetzungen
 
-* Roboter mit aktuellen Software (siehe [Bau des Roboters](../build_a_robot/))
+* Roboter mit der aktuellen Software (siehe [Bau des Roboters](../build_a_robot/) und [Basisinstallation Software](../create_sr_image/))
 * Einen weiteren Computer um auf den Roboter zuzugreifen. An diesem Computer sitzt du und programmierst den Roboter. Der Computer kann ein Raspberry Pi mit Monitor, Tastatur und Maus sein, oder ein Windows Laptop. Da der Roboter über WLAN kommuniziert, muss auch der weitere Computer über WLAN kommunizieren können.
 
 ## Mit dem Roboter verbinden

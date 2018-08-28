@@ -2,7 +2,7 @@
 
 # Basisinstallation Software
 
-Der Roboter nutzt einen Raspberry Pi als Herzstück. Das Standard-Betriebssystem für den Raspberry Pi ist [Raspbian](https://de.wikipedia.org/wiki/Raspberry_Pi#Raspbian). Es gibt aber auch Alternativen. Beispielsweise bietet Dexter Industries für den GoPiGo3 [DexterOS](https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics/), [Raspbian for Robots](https://www.dexterindustries.com/raspberry-pi-robot-software/) und [Cinch](https://www.dexterindustries.com/howto/use-cinch-operating-system/) an. DexterOS ist leicht zu benutzen und zu updaten, beinhaltet eine Scratch-ähnliche Umgebung namens Bloxter ([Onlineversion](http://www.bloxter.com/)) und eine Entwicklungsumgebung für Python. DexterOS ist Closed Source und nicht erweiterbar - kein freier Zugriff auf das Dateisystem, keine Installation eigener Software. Raspbian for Robots basiert auf Raspbian, mit zusätzlicher Software von Dexter Industries. Cinch soll das Erstellen eines Wi-Fi Access Points ermöglichen.
+Der Roboter nutzt einen Raspberry Pi 3 Model B als Herzstück. Das Standard-Betriebssystem für den Raspberry Pi ist [Raspbian](https://de.wikipedia.org/wiki/Raspberry_Pi#Raspbian). Es gibt aber auch Alternativen. Beispielsweise bietet Dexter Industries für den GoPiGo3 [DexterOS](https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics/), [Raspbian for Robots](https://www.dexterindustries.com/raspberry-pi-robot-software/) und [Cinch](https://www.dexterindustries.com/howto/use-cinch-operating-system/) an. DexterOS ist leicht zu benutzen und zu updaten, beinhaltet eine Scratch-ähnliche Umgebung namens Bloxter ([Onlineversion](http://www.bloxter.com/)) und eine Entwicklungsumgebung für Python. DexterOS ist Closed Source und nicht erweiterbar - kein freier Zugriff auf das Dateisystem, keine Installation eigener Software. Raspbian for Robots basiert auf Raspbian, mit zusätzlicher Software von Dexter Industries. Cinch soll das Erstellen eines Wi-Fi Access Points ermöglichen.
 
 Für die Experimente mit dem Schüler-Roboter wird eine eigene Softwareinstallation benutzt:
 * Basis ist ein aktuelles Raspbian.
@@ -18,11 +18,47 @@ Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Detai
 
 ## SD Karte initial beschreiben
 
-TODO
+Um die SD Karte im GoPiGo3 zu wechseln, müssen mehrere Kabel entfernt werden. Das ist mühsam und tut den Steckverbindern auch nicht gut. Deshalb versuchen wir die Karte so selten wie möglich zu wechseln. Am Besten du beschreibst die Karte vor dem Bau des Roboters und steckst sie in den Raspberry Pi. Spätere Aktualisierungen von RaspbianForStudentRobot sind in der Regel ohne das Entfernen der Karte möglich.
+
+Zum initialen Beschreiben der SD Karte brauchst du einen weiteren Computer mit SD Kartenleser, z.B. einen Windows Laptop. Die physische Kartengröße muss microSD sein, denn nur diese akzeptiert der Raspberry Pi 3 Model B. Wir empfehlen eine Kapazität von 32 GB. Häufig werden microSD Karten mit einem Adapter verkauft. Mit diesem können sie in einem Computer genutzt werden, der nur die SD Größe unterstützt.
+
+Die SD Karte muss eine Partition haben und diese muss mit FAT32 formatiert sein. Das ist bei neue gekauften Karten in der Regel bereits der Fall. Ansonsten kann das mit Betriebssystem Boardmitteln erreicht werden, oder du nutzt den [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter_4/index.html) der [SD Association](https://www.sdcard.org/).
+
+RaspbianForStudentRobot liegt als zip Datei vor. Den Inhalt der Datei musst du auf die SD Karte kopieren.
+
+Dann stecke die Karte in den Raspberry Pi und baue den Roboter fertig zusammen.
+
+Ist der Roboter fertig zusammengebaut, die Kamera, der Servo, der Abstandssensor und der Wi-Fi Adapter installiert, kannst du den Roboter erstmalig starten. Das machst du, indem du die Power Taste (rechts hinten am GoPiGo3 Board) drückst. Beim ersten Start wird das Betriebssystem automatisch installiert und dann gestartet. Während dieses Vorgangs blinkt die grüne LED neben der Power Taste. Die kleine grüne LED neben dem mini-USB Anschluss blinkt bei Lese- und Schreiboperationen auf der SD Karte. Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32 GB Samsung EVO Plus dauert die Installation etwa 12 Minuten. Die Installation ist abgeschlossen und das Betriebssystem gestartet, wenn die LED neben der Power Taste ständig grün leuchtet. Jetzt kannst du dich mit dem Roboter verbinden - siehe unten.
 
 ## Mit Roboter verbinden
 
-TODO
+* Arbeitsrechner mit WLAN
+  * Du brauchst einen weiteren Computer um auf den Roboter zuzugreifen. An diesem Arbeitsrechner sitzt du und programmierst den Roboter. Der Arbeitsrechner kann ein Raspberry Pi mit Monitor, Tastatur und Maus sein, oder ein Windows Laptop. Da der Roboter über WLAN kommuniziert, muss auch der Arbeitsrechner über WLAN kommunizieren können.
+* Roboter anschalten
+  * Starte den Roboter indem du die Power Taste (rechts hinten am GoPiGo3 Board) drückst. Die grüne LED daneben beginnt zu blinken. Das bedeutet, das Betriebssystem wird geladen. Wenn die LED ständig grün leuchtet ist der Roboter betriebsbereit.
+  * Übrigens: Wenn die LED neben der Power Taste beginnt gelb oder gar violett zu leuchten, dann bedeutet das die Akkus sind fast leer. Dann den Roboter ausschalten und Akkus wechseln.
+* Arbeitsrechner mit Roboter WLAN verbinden
+  * Der Roboter bietet ein WLAN Netzwerk an. Der Netzwerkname (SSID) ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*. Das voreingestellte Passwort ist *changeitnow*. Bei Arbeitsgruppen erfrage das Passwort von deinem Gruppenleiter.
+  * Verbinde dich mit deinem Arbeitsrechner zum WLAN des Roboters. Wennn du dich mit dem Roboter WLAN verbindest, verlierst du eine evtl. vorher bestehende WLAN Verbindung zum lokalen WLAN Router und damit zum Internet. Hierfür gibt es eine Lösung - siehe unten.
+* Mit VNC Viewer am Roboter arbeiten
+  * Mit dem VNC Viewer verbindest du dich zum Roboter und kannst den Desktop des Roboters sehen.
+  * Bei Raspbian wird der VNC Viewer nicht mehr vorinstalliert. Er muss mit `sudo apt install realvnc-vnc-viewer` installiert werden. Die Verknüpfung befindet sich dann unter dem Menüpunkt *Internet*.
+  * Für Windows kann der Viewer von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
+  * Server-Adresse ist *student-robot.home*, bei Arbeitsgruppen *student-robot[zahl].home*. Beim ersten Aufruf muss die Identität des Servers bestätigt werden. Benutzname ist *pi*, das Passwort ist *myr0bot*.
+  * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
+* Roboter WLAN Passwort und Nutzerpasswort ändern
+  * TODO
+* Roboter mit dem lokalem WLAN verbinden
+  * Wahrscheinlich war dein Arbeitsrechner über ein lokales WLAN mit dem Internet verbunden. Seitdem du dich mit dem Roboter WLAN verbunden hast, hat dein Arbeitsrechner keinen Internetzugriff mehr. Aber es gibt eine Lösung: Der Roboter hat zwei WLAN Schnittstellen. Die eine stellt das Roboter WLAN Netzwerk zur Verfügung und die andere kannst du mit dem lokalen WLAN verbinden. Dann haben dein Roboter, und über den Roboter auch dein Arbeitsrechner wieder Internetgriff.
+  * Achtung: Ist der Roboter mit dem lokalem WLAN verbunden, können auch andere Nutzer des WLANs auf Dienste des Roboters zugreifen. Du solltest dich deshalb nur mit vertrauenswürdigen WLANs verbinden.
+  * Am einfachsten richtest du die WLAN Verbindung vom Raspbian Desktop aus ein. Rechts oben in der Leiste ist das Symbol für WLAN. Dort wählst du das lokale WLAN Netzwerk aus und kannst dann das Passwort eingeben.
+* Mit ssh auf Roboter zugreifen
+  * Du kannst dich mit einem Terminal wie ssh oder PuTTY zur Kommandozeile des Roboters verbinden.
+  * Die Adresse ist *student-robot.home*, Nutzername *pi* und Passwort *myr0bot*. Beim ersten Verbinden muss die Signatur des Servers bestätigt werden.
+
+## Roboter ausschalten
+
+* Das geht einfach: Offene Dokumente speichern, dann die Power Taste (rechts hinten am GoPiGo3 Board) drücken. Die LED daneben beginnt rot zu blinken. Offene Programme werden beendet und das Betriebssystem wird heruntergefahren. Die LED geht aus, wenn der Roboter vollständig heruntergefahren wurde. Du kannst nun die Akkus entfernen.
 
 ## SD Karte aktualisieren
 
@@ -63,13 +99,40 @@ sudo rm /media/pi/SETTINGS/installed_os.json
 sudo shutdown -r now
 ```
 
-Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32GB Sandisk dauert die Installation etwa 15 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
+Die Zeitdauer für die Installation hängt von der Geschwindigkeit der SD Karte ab. Bei einer 32 GB Sandisk dauert die Installation etwa 15 Minuten. Der Vorgang ist abgeschlossen, wenn die Schreib LED (grün) aus bleibt.
 
 Achtung beim ersten Verbinden: Hostname und Passwort wurden bei der Installation auch zurückgesetzt. Siehe Kapitel *Mit Roboter verbinden* für Voreinstellungen.
 
 ## Installation anpassen
 
 TODO
+
+```
+sudo nano /etc/hostapd/hostapd.conf
+```
+
+Zeile *ssid* ändern.
+
+```
+ssid=student-robot1
+```
+
+```
+sudo nano /etc/dnsmasq.conf
+```
+
+Zeile *address* ändern.
+
+```
+address=/student-robot1.home/192.168.42.1
+```
+
+```
+sudo raspi-config
+```
+
+- Network Options > Hostname: *student-robot1*
+- Finish, reboot
 
 ## SD Kartenimage erstellen
 
@@ -93,7 +156,7 @@ In Verzeichnis *os/* alle Betriebssysteme ausser *Raspbian* löschen (z.B. *Libr
 
 Eine große Datei *.placeholder* (Datei in [zip](files/placeholder1.5gb.zip)) in das Verzeichnis *os/* legen. Die Datei dient dazu, Platz in der ersten Partition zu reservieren. Dadurch können später auch größere Updates installiert werden.
 
-microSD Karte mit mindestens 8GB mit einer Partition und FAT32 formatieren.
+microSD Karte mit mindestens 8 GB mit einer Partition und FAT32 formatieren.
 
 Dateien auf die Karte kopieren.
 
@@ -295,11 +358,12 @@ sudo nano /etc/dnsmasq.conf
 Am Ende der Datei einfügen
 
 ```
-no-hosts
-address=/student-robot/192.168.42.1
-
 interface=wlan0
-    dhcp-range=192.168.42.100,192.168.42.200,255.255.255.0,24h
+
+dhcp-range=192.168.42.100,192.168.42.200,1h
+
+no-hosts
+address=/student-robot.home/192.168.42.1
 ```
 
 Neue Konfigurationsdatei für hostapd erstellen
@@ -422,7 +486,7 @@ Ethernetkabel entfernen.
 * GoPiGo3 über Power Taste starten. LED daneben sollte während des Ladens des Betriebssystems grün blinken. Dann sollte sie ständig grün leuchten.
 * Laptop mit Access Point *student-robot*, passwort *changeitnow* verbinden.
 * Der Laptop sollte eine IP Adresse im Bereich 192.168.42.100-200 erhalten haben.
-* Mit *VNC Viewer* zu *student-robot* verbinden, Nutzer *pi*/*myr0bot*.
+* Mit *VNC Viewer* zu *student-robot.home* verbinden, Nutzer *pi*/*myr0bot*.
 * Konfigurationstool mit Cancel abbrechen. Das Standardimage soll nicht auf eine spezielle Sprache oder Zeitzone eingestellt sein. Das kann bei *Installation anpassen* gemacht werden.
 * Bildschirmauflösung auf 1280x1024 ändern: Menü > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig, evtl. erneut mit Access Point verbinden
 * GoPiGo3 Verknüpfungen auf dem Desktop löschen. Die sind für die Integration mit Scratch 1 und verwirren deshalb eher.
@@ -432,13 +496,13 @@ Ethernetkabel entfernen.
 * In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`
 * Scratch 2 starten: Menü *Programming* > *Scratch 2*
 * Beispielprogramm *~/student-robot.org/gopigoscratchextension/scratch_examples/Simple Manual Rover.sb2* öffnen
-* Experimentelle Erweiterung laden: *http://student-robot:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)
+* Experimentelle Erweiterung laden: *http://student-robot.home:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)
 * Bewegungen testen
 * Abstandssensor testen (Doppelklick auf *distance* Block)
 * In weiterem Terminal: `cd ~/student-robot.org/gopigoscratchextension/streamingserver/`, `./run.sh`
-* Video in Browser testen: http://student-robot:8081/
+* Video in Browser testen: http://student-robot.home:8081/
 * Beide Server stoppen
-* Zugriff auf Samba Shares. Nutzer *pi*/*myr0bot*. Share *\\\\student-robot\\root* sollte nur lesbar sein, *\\\\student-robot\\pi* sollte auch schreibbar sein.
+* Zugriff auf Samba Shares. Nutzer *pi*/*myr0bot*. Share *\\\\student-robot.home\\root* sollte nur lesbar sein, *\\\\student-robot.home\\pi* sollte auch schreibbar sein.
 * Zugangsdaten zum lokalen Netzwerk löschen damit sie nicht im image auftauchen: `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf`, die beiden ersten Zeilen bleiben stehen.
 * GoPiGo3 über Power Taste herunterfahren. Während des Herunterfahrens blinkt sie rot, dann geht sie aus.
 
