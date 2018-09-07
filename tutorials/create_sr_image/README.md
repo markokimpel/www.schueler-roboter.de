@@ -379,8 +379,12 @@ interface=wlan0
 driver=nl80211
 ssid=student-robot
 hw_mode=g
+#country_code=DE
+# non-overlapping channels: 1, 6, 11
 channel=1
-wmm_enabled=0
+ieee80211n=1
+wmm_enabled=1
+ht_capab=[HT40][SHORT-GI-20][DSSS_CCK-40]
 macaddr_acl=0
 auth_algs=1
 ignore_broadcast_ssid=0
