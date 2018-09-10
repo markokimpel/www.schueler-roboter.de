@@ -2,6 +2,6 @@
 
 # 10-Sep-2018 Die Roboter sind bereit
 
-Dank der [Lichtwerkstatt](https://lichtwerkstatt-jena.de/) steht uns ein Klassensatz Schüler-Roboter zur Verfügung. Fertig zusammengebaut, mit dem neuesten Rasbian, Scratch, Python und OpenCV. Es kann los gehen!
+Dank der [Lichtwerkstatt](https://lichtwerkstatt-jena.de/) steht uns ein Klassensatz Schüler-Roboter zur Verfügung. Fertig zusammengebaut, mit dem neuesten Raspbian, Scratch, Python und OpenCV. Es kann los gehen!
 
 ![Klassensatz Roboter](images/2018-09-10_Klassensatz.jpg)
