@@ -2,6 +2,8 @@
 
 # News
 
+12-Sep-2018 [MINT-Festival Jena](2018-09-12_MINT-Festival_Jena.md)
+
 10-Sep-2018 [Ein Klassensatz Schüler-Roboter](2018-09-10_Ein_Klassensatz_Schülerroboter.md)
 
 17-Jun-2018 [Familiensonntag im Abantu Kulturlabor](2018-06-17_Familiensonntag_im_Abantu_Kulturlabor.md)
