@@ -497,7 +497,7 @@ Ethernetkabel entfernen.
 * Der Laptop sollte eine IP Adresse im Bereich 192.168.42.100-200 erhalten haben.
 * Mit *VNC Viewer* zu *student-robot.home* verbinden, Nutzer *pi*/*myr0bot*.
 * Konfigurationstool mit Cancel abbrechen. Das Standardimage soll nicht auf eine spezielle Sprache oder Zeitzone eingestellt sein. Das kann bei *Installation anpassen* gemacht werden.
-* Bildschirmauflösung auf 1280x1024 ändern: Menü > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig, evtl. erneut mit Access Point verbinden
+* Bildschirmauflösung auf 1280x720 ändern: Menü > *Preferences* > *Raspberry Pi Configuration*, *Set Resolution*, Neustart notwendig, evtl. erneut mit Access Point verbinden
 * GoPiGo3 Verknüpfungen auf dem Desktop löschen. Die sind für die Integration mit Scratch 1 und verwirren deshalb eher.
 * Bluetooth abschalten
 * Adapter wlan1 mit lokalem WLAN verbinden.
