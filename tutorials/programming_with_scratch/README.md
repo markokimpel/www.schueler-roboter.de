@@ -378,29 +378,25 @@ Neue Figure *Blinker*:
 
 [7.4_solution.sbx](scratch/7.4_solution.sbx)
 
-## TODOs
+## Genutzte Programmiertechniken
 
-Übung X: Ladar Screen
+* Sequenz
+* Verzweigung
+* Schleife
+* Ereignisorientierung
+* Parallelisierung
+* Nachrichten
+* Variablen 
+* Unterprogramme
+* Klassen
 
-Übung X: IFR Approach
+## Ideen für Erweiterungen
 
-Übung X: Kamera
-
-übung X: Durch Labyrinth fahren
-
-Programmiertechniken:
-- Sequenz
-- Verzweigung
-- Schleife
-- Ereignisorientierung
-- Parallelisierung
-- Nachrichten
-- Variablen 
-- Unterprogramme
-- Klassen
-
-- Script zum erstellen von .sb2 links für .sbx Dateien
-- Link zum Starten von gpg3server auf Desktop
+* Übung X: Ladar Screen
+* Übung X: IFR Approach
+* Übung X: Kamera
+* Übung X: Durch Labyrinth fahren
+* Script zum erstellen von .sb2 links für .sbx Dateien
 
 *Copyright 2018 Marko Kimpel*
 
