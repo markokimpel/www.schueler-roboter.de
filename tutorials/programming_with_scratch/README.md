@@ -30,6 +30,13 @@ Scratch extension URL: http://127.0.0.1:8080/scratch_extension.js
 Press Ctrl-C to stop server
 ```
 
+* Sollte beim Starten des Serves eine Fehlermeldung über zu alte Firmware erscheinen (z.B. *gopigo3.FirmwareVersionError: GoPiGo3 firmware needs to be version 1.0.x but is currently version 0.3.4*), dann muss die GoPiGo3 Firmware einmalig aktualisiert werden:
+
+```
+pi@student-robot:~ $ cd ~/Dexter/GoPiGo3/
+pi@student-robot:~/Dexter/GoPiGo3 $ sudo bash Firmware/gopigo3_flash_firmware.sh
+```
+
 * Bitte die angezeigten URLs für *GPG3 Server homepage* und *Scratch extension URL* beachten. Diese werden später gebraucht.
 * Bitte das Terminal offen lassen, während man mit Scratch arbeitet. Das Schliessen des Terminals würde den Server stoppen.
 
