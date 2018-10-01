@@ -147,7 +147,7 @@ Wer sich nicht mit den Details der Installation herumschlagen möchte nimmt ein 
 
 Die folgenden Schritte auf einem anderen Rechner als dem Raspberry Pi ausführen (z.B. einem Windows Laptop). Der Rechner muss auf die SD Karte schreiben können.
 
-*NOOBS* (nicht *NOOBS Lite*) von https://www.raspberrypi.org/downloads/noobs/ herunterladen, z.B. *NOOBS_v2_8_2.zip*.
+*NOOBS* (nicht *NOOBS Lite*) von [https://www.raspberrypi.org/downloads/noobs/](https://www.raspberrypi.org/downloads/noobs/) herunterladen, z.B. *NOOBS_v2_8_2.zip*.
 
 SHA-256 kontrollieren.
 
@@ -502,7 +502,8 @@ Ethernetkabel entfernen.
 * Bluetooth abschalten
 * Adapter wlan1 mit lokalem WLAN verbinden.
 * Öffentliche Webseite, z.B. https://www.schueler-roboter.de/, auf Laptop öffnen (bedeutet, dass IP Forwarding funktioniert).
-* In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`. Sollte eine Fehlermeldung über zu alte Firmware erscheinen, dann aktuelle Firmware flashen: `cd ~/Dexter/GoPiGo3/`, `sudo bash Firmware/gopigo3_flash_firmware.sh`.
+* In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`.
+  * Sollte eine Fehlermeldung über zu alte Firmware erscheinen (*gopigo3.FirmwareVersionError: GoPiGo3 firmware needs to be version 1.0.x but is currently version 0.3.4*), dann aktuelle Firmware flashen: `cd ~/Dexter/GoPiGo3/`, `sudo bash Firmware/gopigo3_flash_firmware.sh`.
 * Scratch 2 starten: Menü *Programming* > *Scratch 2*
 * Beispielprogramm *~/student-robot.org/gopigoscratchextension/scratch_examples/Simple Manual Rover.sb2* öffnen
 * Experimentelle Erweiterung laden: *http://student-robot.home:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)

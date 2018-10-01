@@ -11,24 +11,7 @@ permalink: /tutorials/programming_with_scratch/
 
 * Roboter mit der aktuellen Software (siehe [Bau des Roboters](../build_a_robot/) und [Basisinstallation Software](../create_sr_image/))
 * Einen weiteren Computer um auf den Roboter zuzugreifen. An diesem Computer sitzt du und programmierst den Roboter. Der Computer kann ein Raspberry Pi mit Monitor, Tastatur und Maus sein, oder ein Windows Laptop. Da der Roboter über WLAN kommuniziert, muss auch der weitere Computer über WLAN kommunizieren können.
-
-## Mit dem Roboter verbinden
-
-* Anschalten
-  * Starte den Roboter indem du die Power Taste (rechts hinten am GoPiGo3 Board) drückst. Die grüne LED daneben beginnt zu blinken. Das bedeutet, das Betriebssystem wird geladen. Wenn die LED ständig grün leuchtet ist der Roboter betriebsbereit.
-  * Übrigens: Wenn die LED neben der Power Taste beginnt gelb oder gar violett zu leuchten, dann bedeutet das die Akkus sind fast leer. Dann den Roboter ausschalten und Akkus wechseln.
-* Mit WLAN verbinden
-  * Der Roboter bietet ein WLAN Netzwerk an. Der Netzwerkname (SSID) ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*. Das voreingestellte Passwort ist *changeitnow*. Bei Arbeitsgruppen erfrage das Passwort von deinem Gruppenleiter.
-  * Verbinde dich mit deinem Arbeitsrechner zum WLAN des Roboters. Wennn du dich mit dem Roboter WLAN verbindest, verlierst du eine evtl. vorher bestehende WLAN Verbindung zum lokalen WLAN Router und damit zum Internet.
-* Mit VNC Viewer verbinden
-  * Mit dem VNC Viewer verbindest du dich zum Roboter und kannst den Desktop des Roboters sehen.
-  * Bei Raspbian ist der VNC Viewer bereits installiert (Menüpunkt *Internet*). Für Windows kann er von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
-  * Server-Adresse ist *student-robot*, bei Arbeitsgruppen *student-robot[zahl]*. Beim ersten Aufruf muss die Identität des Servers bestätigt werden. Benutzname ist *pi*, Passwort ist *myr0bot*.
-  * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
-
-## Roboter ausschalten
-
-* Das geht einfach: Offene Dokumente speichern, dann die Power Taste (rechts hinten am GoPiGo3 Board) drücken. Die LED daneben beginnt rot zu blinken. Offene Programme werden beendet und das Betriebssystem wird heruntergefahren. Die LED geht aus, wenn der Roboter vollständig heruntergefahren wurde. Du kannst nun die Akkus entfernen.
+* Wie du den Roboter an- und ausschaltest und dich mit dem VNC Viewer verbindest ist in [Basisinstallation Software](../create_sr_image/) Kapiteln *Mit Roboter verbinden* und *Roboter ausschalten* erklärt.
 
 ## GoPiGo3 Server starten
 
@@ -45,6 +28,13 @@ GPG3 Server homepage : http://127.0.0.1:8080/
 Scratch extension URL: http://127.0.0.1:8080/scratch_extension.js
 
 Press Ctrl-C to stop server
+```
+
+* Sollte beim Starten des Serves eine Fehlermeldung über zu alte Firmware erscheinen (z.B. *gopigo3.FirmwareVersionError: GoPiGo3 firmware needs to be version 1.0.x but is currently version 0.3.4*), dann muss die GoPiGo3 Firmware einmalig aktualisiert werden:
+
+```
+pi@student-robot:~ $ cd ~/Dexter/GoPiGo3/
+pi@student-robot:~/Dexter/GoPiGo3 $ sudo bash Firmware/gopigo3_flash_firmware.sh
 ```
 
 * Bitte die angezeigten URLs für *GPG3 Server homepage* und *Scratch extension URL* beachten. Diese werden später gebraucht.
@@ -378,29 +368,25 @@ Neue Figure *Blinker*:
 
 [7.4_solution.sbx](scratch/7.4_solution.sbx)
 
-## TODOs
+## Genutzte Programmiertechniken
 
-Übung X: Ladar Screen
+* Sequenz
+* Verzweigung
+* Schleife
+* Ereignisorientierung
+* Parallelisierung
+* Nachrichten
+* Variablen 
+* Unterprogramme
+* Klassen
 
-Übung X: IFR Approach
+## Ideen für Erweiterungen
 
-Übung X: Kamera
-
-übung X: Durch Labyrinth fahren
-
-Programmiertechniken:
-- Sequenz
-- Verzweigung
-- Schleife
-- Ereignisorientierung
-- Parallelisierung
-- Nachrichten
-- Variablen 
-- Unterprogramme
-- Klassen
-
-- Script zum erstellen von .sb2 links für .sbx Dateien
-- Link zum Starten von gpg3server auf Desktop
+* Übung X: Ladar Screen
+* Übung X: IFR Approach
+* Übung X: Kamera
+* Übung X: Durch Labyrinth fahren
+* Script zum erstellen von .sb2 links für .sbx Dateien
 
 *Copyright 2018 Marko Kimpel*
 
