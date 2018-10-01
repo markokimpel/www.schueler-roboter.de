@@ -502,7 +502,7 @@ Ethernetkabel entfernen.
 * Bluetooth abschalten
 * Adapter wlan1 mit lokalem WLAN verbinden.
 * Öffentliche Webseite, z.B. https://www.schueler-roboter.de/, auf Laptop öffnen (bedeutet, dass IP Forwarding funktioniert).
-* In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`
+* In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`. Sollte eine Fehlermeldung über zu alte Firmware erscheinen, dann aktuelle Firmware flashen: `cd ~/Dexter/GoPiGo3/`, `sudo bash Firmware/gopigo3_flash_firmware.sh`.
 * Scratch 2 starten: Menü *Programming* > *Scratch 2*
 * Beispielprogramm *~/student-robot.org/gopigoscratchextension/scratch_examples/Simple Manual Rover.sb2* öffnen
 * Experimentelle Erweiterung laden: *http://student-robot.home:8080/scratch_extension.js* (mit Umschalt + linke Maustaste auf *File* Menü)
