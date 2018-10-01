@@ -1,3 +1,8 @@
+---
+title: Basisinstallation Software
+permalink: /tutorials/create_sr_image/
+---
+
 [Home](../..)
 
 # Basisinstallation Software

@@ -1,3 +1,8 @@
+---
+title: Programmieren mit Scratch
+permalink: /tutorials/programming_with_scratch/
+---
+
 [Home](../..)
 
 # Programmieren mit Scratch

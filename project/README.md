@@ -1,3 +1,8 @@
+---
+title: Über das Projekt
+permalink: /project/
+---
+
 [Home](..)
 
 # Über das Projekt

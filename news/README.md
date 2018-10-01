@@ -1,3 +1,8 @@
+---
+title: News
+permalink: /news/
+---
+
 [Home](..)
 
 # News

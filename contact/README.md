@@ -1,3 +1,8 @@
+---
+title: Kontakt
+permalink: /contact/
+---
+
 [Home](..)
 
 # Kontakt
