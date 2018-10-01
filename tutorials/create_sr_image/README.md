@@ -48,7 +48,7 @@ Ist der Roboter fertig zusammengebaut, die Kamera, der Servo, der Abstandssensor
 * Mit VNC Viewer am Roboter arbeiten
   * Mit dem VNC Viewer verbindest du dich zum Roboter und kannst den Desktop des Roboters sehen.
   * Bei Raspbian wird der VNC Viewer nicht mehr vorinstalliert. Er muss mit `sudo apt install realvnc-vnc-viewer` installiert werden. Die Verknüpfung befindet sich dann unter dem Menüpunkt *Internet*.
-  * Für Windows kann der Viewer von https://www.realvnc.com/de/connect/download/viewer/ (Standalone EXE ist ausreichend) heruntergeladen werden.
+  * Für Windows kann der Viewer von [https://www.realvnc.com/de/connect/download/viewer/](https://www.realvnc.com/de/connect/download/viewer/) (Standalone EXE ist ausreichend) heruntergeladen werden.
   * Server-Adresse ist *student-robot.home*, bei Arbeitsgruppen *student-robot[zahl].home*. Beim ersten Aufruf muss die Identität des Servers bestätigt werden. Benutzname ist *pi*, das Passwort ist *myr0bot*.
   * Nun kannst du mit dem Raspbian Betriebssystem auf dem Roboter so arbeiten, als säßest du direkt davor.
 * Roboter WLAN Passwort und Nutzerpasswort ändern
@@ -501,7 +501,7 @@ Ethernetkabel entfernen.
 * GoPiGo3 Verknüpfungen auf dem Desktop löschen. Die sind für die Integration mit Scratch 1 und verwirren deshalb eher.
 * Bluetooth abschalten
 * Adapter wlan1 mit lokalem WLAN verbinden.
-* Öffentliche Webseite, z.B. https://www.schueler-roboter.de/, auf Laptop öffnen (bedeutet, dass IP Forwarding funktioniert).
+* Öffentliche Webseite, z.B. [https://www.schueler-roboter.de/](https://www.schueler-roboter.de/), auf Laptop öffnen (bedeutet, dass IP Forwarding funktioniert).
 * In Terminal: `cd ~/student-robot.org/gopigoscratchextension/gpg3server/`, `./run.sh`.
   * Sollte eine Fehlermeldung über zu alte Firmware erscheinen (*gopigo3.FirmwareVersionError: GoPiGo3 firmware needs to be version 1.0.x but is currently version 0.3.4*), dann aktuelle Firmware flashen: `cd ~/Dexter/GoPiGo3/`, `sudo bash Firmware/gopigo3_flash_firmware.sh`.
 * Scratch 2 starten: Menü *Programming* > *Scratch 2*
@@ -634,12 +634,12 @@ Glückwunsch, du hast ein neues SD Kartenimage erzeugt. Dieses kann nun wie in *
 
 ## Referenzen
 
-* https://github.com/raspberrypi/noobs
-* https://www.raspberrypi.org/forums/viewtopic.php?t=198946
-* https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
-* https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf
-* https://github.com/DexterInd/GoPiGo3
-* https://github.com/DexterInd/DI_Sensors
+* [https://github.com/raspberrypi/noobs](https://github.com/raspberrypi/noobs)
+* [https://www.raspberrypi.org/forums/viewtopic.php?t=198946](https://www.raspberrypi.org/forums/viewtopic.php?t=198946)
+* [https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md)
+* [https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf](https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf)
+* [https://github.com/DexterInd/GoPiGo3](https://github.com/DexterInd/GoPiGo3)
+* [https://github.com/DexterInd/DI_Sensors](https://github.com/DexterInd/DI_Sensors)
 
 *Copyright 2018 Marko Kimpel*
 
