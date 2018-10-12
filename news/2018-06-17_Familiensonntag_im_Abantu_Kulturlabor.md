@@ -1,3 +1,7 @@
+---
+show_home_breadcrumb: false
+---
+
 [Home](../..) - [News](README.md)
 
 # 17-Jun-2018 Familiensonntag im Abantu Kulturlabor

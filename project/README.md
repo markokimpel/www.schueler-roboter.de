@@ -3,10 +3,6 @@ title: Über das Projekt
 permalink: /project/
 ---
 
-[Home](..)
-
-# Über das Projekt
-
 ## Vision
 
 Schaffung einer offenen und leistungsstarken Plattform auf der Schüler jeden Alters mit Freunde Computerkenntnisse erwerben können.

@@ -1,11 +1,8 @@
 ---
 title: Programmieren mit Scratch
 permalink: /tutorials/programming_with_scratch/
+show_toc: true
 ---
-
-[Home](../..)
-
-# Programmieren mit Scratch
 
 ## Voraussetzungen
 

@@ -11,11 +11,21 @@
   </head>
   <body>
     <section class="page-header">
-      <a href="{{ site.github.url }}"><h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1></a>
+      <a href="/"><h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1></a>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
     </section>
 
     <section class="main-content">
+      {% if page.show_home_breadcrumb != false %}
+        <p><a href="/">Home</a></p>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.show_toc %}
+        {% assign toc_h_min = page.toc_h_min | default: 2 %}
+        {% assign toc_h_max = page.toc_h_max | default: 2 %}
+        {% include toc.html html=content h_min=toc_h_min h_max=toc_h_max %}
+      {% endif %}
+
       {{ content }}
 
       <footer class="site-footer">

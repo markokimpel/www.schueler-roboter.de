@@ -3,10 +3,6 @@ title: News
 permalink: /news/
 ---
 
-[Home](..)
-
-# News
-
 12-Sep-2018 [MINT-Festival Jena](2018-09-12_MINT-Festival_Jena.md)
 
 10-Sep-2018 [Ein Klassensatz Schüler-Roboter](2018-09-10_Ein_Klassensatz_Schülerroboter.md)

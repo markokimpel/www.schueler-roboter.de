@@ -1,11 +1,11 @@
 ---
 title: Basisinstallation Software
 permalink: /tutorials/create_sr_image/
+show_toc: true
+toc_h_max: 3
 ---
 
-[Home](../..)
-
-# Basisinstallation Software
+## Die Schüler-Roboter Softwareinstallation
 
 Der Roboter nutzt einen Raspberry Pi 3 Model B als Herzstück. Das Standard-Betriebssystem für den Raspberry Pi ist [Raspbian](https://de.wikipedia.org/wiki/Raspberry_Pi#Raspbian). Es gibt aber auch Alternativen. Beispielsweise bietet Dexter Industries für den GoPiGo3 [DexterOS](https://www.dexterindustries.com/dexteros/get-dexteros-operating-system-for-raspberry-pi-robotics/), [Raspbian for Robots](https://www.dexterindustries.com/raspberry-pi-robot-software/) und [Cinch](https://www.dexterindustries.com/howto/use-cinch-operating-system/) an. DexterOS ist leicht zu benutzen und zu updaten, beinhaltet eine Scratch-ähnliche Umgebung namens Bloxter ([Onlineversion](http://www.bloxter.com/)) und eine Entwicklungsumgebung für Python. DexterOS ist Closed Source und nicht erweiterbar - kein freier Zugriff auf das Dateisystem, keine Installation eigener Software. Raspbian for Robots basiert auf Raspbian, mit zusätzlicher Software von Dexter Industries. Cinch soll das Erstellen eines Wi-Fi Access Points ermöglichen.
 
@@ -19,7 +19,7 @@ Für die Experimente mit dem Schüler-Roboter wird eine eigene Softwareinstallat
 * Automatische Erstellung eines Wi-Fi Access Points zum leichten kabellosen Verbinden mit dem Roboter. Ein WLAN wird nicht benötigt.
 * Zusätzlich kann sich der Roboter über einen USB WLAN Adapter mit dem lokalen WLAN verbinden. Damit sind die Nutzung des Access Points und Internet gleichzeitig möglich.
 
-Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel *SD Karte initial beschreiben* und *Mit Roboter verbinden*. Gruppenleiter sollten ausserdem *Installation anpassen* und *Installation zurücksetzen* lesen. In *SD Karte aktualisieren* ist beschrieben, wie die Installation ohne das Entfernen der SD Karte aktualisiert werden kann. *SD Kartenimage erstellen* ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
+Wer es einfach mag, nutzt ein vorhandenes Kartenimage und muss sich um die Details der Installation und Konfiguration nicht kümmern. Siehe Kapitel [SD Karte initial beschreiben](#sd-karte-initial-beschreiben) und [Mit Roboter verbinden](#mit-roboter-verbinden). Gruppenleiter sollten ausserdem [Installation anpassen](#installation-anpassen) und [Installation zurücksetzen](#installation-zurücksetzen) lesen. In [SD Karte aktualisieren](#sd-karte-aktualisieren) ist beschrieben, wie die Installation ohne das Entfernen der SD Karte aktualisiert werden kann. [SD Kartenimage erstellen](#sd-kartenimage-erstellen) ist für die Maintainer des Kartenimages und technisch Interessierte gedacht.
 
 ## SD Karte initial beschreiben
 

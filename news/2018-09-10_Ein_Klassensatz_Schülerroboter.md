@@ -1,3 +1,7 @@
+---
+show_home_breadcrumb: false
+---
+
 [Home](../..) - [News](README.md)
 
 # 10-Sep-2018 Ein Klassensatz Schüler-Roboter

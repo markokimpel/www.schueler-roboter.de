@@ -1,3 +1,7 @@
+---
+show_home_breadcrumb: false
+---
+
 [Home](../..) - [News](README.md)
 
 # 12-Sep-2018 MINT-Festival Jena

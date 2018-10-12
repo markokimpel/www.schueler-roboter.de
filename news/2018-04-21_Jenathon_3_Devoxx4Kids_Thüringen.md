@@ -1,3 +1,7 @@
+---
+show_home_breadcrumb: false
+---
+
 [Home](../..) - [News](README.md)
 
 # 21-Apr-2018 Jenathon 3 / Devoxx4Kids Thüringen
