@@ -1,6 +1,7 @@
 ---
 title: News
 permalink: /news/
+breadcrumb_path: home
 ---
 
 12-Sep-2018 [MINT-Festival Jena](2018-09-12_MINT-Festival_Jena.md)

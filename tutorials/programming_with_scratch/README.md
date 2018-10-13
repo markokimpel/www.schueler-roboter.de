@@ -1,6 +1,7 @@
 ---
 title: Programmieren mit Scratch
 permalink: /tutorials/programming_with_scratch/
+breadcrumb_path: home
 show_toc: true
 ---
 

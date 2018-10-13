@@ -1,10 +1,7 @@
 ---
-show_home_breadcrumb: false
+title: 21-Apr-2018 Jenathon 3 / Devoxx4Kids Thüringen
+breadcrumb_path: news
 ---
-
-[Home](../..) - [News](README.md)
-
-# 21-Apr-2018 Jenathon 3 / Devoxx4Kids Thüringen
 
 Der Schüler-Roboter war auf der [ersten Devoxx4Kids Thüringen Veranstaltung](https://www.meetup.com/jugthde/events/250002237/).
 

@@ -1,6 +1,7 @@
 ---
 title: Basisinstallation Software
 permalink: /tutorials/create_sr_image/
+breadcrumb_path: home
 show_toc: true
 toc_h_max: 3
 ---

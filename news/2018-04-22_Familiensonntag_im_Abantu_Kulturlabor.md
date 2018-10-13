@@ -1,10 +1,7 @@
 ---
-show_home_breadcrumb: false
+title: 22-Apr-2018 Familiensonntag im Abantu Kulturlabor
+breadcrumb_path: news
 ---
-
-[Home](../..) - [News](README.md)
-
-# 22-Apr-2018 Familiensonntag im Abantu Kulturlabor
 
 Roboter Programmierung für jedermann beim [Abantu Familiensonntag](https://www.facebook.com/abantu.kulturlabor/posts/1643032049084755).
 

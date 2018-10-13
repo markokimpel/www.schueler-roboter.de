@@ -1,6 +1,5 @@
 ---
 permalink: /
-show_home_breadcrumb: false
 ---
 
 ![Schüler Roboter](images/rover_front.jpg)

@@ -1,10 +1,7 @@
 ---
-show_home_breadcrumb: false
+title: 12-Sep-2018 MINT-Festival Jena
+breadcrumb_path: news
 ---
-
-[Home](../..) - [News](README.md)
-
-# 12-Sep-2018 MINT-Festival Jena
 
 Auf dem [MINT-Festival Jena](https://www.mint.uni-jena.de/) waren wir mit einem Workshop vertreten. 12 Schüler der achten Klasse einer Gemeinschaftsschule aus Rudolstadt übten sich im Programmieren mit Scratch.
 

@@ -1,10 +1,7 @@
 ---
-show_home_breadcrumb: false
+title: 17-Jun-2018 Familiensonntag im Abantu Kulturlabor
+breadcrumb_path: news
 ---
-
-[Home](../..) - [News](README.md)
-
-# 17-Jun-2018 Familiensonntag im Abantu Kulturlabor
 
 Der Schüler-Roboter mit dabei beim [Abantu Familiensonntag](https://www.facebook.com/abantu.kulturlabor/posts/1694381223949837).
 

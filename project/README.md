@@ -1,6 +1,7 @@
 ---
 title: Über das Projekt
 permalink: /project/
+breadcrumb_path: home
 ---
 
 ## Vision
