@@ -5,6 +5,8 @@ breadcrumb_path: home
 show_toc: true
 ---
 
+![Scratch 2 Offline Editor](images/scratch2_offline_editor.png)
+
 ## Voraussetzungen
 
 * Roboter mit der aktuellen Software (siehe [Bau des Roboters](../build_a_robot/) und [Basisinstallation Software](../create_sr_image/))

@@ -231,10 +231,24 @@ Samba Konfiguration anpassen
 sudo nano /etc/samba/smb.conf
 ```
 
-Im Bereich *[homes]* *read only = yes* ändern in
+Im Bereich *[homes]* folgende Parameter ändern:
+
+*read only = yes* ändern in
 
 ```
    read only = no
+```
+
+*create mask = 0700* ändern in
+
+```
+   create mask = 0644
+```
+
+*directory mask = 0700* ändern in
+
+```
+   directory mask = 0755
 ```
 
 Am Ende der Datei folgendes Share hinzufügen
