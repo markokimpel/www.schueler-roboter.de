@@ -6,6 +6,7 @@ show_toc: true
 ---
 
 ![Scratch 2 Offline Editor](images/scratch2_offline_editor.png)
+Scratch 2 Offline Editor
 
 ## Voraussetzungen
 
