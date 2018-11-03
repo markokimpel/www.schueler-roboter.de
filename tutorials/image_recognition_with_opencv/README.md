@@ -8,10 +8,10 @@ breadcrumb_path: home
 
 ## Voraussetzungen
 
-* Roboter mit der aktuellen Software (siehe [Bau des Roboters](../build_a_robot/) und [Basisinstallation Software](../create_sr_image/)) zuzüglich Installation von OpenCV und Numpy.
+* Roboter mit der aktuellen Software (siehe [Bau des Roboters](../build_a_robot/) und [Basisinstallation Software](../software_image/)) zuzüglich Installation von OpenCV und Numpy.
 * Python Programmierkenntnisse
 * Einen weiteren Computer um auf den Roboter zuzugreifen. An diesem Computer sitzt du und programmierst den Roboter. Der Computer kann ein Raspberry Pi mit Monitor, Tastatur und Maus sein, oder ein Windows Laptop. Da der Roboter über WLAN kommuniziert, muss auch der weitere Computer über WLAN kommunizieren können.
-* Wie du den Roboter an- und ausschaltest und dich mit dem VNC Viewer und mit ssh verbindest ist in [Mit Roboter verbinden](../create_sr_image/#mit-roboter-verbinden) und [Roboter ausschalten](../create_sr_image/#roboter-ausschalten) erklärt.
+* Wie du den Roboter an- und ausschaltest und dich mit dem VNC Viewer und mit ssh verbindest ist in [Mit Roboter verbinden](../software_image/#mit-roboter-verbinden) und [Roboter ausschalten](../software_image/#roboter-ausschalten) erklärt.
 
 ## Aufgabe
 

@@ -10,9 +10,9 @@ Scratch 2 Offline Editor
 
 ## Voraussetzungen
 
-* Roboter mit der aktuellen Software (siehe [Bau des Roboters](../build_a_robot/) und [Basisinstallation Software](../create_sr_image/))
+* Roboter mit der aktuellen Software (siehe [Bau des Roboters](../build_a_robot/) und [Basisinstallation Software](../software_image/))
 * Einen weiteren Computer um auf den Roboter zuzugreifen. An diesem Computer sitzt du und programmierst den Roboter. Der Computer kann ein Raspberry Pi mit Monitor, Tastatur und Maus sein, oder ein Windows Laptop. Da der Roboter über WLAN kommuniziert, muss auch der weitere Computer über WLAN kommunizieren können.
-* Wie du den Roboter an- und ausschaltest und dich mit dem VNC Viewer verbindest ist in [Basisinstallation Software](../create_sr_image/) Kapiteln *Mit Roboter verbinden* und *Roboter ausschalten* erklärt.
+* Wie du den Roboter an- und ausschaltest und dich mit dem VNC Viewer verbindest ist in [Basisinstallation Software](../software_image/) Kapiteln *Mit Roboter verbinden* und *Roboter ausschalten* erklärt.
 
 ## GoPiGo3 Server starten
 
