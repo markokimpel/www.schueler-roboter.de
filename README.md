@@ -2,7 +2,7 @@
 permalink: /
 ---
 
-![Schüler Roboter](images/rover_front.jpg)
+![Schüler Roboter](images/rover.jpg)
 
 * [Über das Projekt](project/)
 * [News](news/)
