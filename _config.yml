@@ -3,7 +3,7 @@ theme: jekyll-theme-cayman
 title: Schüler-Roboter
 description: Der programmierbare Roboter für Schüler jeden Alters
 lang: de
-google_analytics: UA-109840814-3
+google_analytics: G-E48GCCW6VZ
 
 # generate _posts that seem to be in the future
 future: true
